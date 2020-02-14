@@ -1,0 +1,240 @@
+body {
+    background-image: url("abstract.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+    font-weight: 400;
+    font-size: 15px;
+    position: relative;
+    margin: 0;
+    z-index: -1;
+    min-height: 100vh;
+}
+p {
+    text-align: left;
+    margin-bottom: 8px;
+}
+
+/****************** HOME PAGE ******************/
+
+#home, .menu, .divider {
+    font-size: 25px;
+    font-weight: 200;
+    color: whitesmoke;
+    text-shadow: rgb(0, 0, 0) 3px 2px;
+    text-align: left;
+    margin: 0;
+    top: 0;
+    display: inline;
+    padding: 5px;
+    position: relative;
+}
+.title {
+    font-size: 60px;
+    font-weight: 600;
+    color: whitesmoke;
+    text-shadow: rgb(0, 0, 0) 3px 3px;
+    text-align: center;
+    margin-bottom: 10px;
+    display: block;
+}
+.header {
+    background-color: #000000;
+    border-bottom: 2px solid #b82669;
+    top: 0;
+    position: sticky;
+    z-index: 1;
+    padding: 8px 0px 10px 20px;
+}
+#footer {
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(25, 25, 25, 0.8);
+    width: 100%;
+    height: 30px;
+    text-align: -webkit-center;
+    clear: both;
+    padding-top: 5px;
+    color: mediumslateblue;
+}
+.non_selectable {
+    user-select: none;
+}
+#homepage {
+    background: linear-gradient(135deg,
+     rgba(191, 35, 165, 0.4) 0%,
+     rgba(0, 87, 137, 0.4) 100%);
+    height: 94.7vh;
+}
+.page {
+    display: none;
+}
+#homeTitle {
+    position: relative;
+    top: 28%;
+    font-size: 200px;
+    text-shadow: rgb(183, 55, 133) 5px 5px;
+}
+
+
+/************************** SCHOOL PAGE *********************/
+#schoolPage {
+    background: linear-gradient(135deg,
+     rgba(191, 35, 165, 0.5) 0%,
+     rgba(0, 87, 137, 0.5) 100%);
+    padding-top: 50px;
+    padding-bottom: 25px;
+}
+#schoolPanel {
+    background-color: rgba(210, 210, 210, 0.4);
+    overflow-y: auto;
+    width: 98%;
+    margin-left: 1%;
+    /*text-align: center;*/
+}
+.schoolDivs {
+    color: black;
+    background-color: rgba(245, 245, 245, 0.9);
+    display: inline-grid;
+    height: 250px;
+    width: 400px;
+    padding: 15px;
+    margin-top: 40px;
+    margin-left: 29px;
+    text-align: center;
+    position: relative;
+}
+.val_in {
+    color: black;
+    padding-top: 20px;
+    display: flex;
+}
+input[type=button] {
+    position: absolute;
+    top: 58%;
+    left: 41%;
+    width: 30%;
+    font-family: inherit;
+}
+#submit2 {
+    top: 45%;
+    left: 54%;
+}
+#submit3 {
+    left: 46%;
+}
+#submit4 {
+    top: 45%;
+    left: 54%;
+}
+#submit5 {
+    top: 45%;
+    left: 57%;
+}
+input[type=number] {
+    position: absolute;
+    top: 20%;
+    left: 30%;
+    width: 50%;
+}
+#tri2, #agm2, #quad2{
+    top: 34%;
+}
+#tri3, #quad3{
+    top: 47%;
+}
+#agm1, #agm2 {
+    left: 43%;
+}
+#quad1, #quad2, #quad3 {
+    left: 35%;
+}
+#diff1, #diff2 {
+    left: 43%;
+}
+#diff2 {
+    top: 34%;
+}
+#room1, #room2 {
+    top: 20%;
+    left: 51%;
+    width: 40%;
+}
+#room2 {
+    top: 34%;
+}
+.sol {
+    display: block;
+    width: 395px;
+    height: 105px;
+    background-color: rgba(210, 210, 210, 0.8);
+    text-align: initial;
+    padding-top: 5px;
+    padding-left: 5px;
+    outline-color: mediumvioletred;
+    outline-style: auto;
+}
+#quad_sol, #quad_sol2, #quad_yn, #tri_sol {
+    height: 65px;
+}
+#diff_sol, #diff_sol2 {
+    height: 28px;
+}
+#room_sol, #room_sol2, #room_sol3 {
+    height: 25px;
+    width: 160px;
+}
+#code {
+    outline-color: mediumvioletred;
+    outline-style: auto;
+    left: 40%;
+    width: 245px;
+    height: 60px;
+    display: block;
+    margin-bottom: 1%;
+    text-align-last: center;
+    position: relative;
+}
+#js, #html, #css {
+    font-family: inherit;
+    margin-left: 20px;
+    text-decoration: none;
+    color: dodgerblue;
+    position: relative;
+    display: inline-block;
+    left: -10px;
+    -webkit-text-stroke: thin;
+}
+
+
+/*************************** ANIMATIONS ***************************/
+input:hover {
+    box-shadow:
+        1px 1px #53a7ea,
+        2px 2px #53a7ea,
+        3px 3px #53a7ea;
+    -webkit-transform: translateX(-3px);
+    transform: translateX(-3px);
+    transition-duration: 0.4s;
+}
+.menu:after, .code:after {    
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: close-quote;
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: #fff;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+}
+.code:after {
+    background-color: #d67db5;
+    transition: width 0.5s ease 0s, left 0.5s ease 0s;
+
+}
+.menu:hover:after, .code:hover:after {
+    width: 100%; 
+    left: 0px;
+}

@@ -1,0 +1,104 @@
+<!doctype html>
+<head>
+    <meta charset="utf-8">
+    <title>Personal Projects</title>
+    <link rel="stylesheet" type="text/css" href="sc_work.css"/>
+    <link rel="icon" href="js_favicon-96x96.png"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="sc_work.js"></script>
+    <script defer src="web.js"></script>
+</head>
+<body>
+    <header class="header non_selectable">
+        <h1 id="home" class="menu">Home</h1>
+        <span class="divider"> | </span>
+        <h2 class="menu">CS50 Projects</h2>
+        <span class="divider"> | </span>
+        <h3 class="menu">School Projects</h3>
+    </header>
+    <div id="homepage" class="page">
+        <span id="homeTitle" class="title non_selectable">Xenon</span>
+        <div id="footer">
+            <table>
+                <tr>
+                    <td>&copy; 2020 Gonda Armand</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div id="cs50page" class="page otherPages">
+        <span id="cs50Title" class="title non_selectable">CS50 Projects</span>
+    </div>
+    <div id="schoolPage" class="page otherPages">
+        <div id="schoolPanel">
+            <span id="schoolTitle" class="title non_selectable">School Projects</span>
+            <div id="p1" class="schoolDivs">1. Triangle inequality
+                <span class="val_in">Enter value A:</span>
+                <span class="val_in">Enter value B:</span>
+                <span class="val_in">Enter value C:</span>
+                <input type="number" id="tri1">
+                <input type="number" id="tri2">
+                <input type="number" id="tri3">
+                <input type="button" id="submit1" onclick="triangleEq()" value="Submit">
+                <p>Solution: </p>
+                <div id="tri_sol" class="sol"></div>
+            </div>
+            <div id="p2" class="schoolDivs">2. Arithmetic-geometric mean
+                <span class="val_in">Enter a positive number: </span>
+                <span class="val_in">Enter another number: </span>
+                <input type="number" id="agm1">
+                <input type="number" id="agm2">
+                <input type="button" value="Submit" id="submit2" onclick="AGM()">
+                <p>Solution: </p>
+                <div id="agm_sol" class="sol"></div>
+            </div>
+            <div id="p3" class="schoolDivs">3. Quadratic Equation
+                <span class="val_in">Enter the A value: </span>
+                <span class="val_in">Enter the B value: </span>
+                <span class="val_in">Enter the C value: </span>
+                <input type="number" id="quad1">
+                <input type="number" id="quad2">
+                <input type="number" id="quad3">
+                <input type="button" value="Submit" id="submit3" onclick="quadEq()">
+                <p>Solution: </p>
+                <div id="quad_yn" class="sol"></div>
+            </div>
+            <div id="p4" class="schoolDivs">4. Quadratic Equation 2
+                <p>Solution 1: </p>
+                <div id="quad_sol" class="sol"></div>
+                <p>Solution 2: </p>
+                <div id="quad_sol2" class="sol"></div>
+            </div>
+            <div id="p5" class="schoolDivs">5. Difference
+                <span class="val_in">Enter a number: </span>
+                <span class="val_in">Enter a bigger number: </span>
+                <input type="number" id="diff1">
+                <input type="number" id="diff2">
+                <input type="button" value="Submit" id="submit4" onclick="diff()">
+                <p>Solution (Exclusive): </p>
+                <div id="diff_sol" class="sol"></div>
+                <p>Solution (Inclusive): </p>
+                <div id="diff_sol2" class="sol"></div>
+            </div>
+            <div id="p6" class="schoolDivs">6. Room tiles
+                <span class="val_in">Enter the room's length (cm): </span>
+                <span class="val_in">Enter the room's width (cm): </span>
+                <input type="number" id="room1">
+                <input type="number" id="room2">
+                <input type="button" value="Submit" id="submit5" onclick="room()">
+                <p>Number of tiles needed: </p>
+                <div id="room_sol" class="sol"></div>
+                <p>Total cost: </p>
+                <div id="room_sol2" class="sol"></div>
+                <span style="position:absolute; top: 74.5%; left: 50%;">Waste: </span>
+                <div id="room_sol3" class="sol" style="position: absolute; left: 50%; top: 83.5%;"></div>
+            </div>
+            <div id="code" class="schoolDivs">
+                <p>Click here to see the source code: </p>
+                <a id="js" class="code" href="sc_work.js">JavaScript</a>
+                <a id="html" class="code" href="https://pastebin.com/raw/MAins3wr">HTML</a>
+                <a id="css" class="code" href="sc_work.css">CSS</a>
+            </div>
+        </div>
+    </div>
+</body>
