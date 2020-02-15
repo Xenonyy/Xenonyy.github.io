@@ -8,7 +8,15 @@
     <script defer src="web.js"></script>
     <script defer src="sc_work.js"></script>
 </head>
-<body>
+<body onload="document.body.classList.add('loaded')">
+    <div id="loadingPage">
+        <div id="loaderContainer">
+            <div id="l1" class="loader"></div>
+            <div id="l2" class="loader"></div>
+            <div id="l3" class="loader"></div>
+            <div id="l4" class="loader"></div>
+        </div>
+    </div>
     <header class="header non_selectable">
         <h1 id="home" class="menu">Home</h1>
         <span class="divider"> | </span>
