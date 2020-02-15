@@ -1,5 +1,5 @@
 body:not(.loaded) img {
-    background-color: #000000;
+    display: none;
 }
 body {
     background-image: url("abstract.jpg");

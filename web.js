@@ -27,6 +27,7 @@ async function loadAnimation(ms, page) {
 // Setting up homepage
 $(window).on("load", async function () {
     await loadAnimation(500, homepage);
+    loadPage.fadeOut("slow");
 });
 
 // Navigation in between menus
