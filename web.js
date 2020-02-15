@@ -26,22 +26,5 @@ $("h2").click(async function () {
 });
 $("h3").click(async function () {
     await loadAnimation(400, schoolpage);
-    body.css("background-image", img);
+    body.css("background-image", "url('js.jpg')");
 });
-
-var img = new Image();
-img.src = 'triangle.jpg';
-img.load = function() {
- var canvas = document.createElement('canvas');
- document.body.appendChild(canvas);
- var context = canvas.getContext('2d');
- context.drawImage(img, 0, 0);
- var data = context.getImageData(x, y, img.width, img.height).data;
- localStorage.setItem('image', data); // save image data
-};
-window.onload = function() {
-    var picture = localStorage.getItem('image');
-    var image = document.createElement('img');
-    image.src = picture;
-    document.body.appendChild(image);
-};
