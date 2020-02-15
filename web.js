@@ -10,6 +10,16 @@ const body = $("body"),
 pages.hide();
 homepage.slideDown(800);
 
+// Preload images in cache
+var images = [
+    'abstract.jpg',
+    'js.jpg',
+    'triangle.jpg'
+    ];
+$(images).each(function() {
+    $('<img />').attr('src', this);
+});
+
 // Navigation in between menus
 async function loadAnimation(ms, page) {
     pages.slideUp(ms);
@@ -23,6 +33,7 @@ $("#home").click(async function () {
 });
 $("h2").click(async function () {
     await loadAnimation(400, cs50page);
+    body.css("background-image", "url('triangle.jpg')");
 });
 $("h3").click(async function () {
     await loadAnimation(400, schoolpage);
