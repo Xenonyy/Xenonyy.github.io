@@ -6,17 +6,6 @@ const body = $("body"),
     pages = $(".page"),
     loadPage = $("#loadingPage");
 
-// Preload images in cache
-var images = [
-    'abstract.jpg',
-    'js.jpg',
-    'triangle.jpg'
-    ];
-$(images).each(function() {
-    $('<img />').attr('src', this);
-    $(this).show();
-});
-
 // Transition animation delays
 async function loadAnimation(ms, page) {
     pages.slideUp(ms);
@@ -36,12 +25,12 @@ function changeBG(source) {
 }
 
 $("#home").click(async function () {
-    changeBG('abstract.jpg');
     await loadAnimation(400, homepage);
+    changeBG('abstract.jpg');
 });
 $("h2").click(async function () {
-    changeBG('triangle.jpg');
     await loadAnimation(400, cs50page);
+    changeBG('triangle.jpg');
 });
 $("h3").click(async function () {
     await loadAnimation(400, schoolpage);
