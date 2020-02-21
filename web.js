@@ -16,11 +16,16 @@ async function loadAnimation(ms, page) {
 // Setting up homepage and the loading screen
 $(window).on("load", async function () {
     await loadAnimation(500, homepage);
-    loadPage.fadeOut("slow");
 });
 document.onreadystatechange = () => {
-    while (document.readyState === "loading") {
+    do { 
         loadPage.fadeIn("fast");
+    } while (document.readyState === "loading" || document.readyState === "interactive");
+
+    if (document.readyState === "complete") {
+        setTimeout(() => { loadPage.fadeOut("slow"); }, 500);
+    } else {
+        loadPage.fadeIn("fast")
     }
 }
 
