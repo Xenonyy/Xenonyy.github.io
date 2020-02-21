@@ -26,42 +26,113 @@ p {
     background-color: slateblue;
     z-index: 2;
 }
-#loaderContainer {
-    position: fixed;
-    width: 350px;
-    height: 350px;
-    background-color: teal;
-    display: inline-flex;
+.loaderContainer {
+	box-sizing: border-box;
+	width: 150px;
+	height: 150px;
+	position: absolute;
+	top: 42%;
+	left: 46%;
 }
-.loader {
-    border: 16px solid transparent;
-    border-radius: 50%;
-    width: 250px;
-    height: 250px;
-    animation: spin 2s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite;
-    position: fixed;
+#loadText {
+    position: relative;
+    top: 115%;
+    left: 15%;
+    color: ghostwhite;
+    text-shadow: rgba(0, 0, 0, 0.6) 3px 3px;
+    font-size: 28px;
 }
-#l1 {
-    border-top: 16px solid rgb(191, 35, 165);
-    border-right: 16px solid rgb(191, 35, 165);
-    border-left: 16px solid rgb(191, 35, 165);;
+.spinnerContainer {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
 }
-#l2 {
-    border-left: 16px solid rgb(0, 87, 137);
-    border-bottom: 16px solid rgb(0, 87, 137);
-    width: 200px;
-    height: 200px;
+.loaderContainer .hex0, .loaderContainer .hex120, .loaderContainer .hex240 {
+	border-right: none;
 }
-#l3 {
-    border-bottom: 16px solid rgb(196, 43, 43);
-    width: 50px;
-    height: 50px;
+.spinner {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	animation: rotation0 6s infinite linear, resize 6s infinite linear;
 }
-  
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+.hex0, .hex120, .hex240 {
+	position: absolute;
+	box-sizing: border-box;
+	width: 100%;
+	height: 57.74%;
+	left: 0;
+	top: 21.13%;
+	border-left: 2px solid #fff;
+	border-right: 2px solid #fff;
 }
+.hex0 {
+	animation: rotation0 4s infinite linear;
+}
+.hex120 {
+	transform: rotate(120deg);
+	animation: rotation120 4s infinite linear;
+}
+.hex240 {
+	transform: rotate(240deg);
+	animation: rotation240 4s infinite linear;
+}
+@keyframes rotation0 {
+	0% { transform: rotate(0deg);}
+	100% { transform: rotate(360deg);}
+}
+@keyframes rotation120 {
+	0% { transform: rotate(120deg);}
+	100% { transform: rotate(480deg);}
+}
+@keyframes rotation240 {
+	0% { transform: rotate(240deg);}
+	100% { transform: rotate(600deg);}
+}
+@keyframes resize {
+    0%, 16.66%, 33.33%, 50%, 66.66%, 83.33%, 100% {
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+    }
+    2.77%, 19.44%, 36.11%, 52.77%, 69.44%, 86.11% {
+        width: 93.5%;
+        height: 93.5%;
+        top: 3.25%;
+        left: 3.25%;
+    }
+    5.55%, 22.22%, 38.88%, 55.55%, 72.22%, 88.88% {
+        width: 84.4%;
+        height: 84.4%;
+        top: 7.8%;
+        left: 7.8%;
+    }
+    8.33%, 25%, 41.66%, 58.33%, 75%, 91.66% {
+        width: 73.2%;
+        height: 73.2%;
+        top: 13.4%;
+        left: 13.4%;
+    }
+    11.11%, 27.77%, 44.44%, 61.11%, 77.77%, 94.44% {
+        width: 84.4%;
+        height: 84.4%;
+        top: 7.8%;
+        left: 7.8%;
+    }
+    13.88%, 30.55%, 47.22%, 63.88%, 80.55%, 97.22% {
+        width: 93.5%;
+        height: 93.5%;
+        top: 3.25%;
+        left: 3.25%;
+    }
+}
+
+
 /****************** HOME PAGE ******************/
 
 #homepage {
