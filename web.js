@@ -13,11 +13,16 @@ async function loadAnimation(ms, page) {
         .then(() => page.slideDown(600));
 }
 
-// Setting up homepage
+// Setting up homepage and the loading screen
 $(window).on("load", async function () {
     await loadAnimation(500, homepage);
     loadPage.fadeOut("slow");
 });
+document.onreadystatechange = () => {
+    while (document.readyState === "loading") {
+        loadPage.fadeIn("fast");
+    }
+}
 
 // Navigation in between menus
 function changeBG(source) {
