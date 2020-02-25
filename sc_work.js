@@ -1,14 +1,12 @@
 function triangleEq(valA, valB, valC) {
 
     var valA = parseInt($("#tri1").val());
+        valB = parseInt($("#tri2").val());
+        valC = parseInt($("#tri3").val());
+
     $("#tri1").text(valA);
-
-    var valB = parseInt($("#tri2").val());
     $("#tri2").text(valB);
-
-    var valC = parseInt($("#tri3").val());
     $("#tri3").text(valC);
-    console.log(valA, valB, valC);
 
     if (valA < 1 || valB < 1 || valC < 1) {
         window.alert("Invalid input.");
@@ -22,14 +20,13 @@ function triangleEq(valA, valB, valC) {
         $("#tri_sol").text("This isn't a valid triangle.");
     }
 }
-// triangleEq();
 
 function AGM(num1, num2) {
     
     var num1 = parseInt($("#agm1").val());
-    $("#agm1").text(num1);
+        num2 = parseInt($("#agm2").val());
 
-    var num2 = parseInt($("#agm2").val());
+    $("#agm1").text(num1);
     $("#agm2").text(num2);
 
     if (num1 < 1 || num2 < 1) {
@@ -47,22 +44,19 @@ function AGM(num1, num2) {
         }
     }
 }
-// AGM();
 
 function quadEq(a,b,c) {
 
     var a = $("#quad1").val();
+        b = $("#quad2").val();
+        c = $("#quad3").val();
+
     $("#quad1").text(a);
-
-    var b = $("#quad2").val();
     $("#quad2").text(b);
-
-    var c = $("#quad3").val();
     $("#quad3").text(c);
 
     var xPos = parseFloat((-1 * b + Math.sqrt(Math.pow(b, 2) - (4 * a * c))) / (2 * a)).toPrecision(3);
     var xNeg = parseFloat((-1 * b - Math.sqrt(Math.pow(b, 2) - (4 * a * c))) / (2 * a)).toPrecision(3);
-    console.log(xPos, xNeg);
 
     if (a == 0 && b == 0 && c == 0) {
         window.alert("Invalid input.");
@@ -90,14 +84,13 @@ function quadEq(a,b,c) {
         $("#quad_sol2").text("No solution.");
     }
 }
-// quadEq();
 
 function diff(num1, num2) {
 
     var num1 = parseInt($("#diff1").val());
-    $("#diff1").text(num1);
+        num2 = parseInt($("#diff2").val());
 
-    var num2 = parseInt($("#diff2").val());
+    $("#diff1").text(num1);
     $("#diff2").text(num2);
 
     if (num1.toString().length >= 4 || num2.toString().length >= 4) {
@@ -131,50 +124,25 @@ function diff(num1, num2) {
     }
         $("#diff_sol").text(difference);
         $("#diff_sol2").text(differenceInc);
-        console.log(difference);
 
         if (Math.abs(num1 - num2) < 2) {
             $("#diff_sol").text("No non-exclusive solution.");
         }
 }
-// diff();
 
-function room(length, width) {
-    
-    var length = parseInt($("#room1").val());
-    $("#room1").text(length);
+function circleCalc(dia, Cference, area) {
 
-    var width = parseInt($("#room2").val());
-    $("#room2").text(width);
+    var dia = parseInt($("#dia").val());
+        Cference = parseFloat((2 * Math.PI) * (dia / 2)).toPrecision(4);
+        area = parseFloat(Math.PI * (Math.pow((dia / 2), 2))).toPrecision(4);
 
-    var tiles = 0;
-        sqr_hor = length / 100;
-        sqr_ver = width / 100;
-        floatSum = 0;
-    
-    if (length < 15 && width < 5) {
-        $("#room_sol").text("Invalid input");
-    } else if (length >= width * 3) {
-        for (let i = 0; i < length; i+=15) {
-            tiles++;
-            $("#room_sol").text(tiles);
-            floatSum = length / 15;
-        }
-    } else if (width * 3 >= length) {  
-        for (let i = 0; i < width; i+=5) {
-            tiles++;
-            $("#room_sol").text(tiles);
-            floatSum = width / 5;
-        }
+    $("#dia").text(dia);
+    $("#circle_sol").text(Cference);
+    $("#circle_sol2").text(area);
+
+    if (dia <= 0) {
+        window.alert("Invalid input.");
+        $("#circle_sol").text("Invalid input.");
+        $("#circle_sol2").text("Invalid input.");
     }
-
-    var sqrSum = (sqr_hor * sqr_ver).toFixed(2);
-        cost = tiles * 1890;
-        waste = Math.ceil(Math.abs(floatSum - Math.ceil(floatSum)));
-
-    $("#room_sol2").text(cost + " HUF");
-    $("#room_sol3").text(waste);
-    console.log(tiles, cost + " ft", sqr_hor, sqr_ver, sqrSum, floatSum, waste);
-    
 }
-// room();

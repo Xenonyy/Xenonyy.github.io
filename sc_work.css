@@ -238,13 +238,14 @@ input[type=button] {
 }
 #submit2, #submit4, #submit5 {
     top: 45%;
-    left: 54%;
+    left: 55%;
 }
 #submit3 {
     left: 46%;
 }
 #submit5 {
-    left: 57%;
+    top: 31%;
+    left: 58%;
 }
 input[type=number] {
     position: absolute;
@@ -270,13 +271,10 @@ input[type=number] {
 #diff2 {
     top: 34%;
 }
-#room1, #room2 {
-    top: 20%;
+#dia {
+    top: 20.5%;
     left: 51%;
-    width: 40%;
-}
-#room2 {
-    top: 34%;
+    width: 42%;
 }
 .sol {
     display: block;
@@ -295,9 +293,9 @@ input[type=number] {
 #diff_sol, #diff_sol2 {
     height: 28px;
 }
-#room_sol, #room_sol2, #room_sol3 {
+#circle_sol, #circle_sol2 {
     height: 25px;
-    width: 160px;
+    width: 200px;
 }
 #code {
     outline-color: mediumvioletred;
