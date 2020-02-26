@@ -3,7 +3,7 @@
 const body = $("body"),
     homepage = $("#homepage"),
     schoolpage = $("#schoolPage"),
-    cs50page = $("#cs50page"),
+    latestpage = $("#latestPage"),
     pages = $(".page");
 
 // Set up homepage
@@ -22,7 +22,7 @@ $("#home").click(async function () {
     body.css("background-image", "url('abstract.jpg')");
 });
 $("h2").click(async function () {
-    await loadAnimation(400, cs50page);
+    await loadAnimation(400, latestpage);
 });
 $("h3").click(async function () {
     await loadAnimation(400, schoolpage);
