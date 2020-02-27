@@ -1,15 +1,26 @@
 //////////////////////// Website functionality ///////////////////////////
-
 const body = $("body"),
     homepage = $("#homepage"),
     schoolpage = $("#schoolPage"),
-    latestpage = $("#latestPage"),
+    projectPage = $("#projectPage"),
+    loadPage = $("#loadingPage"),
     pages = $(".page");
 
-// Set up homepage
-pages.hide();
-homepage.slideDown(800);
+// Setting up homepage and the loading screen	
+$(window).on("load", async function () {	
+    await loadAnimation(500, homepage);	
+});	
+document.onreadystatechange = () => {	
+    do { 	
+        loadPage.fadeIn("fast");	
+    } while (document.readyState === "loading" || document.readyState === "interactive");	
 
+    if (document.readyState === "complete") {	
+        setTimeout(() => { loadPage.fadeOut("slow"); }, 500);	
+    } else {	
+        loadPage.fadeIn("fast");
+    }
+}
 // Navigation in between menus
 async function loadAnimation(ms, page) {
     pages.slideUp(ms);
@@ -25,7 +36,7 @@ $("#home").click(async function () {
     changeBG('abstract.jpg');
 });
 $("h2").click(async function () {
-    await loadAnimation(400, latestpage);
+    await loadAnimation(400, projectPage);
     changeBG('triangle.jpg');
 });
 $("h3").click(async function () {
