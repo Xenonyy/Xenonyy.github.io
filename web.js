@@ -16,16 +16,19 @@ async function loadAnimation(ms, page) {
     return new Promise(resolve => setTimeout(resolve, ms))
         .then(() => page.slideDown(600));
 }
+function changeBG(source) {	
+    document.body.style.backgroundImage = "url(" + source + ")";	
+}
 
 $("#home").click(async function () {
     await loadAnimation(400, homepage);
-    body.css("background-image", "url('abstract.jpg')");
+    changeBG('abstract.jpg');
 });
 $("h2").click(async function () {
     await loadAnimation(400, latestpage);
-    body.css("background-image", "url('triangle.jpg')");
+    changeBG('triangle.jpg');
 });
 $("h3").click(async function () {
     await loadAnimation(400, schoolpage);
-    body.css("background-image", "url('js.jpg')");
+    changeBG('js.jpg');
 });
