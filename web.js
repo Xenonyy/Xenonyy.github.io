@@ -44,16 +44,19 @@ $("h3").click(async function () {
     changeBG('js.jpg');
 });
 
-
-// TODO: DOESNT CREATE THE ELEMENT FOR SOME REASON. NOT EVEN IN HTML..........
-
-
-// for (let i = 0; i < 5; i++) {
-//     const spinner = document.createElement("div", { class: "spinner"});
-//     const spinnerContainer = document.createElement("div", { class: "spinnerContainer"});
-//     const hex0 = document.createElement("div", { class: "hex0"});
-//     const hex120 = document.createElement("div", { class: "hex120"});
-//     const hex240 = document.createElement("div", { class: "hex240"});
-// }
-// $(".loaderContainer").append($(".spinner"));
-// $(".spinnerContainer").appendTo($(".spinner"));
+// Loader
+function loadingDivs() {
+    for (let j = 0; j < 5; j++) {
+        for (let i = 0; i < 5; i++) {
+            var spinner = $('<div/>', { id: "spinner"+i, class: 'spinner'});
+            var spinnerContainer = $('<div/>', { class: 'spinnerContainer'});
+            spinnerContainer.append($("#spinner"+i)); // Nesting each spinner into another spinner.
+            var hex0 = $('<div/>', { class: 'hex0'});
+            var hex120 = $('<div/>', { class: 'hex120'});
+            var hex240 = $('<div/>', { class: 'hex240'});
+        }
+        $(".loaderContainer").prepend(spinner);
+        $(".spinner").prepend(spinnerContainer);
+    }
+    $(".spinnerContainer").prepend(hex0, hex120, hex240);
+}
