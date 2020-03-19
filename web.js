@@ -43,20 +43,3 @@ $("h3").click(async function () {
     await loadAnimation(400, schoolpage);
     changeBG('js.jpg');
 });
-
-// Loader
-function loadingDivs() {
-    for (let j = 0; j < 5; j++) {
-        for (let i = 0; i < 5; i++) {
-            var spinner = $('<div/>', { id: "spinner"+i, class: 'spinner'});
-            var spinnerContainer = $('<div/>', { class: 'spinnerContainer'});
-            spinnerContainer.append($("#spinner"+i)); // Nesting each spinner into another spinner.
-            var hex0 = $('<div/>', { class: 'hex0'});
-            var hex120 = $('<div/>', { class: 'hex120'});
-            var hex240 = $('<div/>', { class: 'hex240'});
-        }
-        $(".loaderContainer").prepend(spinner);
-        $(".spinner").prepend(spinnerContainer);
-    }
-    $(".spinnerContainer").prepend(hex0, hex120, hex240);
-}

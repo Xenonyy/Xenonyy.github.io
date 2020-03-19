@@ -10,12 +10,30 @@
     <script defer src="web.js"></script>
     <script defer src="sc_work.js"></script>
 </head>
-<body onload="loadingDivs()">
+<body>
     <img id="pre_img1">
     <img id="pre_img2">
     <img id="pre_img3">
     <div id="loadingPage">
         <div class='loaderContainer'>
+            <script>
+                function loadingDivs() {
+                    for (let j = 0; j < 5; j++) {
+                        for (let i = 0; i < 5; i++) {
+                            var spinner = $('<div/>', { id: "spinner"+i, class: 'spinner'});
+                            var spinnerContainer = $('<div/>', { class: 'spinnerContainer'});
+                            spinnerContainer.append($("#spinner"+i)); // Nesting each spinner into another spinner.
+                            var hex0 = $('<div/>', { class: 'hex0'});
+                            var hex120 = $('<div/>', { class: 'hex120'});
+                            var hex240 = $('<div/>', { class: 'hex240'});
+                        }
+                        $(".loaderContainer").prepend(spinner);
+                        $(".spinner").prepend(spinnerContainer);
+                    }
+                    $(".spinnerContainer").prepend(hex0, hex120, hex240);
+                }
+                loadingDivs();
+            </script>
             <span id="loadText">Loading...</span>
         </div>
     </div>
