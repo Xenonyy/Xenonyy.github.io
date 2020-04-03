@@ -8,7 +8,8 @@ const body = $("body"),
 
 // Setting up homepage and the loading screen	
 $(window).on("load", async function () {	
-    await loadAnimation(500, homepage);	
+    await loadAnimation(500, homepage);
+    window.location.assign("https://xenonyy.github.io/home");
 });	
 document.onreadystatechange = () => {	
     do { 	
@@ -34,12 +35,15 @@ function changeBG(source) {
 $("#home").click(async function () {
     await loadAnimation(400, homepage);
     changeBG('abstract.jpg');
+    location.assign("https://xenonyy.github.io/home");
 });
 $("h2").click(async function () {
     await loadAnimation(400, projectPage);
     changeBG('triangle.jpg');
+    location.assign("https://xenonyy.github.io/projects");
 });
 $("h3").click(async function () {
     await loadAnimation(400, schoolpage);
     changeBG('js.jpg');
+    location.assign("https://xenonyy.github.io/school");
 });
