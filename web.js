@@ -9,7 +9,7 @@ const body = $("body"),
 // Setting up homepage and the loading screen	
 $(window).on("load", async function () {	
     await loadAnimation(500, homepage);
-    window.location.assign("https://xenonyy.github.io/home");
+    // window.location.assign("https://xenonyy.github.io/home");
 });	
 document.onreadystatechange = () => {	
     do { 	
@@ -22,6 +22,7 @@ document.onreadystatechange = () => {
         loadPage.fadeIn("fast");
     }
 }
+
 // Navigation in between menus
 async function loadAnimation(ms, page) {
     pages.slideUp(ms);
@@ -35,15 +36,28 @@ function changeBG(source) {
 $("#home").click(async function () {
     await loadAnimation(400, homepage);
     changeBG('abstract.jpg');
-    location.assign("https://xenonyy.github.io/home");
+    // location.assign("https://xenonyy.github.io/home");
 });
 $("h2").click(async function () {
     await loadAnimation(400, projectPage);
     changeBG('triangle.jpg');
-    location.assign("https://xenonyy.github.io/projects");
+    // location.assign("https://xenonyy.github.io/projects");
 });
 $("h3").click(async function () {
     await loadAnimation(400, schoolpage);
     changeBG('js.jpg');
     location.assign("https://xenonyy.github.io/school");
 });
+
+// Change URL upon clicling different tabs
+function processAjaxData(response, urlPath){
+    document.getElementById("content").innerHTML = response.html;
+    document.title = response.pageTitle;
+    window.history.pushState({"html":response.html,"pageTitle":response.pageTitle},"", urlPath);
+}
+window.onpopstate = function(e){
+    if(e.state){
+        document.getElementById("content").innerHTML = e.state.html;
+        document.title = e.state.pageTitle;
+    }
+};
