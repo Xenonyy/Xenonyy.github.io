@@ -378,7 +378,7 @@ input[type=number] {
         font-size: 40px;
     }
     td {
-        font-size: 12px;
+        font-size: 10px;
     }
     #code {
         left: 18%;
@@ -388,6 +388,7 @@ input[type=number] {
     .schoolDivs {
         width: 300px;
         margin: 15px;
+        padding-right: 10px;
     }
     #schoolPanel {
         width: 96%;
@@ -396,6 +397,21 @@ input[type=number] {
     input[type=number] {
         left: 40%;
         width: 40%;
+    }
+    input[type=button] {
+        left: 47%;
+    }
+    #submit2 {
+        left: 62%;
+    }
+    #agm1, #agm2 {
+        left: 56%;
+    }
+    #quad1, #quad2, #quad3 {
+        left: 45%;
+    }
+    #diff1, #diff2 {
+        left: 54%;
     }
     .sol {
         width: 295px;
