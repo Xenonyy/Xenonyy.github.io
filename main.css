@@ -377,9 +377,22 @@ input[type=number] {
     .title {
         font-size: 40px;
     }
+    td {
+        font-size: 12px;
+    }
     #code {
         left: 18%;
         padding: 10px;
         margin-left: 22px;
+    }
+    .schoolDivs {
+        width: 300px;
+    }
+    input[type=number] {
+        left: 40%;
+        width: 40%;
+    }
+    .sol {
+        width: 295px;
     }
 }
