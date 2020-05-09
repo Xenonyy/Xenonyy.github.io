@@ -376,6 +376,7 @@ input[type=number] {
     }
     .title {
         font-size: 38px;
+        padding-top: 10px;
     }
     td {
         font-size: 10px;
@@ -389,6 +390,7 @@ input[type=number] {
         width: 290px;
         margin: 10px;
         padding-right: 10px;
+        margin-left: 12px;
     }
     #schoolPanel {
         width: 96%;
