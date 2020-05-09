@@ -183,10 +183,10 @@ p {
 }
 #footer {
     position: absolute;
-    bottom: 0;
+    bottom: 0px;
     background-color: rgba(25, 25, 25, 0.8);
     width: 100%;
-    height: 30px;
+    height: 25px;
     text-align: -webkit-center;
     clear: both;
     padding-top: 5px;
@@ -375,15 +375,15 @@ input[type=number] {
         font-size: initial;
     }
     .title {
-        font-size: 40px;
+        font-size: 38px;
     }
     td {
         font-size: 10px;
     }
     #code {
-        left: 18%;
+        left: 8%;
         padding: 10px;
-        margin-left: 22px;
+        margin-bottom: 10px;
     }
     .schoolDivs {
         width: 300px;
@@ -392,7 +392,7 @@ input[type=number] {
     }
     #schoolPanel {
         width: 96%;
-        margin-left: 2%;
+        margin-left: 1%;
     }
     input[type=number] {
         left: 40%;
@@ -404,6 +404,17 @@ input[type=number] {
     #submit2 {
         left: 62%;
     }
+    #submit3 {
+        left: 52%;
+    }
+    #submit4 {
+        left: 60%;
+    }
+    #submit5 {
+        top: 32%;
+        left: 66%;
+        width: 25%;
+    }
     #agm1, #agm2 {
         left: 56%;
     }
@@ -412,6 +423,11 @@ input[type=number] {
     }
     #diff1, #diff2 {
         left: 54%;
+    }
+    #dia {
+        top: 21%;
+        left: 62%;
+        width: 30%;
     }
     .sol {
         width: 295px;
