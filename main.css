@@ -354,3 +354,9 @@ input[type=number] {
         left: 0px;
     }
 }
+@media screen and (max-width: 480px) {
+    body {
+        display: none;
+        background-color: lightgreen;
+    }
+  }
