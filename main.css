@@ -390,10 +390,10 @@ input[type=number] {
         width: 290px;
         margin: 10px;
         padding-right: 10px;
-        margin-left: 12px;
+        margin-left: 14px;
     }
     #schoolPanel {
-        width: 96%;
+        width: 97%;
         margin-left: 1%;
     }
     input[type=number] {
