@@ -366,7 +366,7 @@ input[type=number] {
         font-size: 100px;
     }
     #home, .menu, .divider {
-        font-size: large;
+        font-size: initial;
     }
     .title {
         font-size: 40px;
