@@ -48,17 +48,3 @@ $("h3").click(async function () {
     changeBG('js.jpg');
     // location.assign("https://xenonyy.github.io/school");
 });
-
-// Change URL upon clicling different tabs
-// function processAjaxData(response, urlPath){
-//     document.getElementById("content").innerHTML = response.html;
-//     document.title = response.pageTitle;
-//     window.history.pushState({"html":response.html,"pageTitle":response.pageTitle},"", urlPath);
-// }
-// window.onpopstate = function(e){
-//     if(e.state){
-//         document.getElementById("content").innerHTML = e.state.html;
-//         document.title = e.state.pageTitle;
-//     }
-// };
-// window.history.pushState('page2', 'Title', '/page2.php');
