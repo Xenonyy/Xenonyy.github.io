@@ -360,10 +360,16 @@ input[type=number] {
         background-position-x: center;
     }
     .loaderContainer {
+        top: 35%;
         left: 35%;
+        width: 100px;
+        height: 100px;
+    }
+    #loadText {
+        font-size: 20px;
     }
     #homeTitle {
-        font-size: 100px;
+        font-size: 80px;
     }
     #home, .menu, .divider {
         font-size: initial;
