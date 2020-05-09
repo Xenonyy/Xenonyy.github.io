@@ -386,8 +386,8 @@ input[type=number] {
         margin-bottom: 10px;
     }
     .schoolDivs {
-        width: 300px;
-        margin: 15px;
+        width: 290px;
+        margin: 10px;
         padding-right: 10px;
     }
     #schoolPanel {
@@ -405,7 +405,7 @@ input[type=number] {
         left: 62%;
     }
     #submit3 {
-        left: 52%;
+        left: 51%;
     }
     #submit4 {
         left: 60%;
@@ -425,11 +425,11 @@ input[type=number] {
         left: 54%;
     }
     #dia {
-        top: 21%;
+        top: 20%;
         left: 62%;
         width: 30%;
     }
     .sol {
-        width: 295px;
+        width: 280px;
     }
 }
