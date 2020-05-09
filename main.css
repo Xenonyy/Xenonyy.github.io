@@ -30,7 +30,7 @@ p {
 	box-sizing: border-box;
 	width: 150px;
 	height: 150px;
-	position: absolute;
+    position: absolute;
 	top: 42%;
 	left: 46%;
 }
@@ -354,9 +354,26 @@ input[type=number] {
         left: 0px;
     }
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 520px) {
     body {
-        display: none;
-        background-color: lightgreen;
+        background-size: cover;
+        background-position-x: center;
     }
-  }
+    .loaderContainer {
+        left: 35%;
+    }
+    #homeTitle {
+        font-size: 100px;
+    }
+    #home, .menu, .divider {
+        font-size: 22px;
+    }
+    .title {
+        font-size: 40px;
+    }
+    #code {
+        left: 18%;
+        padding: 10px;
+        margin-left: 22px;
+    }
+}
