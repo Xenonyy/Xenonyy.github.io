@@ -95,7 +95,7 @@ function diff(num1, num2) {
 
     if (num1.toString().length >= 4 || num2.toString().length >= 4) {
         if (Math.abs(num1 - num2) > 8) {
-            window.alert("Enter a smaller range or use smaller numbers.");
+            window.alert("Enter a smaller range.\nMaximum range is 13, but only 8 for 4-digit and larger numbers.");
             return;
         } else {
             var difference = [];
@@ -107,9 +107,9 @@ function diff(num1, num2) {
                 differenceInc.push(i);
             }
         }
-    } else if (num2.toString().length < 4 || num2.toString().length > 4) {
+    } else if (num1.toString().length < 4 || num2.toString().length < 4) {
         if (Math.abs(num1 - num2) >= 13) {
-            window.alert("Enter a smaller range.");
+            window.alert("Enter a smaller range.\nMaximum range is 13, but only 8 for 4-digit and larger numbers.");
             return;
         } else {
             var difference = [];
