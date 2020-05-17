@@ -9,120 +9,142 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script defer src="web.js"></script>
     <script defer src="sc_work.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
 </head>
-<body>
-    <img id="pre_img1">
-    <img id="pre_img2">
-    <img id="pre_img3">
-    <div id="loadingPage">
-        <div class='loaderContainer'>
-            <script>
-                function loadingDivs() {
-                    for (let j = 0; j < 5; j++) {
-                        for (let i = 0; i < 5; i++) {
-                            var spinner = $('<div/>', { id: "spinner"+i, class: 'spinner'});
-                            var spinnerContainer = $('<div/>', { class: 'spinnerContainer'});
-                            spinnerContainer.append($("#spinner"+i)); // Nesting each spinner into another spinner.
-                            var hex0 = $('<div/>', { class: 'hex0'});
-                            var hex120 = $('<div/>', { class: 'hex120'});
-                            var hex240 = $('<div/>', { class: 'hex240'});
+<body class="stop-scrolling">
+    <div id="container">
+        <div id="content-wrap">
+            <img id="pre_img1">
+            <img id="pre_img2">
+            <img id="pre_img3">
+            <div id="loadingPage">
+                <div class='loaderContainer'>
+                    <script>
+                        function loadingDivs() {
+                            for (let j = 0; j < 5; j++) {
+                                for (let i = 0; i < 5; i++) {
+                                    var spinner = $('<div/>', { id: "spinner"+i, class: 'spinner'});
+                                    var spinnerContainer = $('<div/>', { class: 'spinnerContainer'});
+                                    spinnerContainer.append($("#spinner"+i)); // Nesting each spinner into another spinner.
+                                    var hex0 = $('<div/>', { class: 'hex0'});
+                                    var hex120 = $('<div/>', { class: 'hex120'});
+                                    var hex240 = $('<div/>', { class: 'hex240'});
+                                }
+                                $(".loaderContainer").prepend(spinner);
+                                $(".spinner").prepend(spinnerContainer);
+                            }
+                            $(".spinnerContainer").prepend(hex0, hex120, hex240);
                         }
-                        $(".loaderContainer").prepend(spinner);
-                        $(".spinner").prepend(spinnerContainer);
-                    }
-                    $(".spinnerContainer").prepend(hex0, hex120, hex240);
-                }
-                loadingDivs();
-            </script>
-            <span id="loadText">Loading...</span>
+                        loadingDivs();
+                    </script>
+                    <span id="loadText">Loading...</span>
+                </div>
+            </div>
+            <header class="header non_selectable">
+                <h1 id="home" class="menu">Home</h1>
+                <span class="divider"> | </span>
+                <h2 class="menu">About Me</h2>
+                <span class="divider"> | </span>
+                <h3 class="menu">School Projects</h3>
+                <span class="divider"> | </span>
+                <!-- <h4 class="menu">Source Code</h3>
+                <span class="divider"> | </span> -->
+                <h5 class="menu">Contact</h3>
+            </header>
+            <div id="homepage" class="page">
+                <span id="homeTitle" class="title non_selectable">Xenon</span>
+            </div>
+            <div id="aboutPage" class="page otherPages">
+                <div id="aboutPanel">
+                    <span id="aboutTitle" class="title non_selectable">About Me</span>
+                    <div id="about">Hi, my name.... and ...,</div>
+                </div>
+            </div>
+            <div id="schoolPage" class="page otherPages">
+                <div id="schoolBG">
+                    <div id="schoolPanel">
+                        <span id="schoolTitle" class="title non_selectable">School Projects</span>
+                        <div id="p1" class="schoolDivs">1. Triangle inequality
+                            <span class="val_in">Enter value A:</span>
+                            <span class="val_in">Enter value B:</span>
+                            <span class="val_in">Enter value C:</span>
+                            <input type="number" id="tri1">
+                            <input type="number" id="tri2">
+                            <input type="number" id="tri3">
+                            <input type="button" id="submit1" onclick="triangleEq()" value="Submit">
+                            <p>Solution: </p>
+                            <div id="tri_sol" class="sol"></div>
+                        </div>
+                        <div id="p2" class="schoolDivs">2. Arithmetic-geometric mean
+                            <span class="val_in">Enter a positive number: </span>
+                            <span class="val_in">Enter another number: </span>
+                            <input type="number" id="agm1">
+                            <input type="number" id="agm2">
+                            <input type="button" value="Submit" id="submit2" onclick="AGM()">
+                            <p>Solution: </p>
+                            <div id="agm_sol" class="sol"></div>
+                        </div>
+                        <div id="p3" class="schoolDivs">3. Quadratic Equation
+                            <span class="val_in">Enter the A value: </span>
+                            <span class="val_in">Enter the B value: </span>
+                            <span class="val_in">Enter the C value: </span>
+                            <input type="number" id="quad1">
+                            <input type="number" id="quad2">
+                            <input type="number" id="quad3">
+                            <input type="button" value="Submit" id="submit3" onclick="quadEq()">
+                            <p>Solution: </p>
+                            <div id="quad_yn" class="sol"></div>
+                        </div>
+                        <div id="p4" class="schoolDivs">4. Quadratic Equation 2
+                            <p>Solution 1: </p>
+                            <div id="quad_sol" class="sol"></div>
+                            <p>Solution 2: </p>
+                            <div id="quad_sol2" class="sol"></div>
+                        </div>
+                        <div id="p5" class="schoolDivs">5. Difference
+                            <span class="val_in">Enter a number: </span>
+                            <span class="val_in">Enter a bigger number: </span>
+                            <input type="number" id="diff1">
+                            <input type="number" id="diff2">
+                            <input type="button" value="Submit" id="submit4" onclick="diff()">
+                            <p>Solution (Exclusive): </p>
+                            <div id="diff_sol" class="sol"></div>
+                            <p>Solution (Inclusive): </p>
+                            <div id="diff_sol2" class="sol"></div>
+                        </div>
+                        <div id="p6" class="schoolDivs">6. Circumference and Area of a circle
+                            <span class="val_in">Enter the circle's diameter: </span>
+                            <input type="number" id="dia">
+                            <input type="button" value="Submit" id="submit5" onclick="circleCalc()">
+                            <p style="padding-top: 40px;">Circumference: </p>
+                            <div id="circle_sol" class="sol"></div>
+                            <p>Area: </p>
+                            <div id="circle_sol2" class="sol"></div>
+                        </div>
+                        <div id="code" class="schoolDivs">
+                            <p>Click here to see the source code: </p>
+                            <a id="js" class="code non_selectable" href="sc_work.js">JavaScript</a>
+                            <a id="html" class="code non_selectable" href="https://pastebin.com/MAins3wr">HTML</a>
+                            <a id="css" class="code non_selectable" href="main.css">CSS</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="sourceCodePage" class="page otherPages">
+                <div id="sourceCodePanel">
+                    <span id="sourceText" class="title non_selectable">Source Code</span>
+                    <div id="jsPanel"></div>
+                    <div id="htmlPanel"></div>
+                    <div id="cssPanel"></div>
+                </div>
+            </div>
+            <div id="contactPage" class="page otherPages">
+                <div id="contactPanel">
+                    <span id="contactTitle" class="title non_selectable">Contact Information</span>
+                    <div id="contactEmail"></div>
+                </div>
+            </div>
         </div>
-    </div>
-    <header class="header non_selectable">
-        <h1 id="home" class="menu">Home</h1>
-        <span class="divider"> | </span>
-        <h2 class="menu">My latest work</h2>
-        <span class="divider"> | </span>
-        <h3 class="menu">School Projects</h3>
-    </header>
-    <div id="homepage" class="page">
-        <span id="homeTitle" class="title non_selectable">Xenon</span>
-        <div id="footer">
-            <table>
-                <tr>
-                    <td>&copy; 2020 Gonda Armand</td>
-                </tr>
-            </table>
-        </div>
-    </div>
-    <div id="projectPage" class="page otherPages">
-        <span id="projectTitle" class="title non_selectable">My latest work</span>
-    </div>
-    <div id="schoolPage" class="page otherPages">
-        <div id="schoolPanel">
-            <span id="schoolTitle" class="title non_selectable">School Projects</span>
-            <div id="p1" class="schoolDivs">1. Triangle inequality
-                <span class="val_in">Enter value A:</span>
-                <span class="val_in">Enter value B:</span>
-                <span class="val_in">Enter value C:</span>
-                <input type="number" id="tri1">
-                <input type="number" id="tri2">
-                <input type="number" id="tri3">
-                <input type="button" id="submit1" onclick="triangleEq()" value="Submit">
-                <p>Solution: </p>
-                <div id="tri_sol" class="sol"></div>
-            </div>
-            <div id="p2" class="schoolDivs">2. Arithmetic-geometric mean
-                <span class="val_in">Enter a positive number: </span>
-                <span class="val_in">Enter another number: </span>
-                <input type="number" id="agm1">
-                <input type="number" id="agm2">
-                <input type="button" value="Submit" id="submit2" onclick="AGM()">
-                <p>Solution: </p>
-                <div id="agm_sol" class="sol"></div>
-            </div>
-            <div id="p3" class="schoolDivs">3. Quadratic Equation
-                <span class="val_in">Enter the A value: </span>
-                <span class="val_in">Enter the B value: </span>
-                <span class="val_in">Enter the C value: </span>
-                <input type="number" id="quad1">
-                <input type="number" id="quad2">
-                <input type="number" id="quad3">
-                <input type="button" value="Submit" id="submit3" onclick="quadEq()">
-                <p>Solution: </p>
-                <div id="quad_yn" class="sol"></div>
-            </div>
-            <div id="p4" class="schoolDivs">4. Quadratic Equation 2
-                <p>Solution 1: </p>
-                <div id="quad_sol" class="sol"></div>
-                <p>Solution 2: </p>
-                <div id="quad_sol2" class="sol"></div>
-            </div>
-            <div id="p5" class="schoolDivs">5. Difference
-                <span class="val_in">Enter a number: </span>
-                <span class="val_in">Enter a bigger number: </span>
-                <input type="number" id="diff1">
-                <input type="number" id="diff2">
-                <input type="button" value="Submit" id="submit4" onclick="diff()">
-                <p>Solution (Exclusive): </p>
-                <div id="diff_sol" class="sol"></div>
-                <p>Solution (Inclusive): </p>
-                <div id="diff_sol2" class="sol"></div>
-            </div>
-            <div id="p6" class="schoolDivs">6. Circumference and Area of a circle
-                <span class="val_in">Enter the circle's diameter: </span>
-                <input type="number" id="dia">
-                <input type="button" value="Submit" id="submit5" onclick="circleCalc()">
-                <p style="padding-top: 40px;">Circumference: </p>
-                <div id="circle_sol" class="sol"></div>
-                <p>Area: </p>
-                <div id="circle_sol2" class="sol"></div>
-            </div>
-            <div id="code" class="schoolDivs">
-                <p>Click here to see the source code: </p>
-                <a id="js" class="code" href="sc_work.js">JavaScript</a>
-                <a id="html" class="code" href="https://pastebin.com/raw/MAins3wr">HTML</a>
-                <a id="css" class="code" href="sc_work.css">CSS</a>
-            </div>
-        </div>
+            <footer id="footer">&copy; 2020 Gonda Armand</footer>
     </div>
 </body>

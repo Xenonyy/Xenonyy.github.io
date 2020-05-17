@@ -1,20 +1,31 @@
+html, body {
+    scroll-behavior: smooth;
+}
+.stop-scrolling {
+    height: 100%;
+    overflow: hidden;
+  }
 body {
-    background-image: url("abstract.jpg");
+    background-image: url(abstract.jpg);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
     font-weight: 400;
     font-size: 15px;
-    position: relative;
     margin: 0;
-    z-index: -1;
-    min-height: 100vh;
 }
 p {
     text-align: left;
     margin-bottom: 8px;
 }
-/******* LOADING *******/
+#container {
+    position: relative;
+    min-height: 100vh;
+}
+#content-wrap {
+    padding-bottom: 2.3rem;
+}
+/******* PRE-LOADING IMAGES *******/
 #pre_img1 { background: url(abstract.jpg) no-repeat -9999px -9999px; display: none;}
 #pre_img2 { background: url(js.jpg) no-repeat -9999px -9999px; display: none;}
 #pre_img3 { background: url(triangle.jpg) no-repeat -9999px -9999px; display: none;}
@@ -136,19 +147,14 @@ p {
 
 
 /****************** HOME PAGE ******************/
-
 #homepage {
-    background: linear-gradient(135deg,
-     rgba(191, 35, 165, 0.4) 0%,
-     rgba(0, 87, 137, 0.4) 100%);
-    height: 94.7vh;
-}
-.page {
-    display: none;
+    background-image: linear-gradient( 135deg, 
+    rgba(191, 35, 165, 0.4) 0%, 
+    rgba(0, 87, 137, 0.4) 100%);
+    height: 101vh;
 }
 #homeTitle {
-    position: relative;
-    top: 28%;
+    padding-top: 15%;
     font-size: 200px;
     text-shadow: rgb(183, 55, 133) 5px 5px;
 }
@@ -179,17 +185,16 @@ p {
     top: 0;
     position: sticky;
     z-index: 1;
-    padding: 8px 0px 10px 20px;
+    padding: 11px 0px 11px 20px;
 }
 #footer {
     position: absolute;
-    bottom: 0px;
-    background-color: rgba(25, 25, 25, 0.8);
+    bottom: 0;
+    background-color: rgba(25, 25, 25, 0.95);
     width: 100%;
-    height: 25px;
+    height: 1.8rem;
+    padding-top: 8px;
     text-align: -webkit-center;
-    clear: both;
-    padding-top: 5px;
     color: mediumslateblue;
 }
 .non_selectable {
@@ -197,20 +202,22 @@ p {
 }
 
 
-/************************** SCHOOL PAGE *********************/
+/************************** SCHOOL PAGE ***************************/
 #schoolPage {
     background: linear-gradient(135deg,
      rgba(191, 35, 165, 0.5) 0%,
      rgba(0, 87, 137, 0.5) 100%);
-    padding-top: 50px;
-    padding-bottom: 25px;
 }
-#schoolPanel {
+#schoolBG {
+    background-image: url(js.jpg);
+    min-height: 100vh;
+    padding-top: 50px;
+}
+#schoolPanel, #sourceCodePanel {
     background-color: rgba(210, 210, 210, 0.4);
     overflow-y: auto;
     width: 98%;
     margin-left: 1%;
-    /*text-align: center;*/
 }
 .schoolDivs {
     color: black;
@@ -301,7 +308,7 @@ input[type=number] {
     outline-color: mediumvioletred;
     outline-style: auto;
     left: 40%;
-    width: 245px;
+    width: 225px;
     height: 60px;
     display: block;
     margin-bottom: 1%;
@@ -317,6 +324,64 @@ input[type=number] {
     display: inline-block;
     left: -10px;
     -webkit-text-stroke: thin;
+}
+
+/************************** OTHER PAGES ************************/
+#aboutPage {
+    min-height: 50vh;
+    background: linear-gradient(135deg, 
+    rgba(191, 35, 165, 0.4) 0%, 
+    rgba(0, 87, 137, 0.4) 100% );
+}
+#aboutTitle {
+    position: relative;
+    top: 30px;
+    font-size: 50px;
+}
+#about {
+    height: 400px;
+    width: 400px;
+    top: 60%;
+    left: 30%;
+    color: ivory;
+    font-size: 20px;
+    text-shadow: rgb(183, 55, 133) 1px 1px;
+}
+#sourceCodePage {
+    padding-top: 50px;
+    padding-bottom: 25px;
+}
+#sourceCodePanel {
+    min-height: 100vh;
+    background-image: linear-gradient( 135deg, 
+    rgba(191, 35, 165, 0.4) 0%, 
+    rgba(0, 87, 137, 0.4) 100%);
+}
+#sourceText {
+    position: relative;
+    top: 30px;
+    font-size: 50px;
+}
+#contactPage {
+    min-height: 50vh;
+    background-image: linear-gradient( 135deg, 
+    rgba(191, 35, 165, 0.4) 0%, 
+    rgba(0, 87, 137, 0.4) 100%);
+}
+#contactTitle {
+    position: relative;
+    top: 30px;
+    font-size: 50px;
+}
+::-webkit-scrollbar-thumb {
+    background: rgb(165, 64, 119);
+    border-radius: 30px;
+}
+::-webkit-scrollbar-track {
+    background: rgb(120, 108, 143);
+}
+::-webkit-scrollbar {
+    width: 11px;
 }
 
 
@@ -378,8 +443,12 @@ input[type=number] {
         font-size: 38px;
         padding-top: 10px;
     }
-    td {
+    #content-wrap {
+        padding-bottom: 1.7rem;
+    }
+    #footer {
         font-size: 10px;
+        height: 1.2rem;
     }
     #code {
         left: 8%;
