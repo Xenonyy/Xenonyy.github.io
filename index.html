@@ -9,7 +9,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script defer src="web.js"></script>
     <script defer src="sc_work.js"></script>
-    <script src="https://unpkg.com/scrollreveal"></script>
 </head>
 <body class="stop-scrolling">
     <div id="container">
@@ -45,8 +44,8 @@
                 <span class="divider"> | </span>
                 <h2 class="menu">About Me</h2>
                 <span class="divider"> | </span>
-                <h3 class="menu">School Projects</h3>
-                <span class="divider"> | </span>
+                <!-- <h3 class="menu">School Project</h3> -->
+                <!-- <span class="divider"> | </span> -->
                 <!-- <h4 class="menu">Source Code</h3>
                 <span class="divider"> | </span> -->
                 <h5 class="menu">Contact</h3>
@@ -57,13 +56,24 @@
             <div id="aboutPage" class="page otherPages">
                 <div id="aboutPanel">
                     <span id="aboutTitle" class="title non_selectable">About Me</span>
-                    <div id="about">Hi, my name.... and ...,</div>
+                    <ul id="about">
+                        <li>My name is Armand Gonda and I'm a self-taught programmer.</li>
+                        <li>I've started programming at the age of 15 and been a fan of it since.</li>
+                        <li>I specialize in front-end web development.</li>
+                    </ul>
+                    <div id="skills">
+                        <span id="skills-text">Key skills: HTML5, JavaScript, CSS3 (+SASS), jQuery, Git</span>
+                        <img src="html-js-css.png" id="html-js-css" class="skills-img">
+                        <img src="jquery.png" id="jquery" class="skills-img">
+                        <img src="git.png" id="git" class="skills-img">
+                        <!-- <img src="github.png" id="github" class="skills-img"> -->
+                    </div>
                 </div>
             </div>
             <div id="schoolPage" class="page otherPages">
                 <div id="schoolBG">
                     <div id="schoolPanel">
-                        <span id="schoolTitle" class="title non_selectable">School Projects</span>
+                        <span id="schoolTitle" class="title non_selectable">School Project</span>
                         <div id="p1" class="schoolDivs">1. Triangle inequality
                             <span class="val_in">Enter value A:</span>
                             <span class="val_in">Enter value B:</span>
@@ -122,10 +132,10 @@
                             <div id="circle_sol2" class="sol"></div>
                         </div>
                         <div id="code" class="schoolDivs">
-                            <p>Click here to see the source code: </p>
+                            <p>Click here to see the source code of this page: </p>
                             <a id="js" class="code non_selectable" href="sc_work.js">JavaScript</a>
                             <a id="html" class="code non_selectable" href="https://pastebin.com/MAins3wr">HTML</a>
-                            <a id="css" class="code non_selectable" href="main.css">CSS</a>
+                            <a id="css" class="code non_selectable" href="https://pastebin.com/HSY2MSNK">CSS</a>
                         </div>
                     </div>
                 </div>
@@ -141,7 +151,22 @@
             <div id="contactPage" class="page otherPages">
                 <div id="contactPanel">
                     <span id="contactTitle" class="title non_selectable">Contact Information</span>
-                    <div id="contactEmail"></div>
+                    <table id="contactInfo">
+                        <tr>
+                            <td><img src="phone.png" id="phone" class="contact-img"></td>
+                            <td id="contactPhone">+36 20 332 32 15</td>
+                        </tr>
+                        <tr>
+                            <td><img src="email.png" id="email" class="contact-img"></td>
+                            <td id="contactEmail">gonda.armand@gmail.com</td>
+                        </tr>
+                        <tr>
+                            <td><img src="github.png" id="github" class="contact-img"></td>
+                            <td id="contactGitHub">
+                                <a id="gitLink" class="code non_selectable" href="https://github.com/Xenonyy">GitHub Page</a>
+                            </td>
+                        </tr>
+                    </table>
                 </div>
             </div>
         </div>
