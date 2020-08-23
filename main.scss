@@ -347,9 +347,9 @@ input[type=number] {
     position: relative;
     display: inline-grid;
     left: 2%;
-    color: black;
+    color: white;
     font-size: 22px;
-    // text-shadow: $primary-text-shadow;
+    text-shadow: $primary-text-shadow;
 }
 #skills-text {
     left: 15%;
