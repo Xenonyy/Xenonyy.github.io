@@ -9,12 +9,13 @@ const body = $("body"),
 // Setting up homepage and the loading screen	
 // $(window).on("load", async function () {	
 //     await loadAnimation(500, homepage);
-    // window.location.assign("https://xenonyy.github.io/home");
+//     window.location.assign("https://xenonyy.github.io/home");
 // });
+window.scrollTo(0,0); //Pages disappear until u start scrolling if you come back to the site without this.
 
 // Remove the scrollbar to wait for the loading animation
 $(window).on('load', function () {
-    setTimeout(() => { $('body').removeClass('stop-scrolling'); }, 1000);
+    setTimeout(() => { $('body').removeClass('stop-scrolling'); }, 750);
 });
 
 document.onreadystatechange = () => {	
@@ -29,7 +30,7 @@ document.onreadystatechange = () => {
     }
 }
 
-// Navigation in between menus
+// Navigation in between pages
 async function loadAnimation(ms, page) {
     pages.slideUp(ms);
     return new Promise(resolve => setTimeout(resolve, ms))
@@ -40,41 +41,46 @@ function changeBG(source) {
 }
 
 $("#home").click(async function () {
-    await loadAnimation(400, homepage);
-    changeBG('abstract.jpg');
-    // location.assign("https://xenonyy.github.io/home");
+    // await loadAnimation(400, homepage);
+    // changeBG('abstract.jpg');
+    window.scrollTo(0,0);
 });
 $("h2").click(async function () {
-    await loadAnimation(400, aboutpage);
-    changeBG('triangle.jpg');
-    $("#footer").hide();
-    $("#content-wrap").css("padding-bottom", "0");
-    // location.assign("https://xenonyy.github.io/projects");
+    // await loadAnimation(400, aboutpage);
+    // changeBG('triangle.jpg');
+    // $("#footer").hide();
+    // $("#content-wrap").css("padding-bottom", "0");
+    window.scrollTo(0,800);
 });
 $("h3").click(async function () {
-    await loadAnimation(400, schoolpage);
-    changeBG('js.jpg');
-    $("#schoolPanel").css("visibility", "visible");
-    body.css("overflow-y", "auto");
-    body.css("background-size", "cover");
-    $("#footer").hide();
-    $("#content-wrap").css("padding-bottom", "0");
-    // location.assign("https://xenonyy.github.io/school");
+    // await loadAnimation(400, schoolpage);
+    // changeBG('js.jpg');
+    // $("#schoolPanel").css("visibility", "visible");
+    // body.css("overflow-y", "auto");
+    // body.css("background-size", "cover");
+    // $("#footer").hide();
+    // $("#content-wrap").css("padding-bottom", "0");
+    window.scrollTo(0,1520);
+});
+$("h5").click(function () {
+    window.scrollTo(0,2200);
 });
 
 // Turning the website into a scrollable format
-$("#aboutPanel").css("visibility", "hidden");
-$("#schoolPanel").css("visibility", "hidden");
+$("#sourceCodePage").hide();
+$("#schoolPanel").hide();
+$(schoolpage).hide();
+$("#aboutPanel").hide();
+$("#contactPanel").hide();
+
 $(document).scroll(function() {
-    if ($(this).scrollTop() > 600 && $(this).scrollTop() < 1200) {
-        $('#aboutPanel').css("visibility", "visible");
-        $('#aboutPanel').fadeIn(1000);
-    } else if ($(this).scrollTop() > 1200) {
-        $('#schoolPanel').css("visibility", "visible");
-        $('#schoolPanel').fadeIn(1000);
+    if ($(this).scrollTop() > 400) {
+        $('#aboutPanel').fadeIn(800);
+    }
+    if ($(this).scrollTop() > 1000) {
+        $('#schoolPanel').fadeIn(800);
+    }
+    if ($(this).scrollTop() > 800) {
+        $('#contactPanel').fadeIn(800);
     }
 });
-
-
-
-$("#sourceCodePage").hide();
