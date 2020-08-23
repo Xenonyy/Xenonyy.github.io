@@ -1,6 +1,4 @@
 # Xenonyan.github.io
 
-A website to showcase the projects I've done, and to show my web developer skills.
-
-Mainly showcasing projects I've done for my IT classes, alongside with my own original personal projects!
-Soon more to come!
+A website I built from scratch to show my web developer skills.
+Plan to expand it more in the future with some personal projects!
