@@ -1,4 +1,8 @@
 @charset "UTF-8";
+@font-face {
+  font-family: Quicksand;
+  src: url(Quicksand_Book_Oblique.otf);
+}
 html, body {
   scroll-behavior: smooth;
 }
@@ -12,10 +16,12 @@ body {
   background-image: url(abstract.jpg);
   background-repeat: no-repeat;
   background-size: contain;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
-  font-weight: 400;
-  font-size: 15px;
-  margin: 0;
+  line-height: 2em;
+  letter-spacing: 0.25px;
+  font-weight: 300;
+  margin: 0 auto;
+  font-size: 100%;
+  font-family: Quicksand;
 }
 
 p {
@@ -50,10 +56,13 @@ p {
 
 #loadingPage {
   position: fixed;
-  height: 100%;
+  height: 100vh;
   width: 100%;
   background-color: slateblue;
   z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .loaderContainer {
@@ -61,17 +70,18 @@ p {
   width: 150px;
   height: 150px;
   position: absolute;
-  top: 42%;
-  left: 46%;
 }
 
 #loadText {
-  position: relative;
-  top: 115%;
-  left: 15%;
-  color: ghostwhite;
-  text-shadow: rgba(0, 0, 0, 0.6) 3px 3px;
-  font-size: 28px;
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: rgba(0, 0, 0, 0.6) 3px 2.4px;
+  font-size: 1.8rem;
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  margin: 13rem 0 0 1rem;
 }
 
 /*  CSS design by Vanlentin François.
@@ -187,32 +197,37 @@ p {
 /****************** HOME PAGE ******************/
 #homepage {
   background: linear-gradient(135deg, rgba(191, 35, 165, 0.4) 0%, rgba(0, 87, 137, 0.4) 100%);
-  height: 101vh;
+  height: 100vh;
 }
 
 #homeTitle {
-  padding-top: 15%;
-  font-size: 200px;
+  font-size: 10em;
   text-shadow: #b73785 5px 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  max-height: 51rem;
 }
 
 #home, .menu, .divider {
-  font-size: 25px;
-  font-weight: 200;
-  color: whitesmoke;
+  font-size: 1.6rem;
+  font-weight: 350;
+  line-height: 0.9em;
+  letter-spacing: 0.25px;
+  color: rgba(255, 255, 255, 0.9);
   text-shadow: black 3px 3px;
-  text-align: left;
-  margin: 0;
-  top: 0;
-  display: inline;
+  margin: 0 auto;
+  display: inline-flex;
+  justify-content: left;
   padding: 5px;
   position: relative;
 }
 
 .title {
-  font-size: 60px;
-  font-weight: 600;
-  color: whitesmoke;
+  font-size: 3rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.9);
   text-shadow: black 3px 3px;
   text-align: center;
   margin-bottom: 10px;
@@ -233,10 +248,14 @@ p {
   bottom: 0;
   background-color: rgba(25, 25, 25, 0.95);
   width: 100%;
-  height: 1.8rem;
-  padding-top: 8px;
-  text-align: -webkit-center;
+  height: 2.2rem;
+  padding-top: 2px;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
   color: mediumslateblue;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
 }
 
 .non_selectable {
@@ -401,56 +420,60 @@ input[type=number] {
 }
 
 #aboutPanel {
-  background: linear-gradient(135deg, rgba(191, 35, 165, 0.4) 0%, rgba(0, 87, 137, 0.4) 100%);
-  min-height: 50vh;
+  background: #0d1c2b;
+  height: 50vh;
 }
 
-#about, #skills-text {
-  height: 300px;
-  width: 500px;
-  position: relative;
-  display: inline-grid;
-  left: 2%;
-  color: black;
-  font-size: 22px;
+#aboutContainer {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: row;
+  gap: normal;
+  justify-content: center;
+  background-color: #0d202b;
+  border-color: #17323a;
+  border-style: solid;
+  border-width: 1px;
+  padding: 2rem;
+  margin: 5rem 15rem 0rem 15rem;
 }
 
-#skills-text {
-  left: 15%;
-  height: 120px;
+#about {
+  height: fit-content;
   width: fit-content;
-  display: list-item;
+  display: inline-block;
+  line-height: 1.5em;
+  letter-spacing: 0.25px;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 22px;
+  text-shadow: black 3px 3px;
+  background-color: #0d202b;
+  border-color: #17323a;
+  border-style: solid;
+  border-width: 1px;
+  padding: 10px 15px 10px 2.2rem;
 }
 
 #skills {
-  width: -webkit-fill-available;
-  display: inline-block;
-  margin-top: 100px;
-  inline-size: max-content;
+  background-color: #0d202b;
+  border-color: #17323a;
+  border-style: solid;
+  border-width: 1px;
+  margin-left: 3rem;
+  width: 25rem;
+  height: 18rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
-#html-js-css, .skills-img, .contact-img {
-  background-size: contain;
-  background-repeat: no-repeat;
-  height: 300px;
-  -ms-transform: scale(0.5, 0.5);
-  /* IE 9 */
-  -webkit-transform: scale(0.5, 0.5);
-  /* Safari */
-  transform: scale(0.5, 0.5);
-}
-
-.skills-img, .contact-img {
-  margin: -100px;
-  float: left;
-}
-
-#jquery, #git {
-  width: 400px;
-}
-
-#git {
-  margin-left: -50px;
+img {
+  width: 100%;
+  height: auto;
+  transform: scale(0.8);
 }
 
 #sourceCodePage {
@@ -486,38 +509,47 @@ input[type=number] {
 }
 
 #contactInfo {
-  margin-top: 3%;
-  width: 35%;
   background-color: rgba(154, 130, 228, 0.32);
-  left: 32%;
-  position: absolute;
-  height: 300px;
+  display: flex;
+  justify-content: flex-start;
+  align-content: flex-start;
+  margin: 5rem 40rem 0rem 40rem;
+}
+
+td {
+  height: 100px;
+  width: 100px;
 }
 
 #phone {
-  -ms-transform: scale(0.14, 0.14);
-  -webkit-transform: scale(0.14, 0.14);
-  transform: scale(0.14, 0.14);
+  -ms-transform: scale(0.4, 0.4);
+  -webkit-transform: scale(0.4, 0.4);
+  transform: scale(0.4, 0.4);
 }
 
 #email {
-  -ms-transform: scale(0.2, 0.2);
-  -webkit-transform: scale(0.2, 0.2);
-  transform: scale(0.2, 0.2);
+  -ms-transform: scale(0.6, 0.6);
+  -webkit-transform: scale(0.6, 0.6);
+  transform: scale(0.6, 0.6);
 }
 
 #github {
-  -ms-transform: scale(0.15, 0.15);
-  -webkit-transform: scale(0.15, 0.15);
-  transform: scale(0.15, 0.15);
+  -ms-transform: scale(0.5, 0.5);
+  -webkit-transform: scale(0.5, 0.5);
+  transform: scale(0.5, 0.5);
 }
 
 #contactEmail, #contactPhone, #contactGitHub, #gitLink {
-  color: black;
-  font-size: 20px;
-  text-shadow: #4e4e4e 2px 2px;
+  color: lightgray;
+  font-size: 1.3rem;
+  text-shadow: black 3px 3px;
   text-decoration: none;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  width: fit-content;
 }
 
 /*********SCROLLBAR*********/
