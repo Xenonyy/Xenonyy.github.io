@@ -18,9 +18,10 @@ $(window).on('load', function () {
     setTimeout(() => { $('body').removeClass('stop-scrolling'); }, 750);
 });
 
+// Loading page
 document.onreadystatechange = () => {	
     do { 	
-        loadPage.fadeIn("fast");	
+        loadPage.fadeIn("fast");
     } while (document.readyState === "loading" || document.readyState === "interactive");	
 
     if (document.readyState === "complete") {	
@@ -69,7 +70,7 @@ $("h5").click(function () {
 // Turning the website into a scrollable format
 $("#sourceCodePage").hide();
 $("#schoolPanel").hide();
-$(schoolpage).hide();
+schoolpage.hide();
 $("#aboutPanel").hide();
 $("#contactPanel").hide();
 
@@ -77,9 +78,9 @@ $(document).scroll(function() {
     if ($(this).scrollTop() > 400) {
         $('#aboutPanel').fadeIn(800);
     }
-    if ($(this).scrollTop() > 1000) {
-        $('#schoolPanel').fadeIn(800);
-    }
+    // if ($(this).scrollTop() > 1000) {
+    //     $('#schoolPanel').fadeIn(800);
+    // }
     if ($(this).scrollTop() > 800) {
         $('#contactPanel').fadeIn(800);
     }
