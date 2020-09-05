@@ -76,7 +76,7 @@ $("#sourceCodePage").hide();
 $("#schoolPanel").hide();
 schoolpage.hide();
 $("#aboutPanel").hide();
-$("#contactPanel").hide();
+// $("#contactPanel").hide();
 
 $(document).scroll(function() {
     if ($(this).scrollTop() > 100) {
@@ -85,7 +85,7 @@ $(document).scroll(function() {
     // if ($(this).scrollTop() > 1000) {
     //     $('#schoolPanel').fadeIn(800);
     // }
-    if ($(this).scrollTop() > 600) {
-        $('#contactPanel').fadeIn(800);
-    }
+    // if ($(this).scrollTop() > 600) {
+    //     $('#contactPanel').fadeIn(800);
+    // }
 });
