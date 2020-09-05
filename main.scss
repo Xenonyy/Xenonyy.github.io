@@ -174,7 +174,7 @@ p {
     flex-direction: column;
     justify-content: center;
     height: 100%;
-    max-height: 51rem;
+    max-height: 52rem;
 }
 #home, .menu, .divider {
     font-size: 1.6rem;
@@ -350,7 +350,7 @@ input[type=number] {
 
 /************************** OTHER PAGES ************************/
 #aboutPage {
-    height: 50vh;
+    height: 100vh;
     background: black;
 }
 #aboutTitle {
@@ -361,12 +361,13 @@ input[type=number] {
 #aboutPanel {
     // background: $gradient;
     background: hsl(210, 55%, 11%);
-    height: 50vh;
+    height: 100vh;
 }
 #aboutContainer {
     align-items: flex-start;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    flex-flow: wrap;
     gap: normal;
     justify-content: center;
     background-color: #0d202b;
@@ -375,25 +376,29 @@ input[type=number] {
     border-width: 1px;
     padding: 2rem;
     margin: 5rem 15rem 0rem 15rem;
+    width: fit-content;
 }
 #about {
     height: fit-content;
     width: fit-content;
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
     line-height: 1.5em;
     letter-spacing: 0.25px;
     font-weight: 300;
     color: $white;
     font-size: 22px;
     text-shadow: $primary-text-shadow;
-    background-color: #0d202b;
+    background-color: hsl(202, 51%, 13%);
     border-color: #17323a;
     border-style: solid;
     border-width: 1px;
-    padding: 10px 15px 10px 2.2rem;
+    // padding: 10px 15px 10px 2.2rem;
+    padding: 30px 15px 27px 3rem;
+    margin-top: 0;
 }
 #skills {
-    background-color: #0d202b;
+    background-color: hsl(202, 51%, 13%);
     border-color: #17323a;
     border-style: solid;
     border-width: 1px;
@@ -403,7 +408,6 @@ input[type=number] {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    flex-wrap: wrap;
     align-items: center;
 
 }
@@ -451,23 +455,25 @@ img {
 }
 #contactPage {
     min-height: 50vh;
-    background: black;
+    // background: black;
 }
 #contactPanel {
-    background: $gradient;
-    height: 50vh;
+    // background: $gradient;
 }
 #contactTitle {
-    position: relative;
-    top: 30px;
+    margin-top: 5rem;
     font-size: 50px;
 }
 #contactInfo {
-    background-color: rgba(154, 130, 228, 0.32);
+    // background-color: rgba(154, 130, 228, 0.32);
+    background-color: hsl(202, 51%, 13%);
+    border-color: #17323a;
+    border-style: solid;
+    border-width: 1px;
     display: flex;
     justify-content: flex-start;
-    align-content: flex-start;
-    margin: 5rem 40rem 0rem 40rem;
+    align-content: center;
+    margin: 3rem 0 0 0;
 }
 td {
     height: 100px;
@@ -635,4 +641,22 @@ td {
     .sol {
         width: 280px;
     }
+}
+
+// Remove BG image if screen is smaller than x
+@media screen and (max-width: 1200px) {
+    body {
+        background: black;
+    }
+}
+@media screen and (max-height: 480px) {
+    body {
+        background: black;
+    }
+}
+
+// Title animation
+.fadeInLeft {
+    // animation-iteration-count: infinite;
+    animation-delay: 0.7s;
 }
