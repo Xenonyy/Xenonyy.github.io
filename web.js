@@ -14,22 +14,26 @@ const body = $("body"),
 window.scrollTo(0,0); //Pages disappear until u start scrolling if you come back to the site without this.
 
 // Remove the scrollbar to wait for the loading animation
-$(window).on('load', function () {
-    setTimeout(() => { $('body').removeClass('stop-scrolling'); }, 750);
-});
+// $(window).on('load', function () {
+//     setTimeout(() => { $('body').removeClass('stop-scrolling'); }, 750);
+// });
+homepage.hide();
+loadPage.hide();
+body.removeClass("stop-scrolling");
+homepage.fadeIn(1500);
 
 // Loading page
-document.onreadystatechange = () => {	
-    do { 	
-        loadPage.fadeIn("fast");
-    } while (document.readyState === "loading" || document.readyState === "interactive");	
+// document.onreadystatechange = () => {	
+//     do { 	
+//         loadPage.fadeIn("fast");
+//     } while (document.readyState === "loading" || document.readyState === "interactive");	
 
-    if (document.readyState === "complete") {	
-        setTimeout(() => { loadPage.fadeOut("slow"); }, 500);	
-    } else {	
-        loadPage.fadeIn("fast");
-    }
-}
+//     if (document.readyState === "complete") {	
+//         setTimeout(() => { loadPage.fadeOut("slow"); }, 400);
+//     } else {	
+//         loadPage.fadeIn("fast");
+//     }
+// }
 
 // Navigation in between pages
 async function loadAnimation(ms, page) {
@@ -75,13 +79,13 @@ $("#aboutPanel").hide();
 $("#contactPanel").hide();
 
 $(document).scroll(function() {
-    if ($(this).scrollTop() > 400) {
+    if ($(this).scrollTop() > 100) {
         $('#aboutPanel').fadeIn(800);
     }
     // if ($(this).scrollTop() > 1000) {
     //     $('#schoolPanel').fadeIn(800);
     // }
-    if ($(this).scrollTop() > 800) {
+    if ($(this).scrollTop() > 600) {
         $('#contactPanel').fadeIn(800);
     }
 });
