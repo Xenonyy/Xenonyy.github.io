@@ -9,6 +9,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script defer src="web.js"></script>
     <script defer src="sc_work.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
 </head>
 <body class="stop-scrolling">
     <div id="container">
@@ -51,7 +52,7 @@
                 <h5 class="menu">Contact</h3>
             </header>
             <div id="homepage" class="page">
-                <span id="homeTitle" class="title non_selectable">Xenon</span>
+                <span id="homeTitle" class="title non_selectable animated fadeInLeft">Xenon</span>
             </div>
             <div id="aboutPage" class="page otherPages">
                 <div id="aboutPanel">
@@ -69,10 +70,31 @@
                             <img src="git.png" id="git" class="skills-img"> -->
                             <img src="skills.png" id="skillsPicture">
                         </div>
+                        <div id="contactPage" class="page otherPages">
+                            <div id="contactPanel">
+                                <span id="contactTitle" class="title non_selectable">Contact Information</span>
+                                <table id="contactInfo">
+                                    <tr>
+                                        <td><img src="phone.png" id="phone" class="contact-img"></td>
+                                        <td id="contactPhone">+36 20 332 32 15</td>
+                                    </tr>
+                                    <tr>
+                                        <td><img src="email.png" id="email" class="contact-img"></td>
+                                        <td id="contactEmail">gonda.armand@gmail.com</td>
+                                    </tr>
+                                    <tr>
+                                        <td><img src="github.png" id="github" class="contact-img"></td>
+                                        <td id="contactGitHub">
+                                            <a id="gitLink" class="code non_selectable" href="https://github.com/Xenonyy">GitHub Page</a>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div id="schoolPage" class="page otherPages">
+            <!-- <div id="schoolPage" class="page otherPages">
                 <div id="schoolBG">
                     <div id="schoolPanel">
                         <span id="schoolTitle" class="title non_selectable">School Project</span>
@@ -141,36 +163,16 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div id="sourceCodePage" class="page otherPages">
+            </div> -->
+            <!-- <div id="sourceCodePage" class="page otherPages">
                 <div id="sourceCodePanel">
                     <span id="sourceText" class="title non_selectable">Source Code</span>
                     <div id="jsPanel"></div>
                     <div id="htmlPanel"></div>
                     <div id="cssPanel"></div>
                 </div>
-            </div>
-            <div id="contactPage" class="page otherPages">
-                <div id="contactPanel">
-                    <span id="contactTitle" class="title non_selectable">Contact Information</span>
-                    <table id="contactInfo">
-                        <tr>
-                            <td><img src="phone.png" id="phone" class="contact-img"></td>
-                            <td id="contactPhone">+36 20 332 32 15</td>
-                        </tr>
-                        <tr>
-                            <td><img src="email.png" id="email" class="contact-img"></td>
-                            <td id="contactEmail">gonda.armand@gmail.com</td>
-                        </tr>
-                        <tr>
-                            <td><img src="github.png" id="github" class="contact-img"></td>
-                            <td id="contactGitHub">
-                                <a id="gitLink" class="code non_selectable" href="https://github.com/Xenonyy">GitHub Page</a>
-                            </td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
+            </div> -->
+
         </div>
             <footer id="footer">&copy; 2020 Gonda Armand</footer>
     </div>
