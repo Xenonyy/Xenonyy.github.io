@@ -1,9 +1,10 @@
 //////////////////////// Website functionality ///////////////////////////
 const body = $("body"),
-    homepage = $("#homepage"),
+    homepage = $("#homePage"),
     schoolpage = $("#schoolPage"),
     aboutpage = $("#aboutPage"),
-    loadPage = $("#loadingPage"),
+    loadpage = $("#loadingPage"),
+    contactpage = $("contactPage");
     pages = $(".page");
 
 // Setting up homepage and the loading screen	
@@ -18,20 +19,20 @@ window.scrollTo(0,0); //Pages disappear until u start scrolling if you come back
 //     setTimeout(() => { $('body').removeClass('stop-scrolling'); }, 750);
 // });
 homepage.hide();
-loadPage.hide();
+loadpage.hide();
 body.removeClass("stop-scrolling");
 homepage.fadeIn(1500);
 
 // Loading page
 // document.onreadystatechange = () => {	
 //     do { 	
-//         loadPage.fadeIn("fast");
+//         loadpage.fadeIn("fast");
 //     } while (document.readyState === "loading" || document.readyState === "interactive");	
 
 //     if (document.readyState === "complete") {	
-//         setTimeout(() => { loadPage.fadeOut("slow"); }, 400);
+//         setTimeout(() => { loadpage.fadeOut("slow"); }, 400);
 //     } else {	
-//         loadPage.fadeIn("fast");
+//         loadpage.fadeIn("fast");
 //     }
 // }
 
@@ -45,19 +46,19 @@ function changeBG(source) {
     document.body.style.backgroundImage = "url(" + source + ")";	
 }
 
-$("#home").click(async function () {
+// $("#home").click(async function () {
     // await loadAnimation(400, homepage);
     // changeBG('abstract.jpg');
-    window.scrollTo(0,0);
-});
-$("h2").click(async function () {
+    // window.scrollTo(0,0);
+// });
+// $("h2").click(async function () {
     // await loadAnimation(400, aboutpage);
     // changeBG('triangle.jpg');
     // $("#footer").hide();
     // $("#content-wrap").css("padding-bottom", "0");
-    window.scrollTo(0,800);
-});
-$("h3").click(async function () {
+    // window.scrollTo(0,800);
+// });
+// $("h3").click(async function () {
     // await loadAnimation(400, schoolpage);
     // changeBG('js.jpg');
     // $("#schoolPanel").css("visibility", "visible");
@@ -65,27 +66,27 @@ $("h3").click(async function () {
     // body.css("background-size", "cover");
     // $("#footer").hide();
     // $("#content-wrap").css("padding-bottom", "0");
-    window.scrollTo(0,1520);
-});
-$("h5").click(function () {
-    window.scrollTo(0,2200);
-});
+//     window.scrollTo(0,1520);
+// });
+
 
 // Turning the website into a scrollable format
-$("#sourceCodePage").hide();
-$("#schoolPanel").hide();
-schoolpage.hide();
+// $("#sourceCodePage").hide();
+// $("#schoolPanel").hide();
+// schoolpage.hide();
 $("#aboutPanel").hide();
-// $("#contactPanel").hide();
 
 $(document).scroll(function() {
     if ($(this).scrollTop() > 100) {
         $('#aboutPanel').fadeIn(800);
     }
-    // if ($(this).scrollTop() > 1000) {
-    //     $('#schoolPanel').fadeIn(800);
-    // }
-    // if ($(this).scrollTop() > 600) {
-    //     $('#contactPanel').fadeIn(800);
-    // }
+});
+$("#home").on("click", function () {
+    document.getElementById("homePage").scrollIntoView({behavior: "smooth", block: "start", inline: "start"});
+});
+$("h2").on("click", function () {
+    document.getElementById("aboutPage").scrollIntoView({behavior: "smooth", block: "start", inline: "start"});
+});
+$("h5").on("click", function () {
+    document.getElementById("contactPage").scrollIntoView({behavior: "smooth", block: "center", inline: "center"});
 });
