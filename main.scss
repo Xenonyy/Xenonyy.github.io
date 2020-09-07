@@ -164,7 +164,7 @@ p {
 
 
 /****************** HOME PAGE ******************/
-#homepage {
+#homePage {
     background: $gradient;
     height: -webkit-fill-available;
     width: -webkit-fill-available;
@@ -357,10 +357,11 @@ input[type=number] {
     width: -webkit-fill-available;
     display: inline-table;
     background: black;
+    scroll-margin-top: 3.7em;
 }
 #aboutTitle {
     position: relative;
-    top: 30px;
+    top: 1em;
 }
 #aboutPanel {
     // background: $gradient;
@@ -653,7 +654,7 @@ td {
 }
 
 // Mobile support
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1480px) {
     body {background: black;}
     html {font-size: 0.6rem;}
     td {width: 3em; height: 3em;}
@@ -669,9 +670,17 @@ td {
     #aboutPage {height: -webkit-fill-available;}
     #aboutPanel {padding-bottom: 2em;}
 }
+@media screen and (max-width: 1820px) {
+    html {font-size: 0.8rem;}
+}
+@media screen and (max-height: 950px) {
+    html {font-size: 0.8rem;}
+}
 
-// Title animation
-.fadeInLeft {
-    // animation-iteration-count: infinite;
+// Animate.css animations
+#homeTitle {
     animation-delay: 0.7s;
+}
+#aboutContainer {
+    animation-duration: 1.5s;
 }
