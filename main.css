@@ -191,7 +191,7 @@ p {
   }
 }
 /****************** HOME PAGE ******************/
-#homepage {
+#homePage {
   background: linear-gradient(135deg, rgba(191, 35, 165, 0.4) 0%, rgba(0, 87, 137, 0.4) 100%);
   height: -webkit-fill-available;
   width: -webkit-fill-available;
@@ -411,11 +411,12 @@ input[type=number] {
   width: -webkit-fill-available;
   display: inline-table;
   background: black;
+  scroll-margin-top: 3.7em;
 }
 
 #aboutTitle {
   position: relative;
-  top: 30px;
+  top: 1em;
 }
 
 #aboutPanel {
@@ -668,7 +669,17 @@ td {
     width: 280px;
   }
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1820px) {
+  html {
+    font-size: 0.8rem;
+  }
+}
+@media screen and (max-height: 950px) {
+  html {
+    font-size: 0.8rem;
+  }
+}
+@media screen and (max-width: 1480px) {
   body {
     background: black;
   }
@@ -720,8 +731,12 @@ td {
     padding-bottom: 2em;
   }
 }
-.fadeInLeft {
+#homeTitle {
   animation-delay: 0.7s;
+}
+
+#aboutContainer {
+  animation-duration: 1.5s;
 }
 
 /*# sourceMappingURL=main.css.map */
