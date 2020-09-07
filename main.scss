@@ -653,7 +653,13 @@ td {
     }
 }
 
-// Mobile support
+// Support for different screen sizes
+@media screen and (max-width: 1820px) {
+    html {font-size: 0.8rem;}
+}
+@media screen and (max-height: 950px) {
+    html {font-size: 0.8rem;}
+}
 @media screen and (max-width: 1480px) {
     body {background: black;}
     html {font-size: 0.6rem;}
@@ -669,12 +675,6 @@ td {
     #aboutContainer {margin: 5em 5em 0 5em;}
     #aboutPage {height: -webkit-fill-available;}
     #aboutPanel {padding-bottom: 2em;}
-}
-@media screen and (max-width: 1820px) {
-    html {font-size: 0.8rem;}
-}
-@media screen and (max-height: 950px) {
-    html {font-size: 0.8rem;}
 }
 
 // Animate.css animations

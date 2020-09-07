@@ -669,6 +669,16 @@ td {
     width: 280px;
   }
 }
+@media screen and (max-width: 1820px) {
+  html {
+    font-size: 0.8rem;
+  }
+}
+@media screen and (max-height: 950px) {
+  html {
+    font-size: 0.8rem;
+  }
+}
 @media screen and (max-width: 1480px) {
   body {
     background: black;
@@ -719,16 +729,6 @@ td {
 
   #aboutPanel {
     padding-bottom: 2em;
-  }
-}
-@media screen and (max-width: 1820px) {
-  html {
-    font-size: 0.8rem;
-  }
-}
-@media screen and (max-height: 950px) {
-  html {
-    font-size: 0.8rem;
   }
 }
 #homeTitle {
