@@ -5,6 +5,8 @@
 }
 html, body {
   scroll-behavior: smooth;
+  font-size: 100%;
+  font-family: Quicksand;
 }
 
 .stop-scrolling {
@@ -20,8 +22,6 @@ body {
   letter-spacing: 0.25px;
   font-weight: 300;
   margin: 0 auto;
-  font-size: 100%;
-  font-family: Quicksand;
 }
 
 p {
@@ -29,13 +29,9 @@ p {
   margin-bottom: 8px;
 }
 
-#container {
+#content-wrap {
   position: relative;
   min-height: 100vh;
-}
-
-#content-wrap {
-  padding-bottom: 2.3rem;
 }
 
 /******* PRE-LOADING IMAGES *******/
@@ -197,11 +193,13 @@ p {
 /****************** HOME PAGE ******************/
 #homepage {
   background: linear-gradient(135deg, rgba(191, 35, 165, 0.4) 0%, rgba(0, 87, 137, 0.4) 100%);
-  height: 100vh;
+  height: -webkit-fill-available;
+  width: -webkit-fill-available;
+  display: inline-table;
 }
 
 #homeTitle {
-  font-size: 10em;
+  font-size: 10rem;
   text-shadow: #b73785 5px 5px;
   display: flex;
   flex-direction: column;
@@ -211,7 +209,7 @@ p {
 }
 
 #home, .menu, .divider {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   font-weight: 350;
   line-height: 0.9em;
   letter-spacing: 0.25px;
@@ -244,7 +242,7 @@ p {
 }
 
 #footer {
-  position: absolute;
+  position: relative;
   bottom: 0;
   background-color: rgba(25, 25, 25, 0.95);
   width: 100%;
@@ -410,18 +408,19 @@ input[type=number] {
 /************************** OTHER PAGES ************************/
 #aboutPage {
   height: 100vh;
+  width: -webkit-fill-available;
+  display: inline-table;
   background: black;
 }
 
 #aboutTitle {
   position: relative;
   top: 30px;
-  font-size: 50px;
 }
 
 #aboutPanel {
   background: #0d1c2b;
-  height: 100vh;
+  height: inherit;
 }
 
 #aboutContainer {
@@ -435,9 +434,10 @@ input[type=number] {
   border-color: #17323a;
   border-style: solid;
   border-width: 1px;
-  padding: 2rem;
-  margin: 5rem 15rem 0rem 15rem;
+  padding: 1.5em;
+  margin: 4em 10em 0 10em;
   width: fit-content;
+  font-size: 1.3rem;
 }
 
 #about {
@@ -449,14 +449,13 @@ input[type=number] {
   letter-spacing: 0.25px;
   font-weight: 300;
   color: rgba(255, 255, 255, 0.9);
-  font-size: 22px;
   text-shadow: black 3px 3px;
   background-color: #102632;
   border-color: #17323a;
   border-style: solid;
   border-width: 1px;
-  padding: 30px 15px 27px 3rem;
-  margin-top: 0;
+  padding: 1em 1em 1em 2em;
+  margin: 0 3em 1em 0;
 }
 
 #skills {
@@ -464,9 +463,8 @@ input[type=number] {
   border-color: #17323a;
   border-style: solid;
   border-width: 1px;
-  margin-left: 3rem;
-  width: 25rem;
-  height: 18rem;
+  width: 20em;
+  height: 15em;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -477,6 +475,15 @@ img {
   width: 100%;
   height: auto;
   transform: scale(0.8);
+}
+
+hr {
+  width: 75%;
+  margin-top: 2em;
+  border-radius: 2px;
+  border: #17323a;
+  background-color: #17323a;
+  height: 0.1em;
 }
 
 #sourceCodePage {
@@ -495,13 +502,8 @@ img {
   font-size: 50px;
 }
 
-#contactPage {
-  min-height: 50vh;
-}
-
 #contactTitle {
-  margin-top: 5rem;
-  font-size: 50px;
+  margin-top: 2rem;
 }
 
 #contactInfo {
@@ -512,12 +514,12 @@ img {
   display: flex;
   justify-content: flex-start;
   align-content: center;
-  margin: 3rem 0 0 0;
+  margin: 2rem 0 0 0;
 }
 
 td {
-  height: 100px;
-  width: 100px;
+  height: 4em;
+  width: 4em;
 }
 
 #phone {
@@ -540,7 +542,6 @@ td {
 
 #contactEmail, #contactPhone, #contactGitHub, #gitLink {
   color: lightgray;
-  font-size: 1.3rem;
   text-shadow: black 3px 3px;
   text-decoration: none;
   position: relative;
@@ -600,44 +601,6 @@ td {
 }
 /************************** MOBILE SUPPORT ************************/
 @media screen and (max-width: 520px) {
-  body {
-    background-size: cover;
-    background-position-x: center;
-  }
-
-  .loaderContainer {
-    top: 35%;
-    left: 35%;
-    width: 100px;
-    height: 100px;
-  }
-
-  #loadText {
-    font-size: 20px;
-  }
-
-  #homeTitle {
-    font-size: 60px;
-  }
-
-  #home, .menu, .divider {
-    font-size: initial;
-  }
-
-  .title {
-    font-size: 38px;
-    padding-top: 10px;
-  }
-
-  #content-wrap {
-    padding-bottom: 1.7rem;
-  }
-
-  #footer {
-    font-size: 10px;
-    height: 1.2rem;
-  }
-
   #code {
     left: 8%;
     padding: 10px;
@@ -709,10 +672,52 @@ td {
   body {
     background: black;
   }
+
+  html {
+    font-size: 0.6rem;
+  }
+
+  td {
+    width: 3em;
+    height: 3em;
+  }
+
+  #aboutContainer {
+    margin: 5em 5em 0 5em;
+  }
+
+  #aboutPage {
+    height: -webkit-fill-available;
+  }
+
+  #aboutPanel {
+    padding-bottom: 2em;
+  }
 }
 @media screen and (max-height: 480px) {
   body {
     background: black;
+  }
+
+  html {
+    font-size: 0.6rem;
+  }
+
+  td {
+    width: 3em;
+    height: 3em;
+  }
+
+  #aboutContainer {
+    margin: 5em 5em 0 5em;
+  }
+
+  #aboutPage {
+    height: -webkit-fill-available;
+  }
+
+  #aboutPanel {
+    padding-bottom: 2em;
   }
 }
 .fadeInLeft {
