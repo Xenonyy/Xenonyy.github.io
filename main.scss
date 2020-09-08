@@ -169,6 +169,7 @@ p {
     height: -webkit-fill-available;
     width: -webkit-fill-available;
     display: inline-table;
+    scroll-margin: 5em;
 }
 #homeTitle {
     font-size: 10rem; //scales with 100%(16px) value from the html element

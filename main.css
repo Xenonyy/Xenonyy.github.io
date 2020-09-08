@@ -196,6 +196,7 @@ p {
   height: -webkit-fill-available;
   width: -webkit-fill-available;
   display: inline-table;
+  scroll-margin: 5em;
 }
 
 #homeTitle {
