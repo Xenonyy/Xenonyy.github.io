@@ -1,4 +1,4 @@
-$primary-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+$secondary-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
 $primary-text-shadow: rgb(0, 0, 0) 3px 3px;
 $gradient: linear-gradient(135deg, rgba(191, 35, 165, 0.4) 0%, rgba(0, 87, 137, 0.4) 100%);
 $white: hsla(0, 0%, 100%, 0.9);
@@ -45,7 +45,7 @@ body {
     background-image: url(abstract.jpg);
     background-repeat: no-repeat;
     background-size: contain;
-    // font-family: $primary-font;
+    // font-family: $secondary-font;
     line-height: 2em;
     letter-spacing: 0.25px;
     font-weight: 300;
@@ -115,7 +115,7 @@ body {
     display: flex;
     flex-direction: column;
     color: mediumslateblue;
-    font-family: $primary-font;
+    font-family: $secondary-font;
 }
 .non_selectable {
     user-select: none;
@@ -304,7 +304,7 @@ hr {
 }
 @media only screen and (min-width: 200px) and (max-width: 499px) {
     body {background: black;}
-    html {font-size: 0.6rem; line-height: 1em;}
+    html {font-family: $secondary-font; font-size: 0.6rem; line-height: 1em;}
     #homeTitle {font-size: 5rem}
     #aboutContainer {margin: 5em 1em 0 1em;}
     #aboutPage {height: 50vh;}

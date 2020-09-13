@@ -374,6 +374,7 @@ hr {
   }
 
   html {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
     font-size: 0.6rem;
     line-height: 1em;
   }
