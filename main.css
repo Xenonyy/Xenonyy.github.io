@@ -192,7 +192,7 @@ body {
   border-style: solid;
   border-width: 1px;
   padding: 1.5em;
-  margin: 4em 10em 1em 10em;
+  margin: 4em 12em 1em 12em;
   font-size: 1.3rem;
 }
 
@@ -361,7 +361,7 @@ hr {
   }
 
   #aboutPage {
-    height: 50vh;
+    height: 60vh;
   }
 
   #aboutPanel {
@@ -381,6 +381,7 @@ hr {
 
   #homeTitle {
     font-size: 5rem;
+    text-shadow: #b73785 3px 2px;
   }
 
   #aboutContainer {
@@ -388,7 +389,7 @@ hr {
   }
 
   #aboutPage {
-    height: 50vh;
+    height: 60vh;
   }
 
   #aboutPanel {
