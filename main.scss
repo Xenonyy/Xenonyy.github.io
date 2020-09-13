@@ -242,6 +242,9 @@ hr {
     line-height: 2em;
     margin: 2em 0em 1em 5em;
 }
+#contactPhone {
+    margin-top: 1em;
+}
 
 /********* SCROLLBAR *********/
 ::-webkit-scrollbar-thumb {
@@ -295,7 +298,6 @@ hr {
 @media only screen and (min-width: 500px) and (max-width: 1650px) {
     body {background: black;}
     html {font-size: 0.6rem; line-height: 1.2em;}
-    .contact-img {width: 3em; height: 3em;}
     #aboutContainer {margin: 5em 5em 0 5em;}
     #aboutPage {height: 50vh;}
     #aboutPanel {padding-bottom: 2em;}
@@ -304,7 +306,6 @@ hr {
     body {background: black;}
     html {font-size: 0.6rem; line-height: 1em;}
     #homeTitle {font-size: 5rem}
-    .contact-img {width: 3em; height: 3em;}
     #aboutContainer {margin: 5em 1em 0 1em;}
     #aboutPage {height: 50vh;}
     #aboutPanel {padding-bottom: 2em;}

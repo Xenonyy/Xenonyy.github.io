@@ -294,6 +294,10 @@ hr {
   margin: 2em 0em 1em 5em;
 }
 
+#contactPhone {
+  margin-top: 1em;
+}
+
 /********* SCROLLBAR *********/
 ::-webkit-scrollbar-thumb {
   background: #a54077;
@@ -352,11 +356,6 @@ hr {
     line-height: 1.2em;
   }
 
-  .contact-img {
-    width: 3em;
-    height: 3em;
-  }
-
   #aboutContainer {
     margin: 5em 5em 0 5em;
   }
@@ -381,11 +380,6 @@ hr {
 
   #homeTitle {
     font-size: 5rem;
-  }
-
-  .contact-img {
-    width: 3em;
-    height: 3em;
   }
 
   #aboutContainer {
