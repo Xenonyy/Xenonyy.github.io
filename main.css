@@ -342,7 +342,7 @@ hr {
   }
 }
 /*************************** Support for different screen sizes *********************************/
-@media only screen and (min-width: 270px) and (max-width: 1650px) {
+@media only screen and (min-width: 500px) and (max-width: 1650px) {
   body {
     background: black;
   }
@@ -352,13 +352,44 @@ hr {
     line-height: 1.2em;
   }
 
-  td {
+  .contact-img {
     width: 3em;
     height: 3em;
   }
 
   #aboutContainer {
     margin: 5em 5em 0 5em;
+  }
+
+  #aboutPage {
+    height: 50vh;
+  }
+
+  #aboutPanel {
+    padding-bottom: 2em;
+  }
+}
+@media only screen and (min-width: 200px) and (max-width: 499px) {
+  body {
+    background: black;
+  }
+
+  html {
+    font-size: 0.6rem;
+    line-height: 1em;
+  }
+
+  #homeTitle {
+    font-size: 5rem;
+  }
+
+  .contact-img {
+    width: 3em;
+    height: 3em;
+  }
+
+  #aboutContainer {
+    margin: 5em 1em 0 1em;
   }
 
   #aboutPage {
