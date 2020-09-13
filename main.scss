@@ -6,6 +6,7 @@ $white: hsla(0, 0%, 100%, 0.9);
     font-family: Quicksand;
     src: url(Quicksand_Book_Oblique.otf);
 }
+// 12 column responsive grid layout
 * {
     box-sizing: border-box;
 }
@@ -70,8 +71,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 100%;
-    max-height: 52rem;
+    height: 85%;
 }
 #home, .menu, .divider {
     font-size: 1.5rem;
@@ -124,9 +124,9 @@ body {
 
 /************************** OTHER PAGES ************************/
 #aboutPage {
-    height: 100vh;
+    height: 90vh;
     width: -webkit-fill-available;
-    display: inline-table;
+    display: block;
     background: black;
     scroll-margin-top: 3.7em;
 }
@@ -151,13 +151,10 @@ body {
     border-style: solid;
     border-width: 1px;
     padding: 1.5em;
-    margin: 4em 10em 0 10em;
-    width: fit-content;
+    margin: 4em 10em 1em 10em;
     font-size: 1.3rem;
 }
 #about {
-    height: fit-content;
-    width: fit-content;
     display: flex;
     flex-direction: column;
     line-height: 1.5em;
@@ -170,7 +167,7 @@ body {
     border-style: solid;
     border-width: 1px;
     padding: 1em 1em 1em 2em;
-    margin: 0 3em 1em 0;
+    margin: 0 1em 2em 1em;
 }
 #skills {
     background-color: hsl(202, 51%, 13%);
@@ -191,20 +188,13 @@ img {
     transform: scale(0.8);
 }
 hr {
-    width: 75%;
+    width: 82%;
     margin-top: 2em;
     border-radius: 2px;
     border: #17323a;
     background-color: #17323a;
     height: 0.1em;
 }
-// #contactPage {
-//     height: 50vh;
-//     background: black;
-// }
-// #contactPanel {
-//     background: $gradient;
-// }
 #contactTitle {
     margin-top: 2rem;
 }
@@ -214,14 +204,7 @@ hr {
     border-color: #17323a;
     border-style: solid;
     border-width: 1px;
-    display: flex;
-    justify-content: flex-start;
-    align-content: center;
     margin: 2rem 0 0 0;
-}
-td {
-    height: 4em;
-    width: 4em;
 }
 #phone {
     -ms-transform: scale(0.4, 0.4);
@@ -243,13 +226,22 @@ td {
     text-shadow: $primary-text-shadow;
     text-decoration: none;
     position: relative; // For gitlink to have proper hover animation
+}
+.contact-img {
+    height: 4em;
+    width: 4em;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-content: center;
-    width: fit-content;
+    float: left;
+    clear: both;
+    content: "";
 }
-
+.cell {
+    display: flex;
+    flex-direction: row;
+    line-height: 2em;
+    margin: 2em 0em 1em 5em;
+}
 
 /********* SCROLLBAR *********/
 ::-webkit-scrollbar-thumb {
@@ -300,12 +292,12 @@ td {
 
 
 /*************************** Support for different screen sizes *********************************/
-@media screen and (min-width: 300px) and (max-width: 1650px) {
+@media only screen and (min-width: 270px) and (max-width: 1650px) {
     body {background: black;}
     html {font-size: 0.6rem; line-height: 1.2em;}
     td {width: 3em; height: 3em;}
     #aboutContainer {margin: 5em 5em 0 5em;}
-    #aboutPage {height: -webkit-fill-available;}
+    #aboutPage {height: 50vh;}
     #aboutPanel {padding-bottom: 2em;}
 }
 // @media only screen and (max-width: 1820px) {

@@ -106,8 +106,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 100%;
-  max-height: 52rem;
+  height: 85%;
 }
 
 #home, .menu, .divider {
@@ -164,9 +163,9 @@ body {
 
 /************************** OTHER PAGES ************************/
 #aboutPage {
-  height: 100vh;
+  height: 90vh;
   width: -webkit-fill-available;
-  display: inline-table;
+  display: block;
   background: black;
   scroll-margin-top: 3.7em;
 }
@@ -193,14 +192,11 @@ body {
   border-style: solid;
   border-width: 1px;
   padding: 1.5em;
-  margin: 4em 10em 0 10em;
-  width: fit-content;
+  margin: 4em 10em 1em 10em;
   font-size: 1.3rem;
 }
 
 #about {
-  height: fit-content;
-  width: fit-content;
   display: flex;
   flex-direction: column;
   line-height: 1.5em;
@@ -213,7 +209,7 @@ body {
   border-style: solid;
   border-width: 1px;
   padding: 1em 1em 1em 2em;
-  margin: 0 3em 1em 0;
+  margin: 0 1em 2em 1em;
 }
 
 #skills {
@@ -236,7 +232,7 @@ img {
 }
 
 hr {
-  width: 75%;
+  width: 82%;
   margin-top: 2em;
   border-radius: 2px;
   border: #17323a;
@@ -253,15 +249,7 @@ hr {
   border-color: #17323a;
   border-style: solid;
   border-width: 1px;
-  display: flex;
-  justify-content: flex-start;
-  align-content: center;
   margin: 2rem 0 0 0;
-}
-
-td {
-  height: 4em;
-  width: 4em;
 }
 
 #phone {
@@ -287,11 +275,23 @@ td {
   text-shadow: black 3px 3px;
   text-decoration: none;
   position: relative;
+}
+
+.contact-img {
+  height: 4em;
+  width: 4em;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-content: center;
-  width: fit-content;
+  float: left;
+  clear: both;
+  content: "";
+}
+
+.cell {
+  display: flex;
+  flex-direction: row;
+  line-height: 2em;
+  margin: 2em 0em 1em 5em;
 }
 
 /********* SCROLLBAR *********/
@@ -342,7 +342,7 @@ td {
   }
 }
 /*************************** Support for different screen sizes *********************************/
-@media screen and (min-width: 300px) and (max-width: 1650px) {
+@media only screen and (min-width: 270px) and (max-width: 1650px) {
   body {
     background: black;
   }
@@ -362,7 +362,7 @@ td {
   }
 
   #aboutPage {
-    height: -webkit-fill-available;
+    height: 50vh;
   }
 
   #aboutPanel {
