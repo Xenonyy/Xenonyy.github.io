@@ -106,7 +106,7 @@ body {
 #footer {
     position: relative;
     bottom: 0;
-    background-color: rgba(25, 25, 25, 0.95);
+    background-color: rgb(54 37 147);
     width: 100%;
     height: 2.2rem;
     padding-top: 2px;
@@ -114,7 +114,7 @@ body {
     justify-content: center;
     display: flex;
     flex-direction: column;
-    color: mediumslateblue;
+    color: #a393ff;
     font-family: $secondary-font;
 }
 .non_selectable {
@@ -136,7 +136,7 @@ body {
 }
 #aboutPanel {
     // background: $gradient;
-    background: hsl(210, 55%, 11%);
+    background: #252525;
     height: inherit;
 }
 #aboutContainer {
@@ -146,8 +146,8 @@ body {
     flex-flow: wrap;
     gap: normal;
     justify-content: center;
-    background-color: #0d202b;
-    border-color: #17323a;
+    background-color: #86154938;
+    border-color: #b82669;
     border-style: solid;
     border-width: 1px;
     padding: 1.5em;
@@ -162,16 +162,16 @@ body {
     font-weight: 300;
     color: $white;
     text-shadow: $primary-text-shadow;
-    background-color: hsl(202, 51%, 13%);
-    border-color: #17323a;
+    background-color: #86154938;
+    border-color: #b82669;
     border-style: solid;
     border-width: 1px;
     padding: 1em 1em 1em 2em;
     margin: 0 1em 2em 1em;
 }
 #skills {
-    background-color: hsl(202, 51%, 13%);
-    border-color: #17323a;
+    background-color: #86154938;
+    border-color: #b82669;
     border-style: solid;
     border-width: 1px;
     width: 20em;
@@ -191,8 +191,8 @@ hr {
     width: 82%;
     margin-top: 2em;
     border-radius: 2px;
-    border: #17323a;
-    background-color: #17323a;
+    border: #b82669;
+    background-color: #b82669;
     height: 0.1em;
 }
 #contactTitle {
@@ -200,8 +200,8 @@ hr {
 }
 #contactInfo {
     // background-color: rgba(154, 130, 228, 0.32);
-    background-color: hsl(202, 51%, 13%);
-    border-color: #17323a;
+    background-color: #86154938;
+    border-color: #b82669;
     border-style: solid;
     border-width: 1px;
     margin: 2rem 0 0 0;
@@ -245,6 +245,7 @@ hr {
 #contactPhone {
     margin-top: 1em;
 }
+
 
 /********* SCROLLBAR *********/
 ::-webkit-scrollbar-thumb {
@@ -297,7 +298,7 @@ hr {
 /*************************** Support for different screen sizes *********************************/
 @media only screen and (min-width: 500px) and (max-width: 1650px) {
     body {background: black;}
-    html {font-size: 0.6rem; line-height: 1.2em;}
+    html {font-size: 0.8rem; line-height: 1.2em;}
     #aboutContainer {margin: 5em 5em 0 5em;}
     #aboutPage {height: 60vh;}
     #aboutPanel {padding-bottom: 2em;}
@@ -306,32 +307,11 @@ hr {
     body {background: black;}
     html {font-family: $secondary-font; font-size: 0.6rem; line-height: 1em;}
     #homeTitle {font-size: 5rem; text-shadow: #b73785 3px 2px;}
+    .cell, #gitLink, #about {text-shadow: black 2px 2px;}
     #aboutContainer {margin: 5em 1em 0 1em;}
     #aboutPage {height: 60vh;}
     #aboutPanel {padding-bottom: 2em;}
 }
-// @media only screen and (max-width: 1820px) {
-//     html {font-size: 0.8rem;}
-// }
-// @media only screen and (max-height: 950px) {
-//     html {font-size: 0.8rem;}
-// }
-// @media only screen and (max-width: 1480px) {
-//     body {background: black;}
-//     html {font-size: 0.6rem;}
-//     td {width: 3em; height: 3em;}
-//     #aboutContainer {margin: 5em 5em 0 5em;}
-//     #aboutPage {height: -webkit-fill-available;}
-//     #aboutPanel {padding-bottom: 2em;}
-// }
-// @media only screen and (max-height: 480px) {
-//     body {background: black;}
-//     html {font-size: 0.6rem;}
-//     td {width: 3em; height: 3em;}
-//     #aboutContainer {margin: 5em 5em 0 5em;}
-//     #aboutPage {height: -webkit-fill-available;}
-//     #aboutPanel {padding-bottom: 2em;}
-// }
 
 
 // Animate.css tweaks

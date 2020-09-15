@@ -145,7 +145,7 @@ body {
 #footer {
   position: relative;
   bottom: 0;
-  background-color: rgba(25, 25, 25, 0.95);
+  background-color: #362593;
   width: 100%;
   height: 2.2rem;
   padding-top: 2px;
@@ -153,7 +153,7 @@ body {
   justify-content: center;
   display: flex;
   flex-direction: column;
-  color: mediumslateblue;
+  color: #a393ff;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
 }
 
@@ -176,7 +176,7 @@ body {
 }
 
 #aboutPanel {
-  background: #0d1c2b;
+  background: #252525;
   height: inherit;
 }
 
@@ -187,8 +187,8 @@ body {
   flex-flow: wrap;
   gap: normal;
   justify-content: center;
-  background-color: #0d202b;
-  border-color: #17323a;
+  background-color: #86154938;
+  border-color: #b82669;
   border-style: solid;
   border-width: 1px;
   padding: 1.5em;
@@ -204,8 +204,8 @@ body {
   font-weight: 300;
   color: rgba(255, 255, 255, 0.9);
   text-shadow: black 3px 3px;
-  background-color: #102632;
-  border-color: #17323a;
+  background-color: #86154938;
+  border-color: #b82669;
   border-style: solid;
   border-width: 1px;
   padding: 1em 1em 1em 2em;
@@ -213,8 +213,8 @@ body {
 }
 
 #skills {
-  background-color: #102632;
-  border-color: #17323a;
+  background-color: #86154938;
+  border-color: #b82669;
   border-style: solid;
   border-width: 1px;
   width: 20em;
@@ -235,8 +235,8 @@ hr {
   width: 82%;
   margin-top: 2em;
   border-radius: 2px;
-  border: #17323a;
-  background-color: #17323a;
+  border: #b82669;
+  background-color: #b82669;
   height: 0.1em;
 }
 
@@ -245,8 +245,8 @@ hr {
 }
 
 #contactInfo {
-  background-color: #102632;
-  border-color: #17323a;
+  background-color: #86154938;
+  border-color: #b82669;
   border-style: solid;
   border-width: 1px;
   margin: 2rem 0 0 0;
@@ -352,7 +352,7 @@ hr {
   }
 
   html {
-    font-size: 0.6rem;
+    font-size: 0.8rem;
     line-height: 1.2em;
   }
 
@@ -382,6 +382,10 @@ hr {
   #homeTitle {
     font-size: 5rem;
     text-shadow: #b73785 3px 2px;
+  }
+
+  .cell, #gitLink, #about {
+    text-shadow: black 2px 2px;
   }
 
   #aboutContainer {
