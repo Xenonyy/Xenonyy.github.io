@@ -21,7 +21,7 @@ window.scrollTo(0,0); //Pages disappear until u start scrolling if you come back
 homepage.hide();
 loadpage.hide();
 body.removeClass("stop-scrolling");
-homepage.fadeIn(1500);
+homepage.fadeIn(2000);
 
 // Loading page
 // document.onreadystatechange = () => {	
