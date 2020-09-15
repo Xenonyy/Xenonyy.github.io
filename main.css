@@ -106,7 +106,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 85%;
+  height: 82%;
 }
 
 #home, .menu, .divider {
@@ -372,14 +372,7 @@ hr {
 }
 @media only screen and (min-width: 200px) and (max-width: 499px) {
   body {
-    background-attachment: fixed;
-    background-size: cover;
-    background-position-x: center;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    z-index: -1;
+    background: black;
   }
 
   html {
@@ -402,7 +395,7 @@ hr {
   }
 
   #aboutPage {
-    height: 60vh;
+    height: 70vh;
   }
 
   #aboutPanel {

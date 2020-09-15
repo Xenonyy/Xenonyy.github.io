@@ -71,7 +71,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 85%;
+    height: 82%;
 }
 #home, .menu, .divider {
     font-size: 1.5rem;
@@ -304,12 +304,12 @@ hr {
     #aboutPanel {padding-bottom: 2em;}
 }
 @media only screen and (min-width: 200px) and (max-width: 499px) {
-    body {background-attachment: fixed; background-size: cover; background-position-x: center; top: 0; left: 0; width: 100%; height: 100vh; z-index: -1;}
+    body {background: black;}
     html {font-family: $secondary-font; font-size: 0.6rem; line-height: 1em;}
     #homeTitle {font-size: 5rem; text-shadow: #b73785 3px 2px;}
     .cell, #gitLink, #about {text-shadow: black 1px 1px;}
     #aboutContainer {margin: 5em 1em 0 1em;}
-    #aboutPage {height: 60vh;}
+    #aboutPage {height: 70vh;}
     #aboutPanel {padding-bottom: 2em;}
 }
 
