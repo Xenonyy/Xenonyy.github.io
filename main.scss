@@ -108,8 +108,7 @@ body {
     bottom: 0;
     background-color: rgb(54 37 147);
     width: 100%;
-    height: 2.2rem;
-    padding-top: 2px;
+    height: 2.3rem;
     text-align: center;
     justify-content: center;
     display: flex;
@@ -307,7 +306,7 @@ hr {
     body {background: black;}
     html {font-family: $secondary-font; font-size: 0.6rem; line-height: 1em;}
     #homeTitle {font-size: 5rem; text-shadow: #b73785 3px 2px;}
-    .cell, #gitLink, #about {text-shadow: black 1px 1px;}
+    #contactEmail, #contactPhone, #gitLink, #about {text-shadow: black 1px 1px;}
     #aboutContainer {margin: 5em 1em 0 1em;}
     #aboutPage {height: 70vh;}
     #aboutPanel {padding-bottom: 2em;}
