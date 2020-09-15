@@ -153,7 +153,7 @@ body {
   justify-content: center;
   display: flex;
   flex-direction: column;
-  color: #a393ff;
+  color: #b4abe6d9;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
 }
 
@@ -348,7 +348,9 @@ hr {
 /*************************** Support for different screen sizes *********************************/
 @media only screen and (min-width: 500px) and (max-width: 1650px) {
   body {
-    background: black;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position-x: center;
   }
 
   html {
@@ -370,7 +372,9 @@ hr {
 }
 @media only screen and (min-width: 200px) and (max-width: 499px) {
   body {
-    background: black;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position-x: center;
   }
 
   html {

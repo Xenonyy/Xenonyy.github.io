@@ -114,7 +114,7 @@ body {
     justify-content: center;
     display: flex;
     flex-direction: column;
-    color: #a393ff;
+    color: #b4abe6d9;
     font-family: $secondary-font;
 }
 .non_selectable {
@@ -297,14 +297,14 @@ hr {
 
 /*************************** Support for different screen sizes *********************************/
 @media only screen and (min-width: 500px) and (max-width: 1650px) {
-    body {background: black;}
+    body {background-attachment: fixed; background-size: cover; background-position-x: center;}
     html {font-size: 0.8rem; line-height: 1.2em;}
     #aboutContainer {margin: 5em 5em 0 5em;}
     #aboutPage {height: 60vh;}
     #aboutPanel {padding-bottom: 2em;}
 }
 @media only screen and (min-width: 200px) and (max-width: 499px) {
-    body {background: black;}
+    body {background-attachment: fixed; background-size: cover; background-position-x: center;}
     html {font-family: $secondary-font; font-size: 0.6rem; line-height: 1em;}
     #homeTitle {font-size: 5rem; text-shadow: #b73785 3px 2px;}
     .cell, #gitLink, #about {text-shadow: black 1px 1px;}
