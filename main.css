@@ -350,7 +350,7 @@ hr {
 }
 /*************************** Support for different screen sizes *********************************/
 @media only screen and (min-width: 500px) and (max-width: 1650px) {
-  body {
+  .body-bg {
     background-attachment: fixed;
     background-size: cover;
     background-position-x: center;
@@ -374,7 +374,7 @@ hr {
   }
 }
 @media only screen and (min-width: 200px) and (max-width: 499px) {
-  body {
+  .body-bg {
     background: black;
   }
 
