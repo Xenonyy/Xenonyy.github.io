@@ -397,6 +397,10 @@ hr {
     text-shadow: black 1px 1px;
   }
 
+  .cell {
+    margin: 2em 0em 1em 4em;
+  }
+
   #aboutContainer {
     margin: 5em 1em 0 1em;
   }
