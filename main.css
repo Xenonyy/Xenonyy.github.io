@@ -1,6 +1,7 @@
 @font-face {
   font-family: Quicksand;
-  src: url(Quicksand_Book_Oblique.otf);
+  src: url("/Quicksand_Book_Oblique.otf") format("otf"), url("/Segoe UI.ttf") format("ttf");
+  font-display: fallback;
 }
 * {
   box-sizing: border-box;
@@ -77,13 +78,16 @@ html, body {
 }
 
 body {
-  background-image: url(abstract.jpg);
-  background-repeat: no-repeat;
-  background-size: contain;
   line-height: 2em;
   letter-spacing: 0.25px;
   font-weight: 300;
   margin: 0 auto;
+}
+
+.body-bg {
+  background-image: url(abstract.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 #content-wrap {

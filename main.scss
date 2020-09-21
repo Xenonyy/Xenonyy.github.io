@@ -4,7 +4,9 @@ $gradient: linear-gradient(135deg, rgba(191, 35, 165, 0.4) 0%, rgba(0, 87, 137, 
 $white: hsla(0, 0%, 100%, 0.9);
 @font-face {
     font-family: Quicksand;
-    src: url(Quicksand_Book_Oblique.otf);
+    src: url('/Quicksand_Book_Oblique.otf') format('otf'),
+         url('/Segoe\ UI.ttf') format('ttf');
+    font-display: fallback;
 }
 // 12 column responsive grid layout
 * {
@@ -42,14 +44,16 @@ html, body {
     overflow: hidden;
 }
 body {
-    background-image: url(abstract.jpg);
-    background-repeat: no-repeat;
-    background-size: contain;
     // font-family: $secondary-font;
     line-height: 2em;
     letter-spacing: 0.25px;
     font-weight: 300;
     margin: 0 auto;
+}
+.body-bg {
+    background-image: url(abstract.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 #content-wrap {
     position: relative;
