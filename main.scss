@@ -43,7 +43,7 @@ html, body {
     height: 100%;
     overflow: hidden;
 }
-body {
+body{
     // font-family: $secondary-font;
     line-height: 2em;
     letter-spacing: 0.25px;
@@ -308,6 +308,7 @@ hr {
 }
 @media only screen and (min-width: 200px) and (max-width: 499px) {
     .body-bg {background: black;}
+    body {height: auto;}
     html {font-family: $secondary-font; font-size: 0.6rem; line-height: 1em;}
     #homeTitle {font-size: 5rem; text-shadow: #b73785 3px 2px;}
     #contactEmail, #contactPhone, #gitLink, #about {text-shadow: black 1px 1px;}
