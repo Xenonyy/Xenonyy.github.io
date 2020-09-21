@@ -84,9 +84,9 @@ $(document).scroll(function() {
 $("#home").on("click", function () {
     document.getElementById("homePage").scrollIntoView({behavior: "smooth", block: "start", inline: "start"});
 });
-$("h2").on("click", function () {
+$("#aboutMe").on("click", function () {
     document.getElementById("aboutPage").scrollIntoView({behavior: "smooth", block: "start", inline: "start"});
 });
-$("h5").on("click", function () {
+$("#contact").on("click", function () {
     document.getElementById("contactPage").scrollIntoView({behavior: "smooth", block: "center", inline: "center"});
 });
