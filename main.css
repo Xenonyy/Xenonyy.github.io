@@ -87,7 +87,9 @@ body {
 .body-bg {
   background-image: url(abstract.jpg);
   background-repeat: no-repeat;
-  background-size: contain;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position-x: center;
 }
 
 #content-wrap {
@@ -97,10 +99,10 @@ body {
 
 /****************** HOME PAGE ******************/
 #homePage {
+  display: none;
   background: linear-gradient(135deg, rgba(191, 35, 165, 0.4) 0%, rgba(0, 87, 137, 0.4) 100%);
   height: -webkit-fill-available;
   width: -webkit-fill-available;
-  display: inline-table;
   scroll-margin: 5em;
 }
 
@@ -170,7 +172,7 @@ body {
   width: -webkit-fill-available;
   display: block;
   background: black;
-  scroll-margin-top: 3.7em;
+  scroll-margin-top: 4em;
 }
 
 #aboutTitle {
@@ -179,6 +181,7 @@ body {
 }
 
 #aboutPanel {
+  display: none;
   background: #252525;
   height: inherit;
 }
@@ -350,12 +353,6 @@ hr {
 }
 /*************************** Support for different screen sizes *********************************/
 @media only screen and (min-width: 500px) and (max-width: 1650px) {
-  .body-bg {
-    background-attachment: fixed;
-    background-size: cover;
-    background-position-x: center;
-  }
-
   html {
     font-size: 0.8rem;
     line-height: 1.2em;
@@ -414,11 +411,54 @@ hr {
   }
 }
 #homeTitle {
-  animation-delay: 0.7s;
+  animation-delay: 0.5s;
+  animation: fadeInLeftHome 1.5s ease-in-out;
+}
+
+#aboutTitle, #contactTitle {
+  animation: fadeInLeftTitle 1.5s cubic-bezier(0.22, 0.61, 0.36, 1);
 }
 
 #aboutContainer {
-  animation-duration: 1.5s;
+  animation-delay: 0.8s;
+  animation: fadeInDown 1.5s cubic-bezier(0, 0, 0.24, 1.01);
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -15%, 0);
+    transform: translate3d(0, -15%, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+}
+@keyframes fadeInLeftHome {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+}
+@keyframes fadeInLeftTitle {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(-20%, 0, 0);
+    transform: translate3d(-20%, 0, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
