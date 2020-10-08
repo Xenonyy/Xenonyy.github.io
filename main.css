@@ -107,12 +107,23 @@ body {
 }
 
 #homeTitle {
-  font-size: 10rem;
-  text-shadow: #b73785 5px 5px;
+  font-size: 6rem;
+  text-shadow: #d21d8b 5px 5px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  height: 82%;
+  justify-content: flex-end;
+  height: 42%;
+  font-weight: 600;
+}
+
+#homeTitle2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 6%;
+  text-shadow: #00a3e1 2px 2px;
+  font-weight: 600;
+  font-size: 2.5rem;
 }
 
 #home, .menu, .divider {
@@ -386,8 +397,15 @@ hr {
   }
 
   #homeTitle {
-    font-size: 5rem;
+    font-size: 4rem;
     text-shadow: #b73785 3px 2px;
+  }
+
+  #homeTitle2 {
+    font-size: 2rem;
+    height: 4%;
+    text-shadow: #00a3e1 1.2px 1.2px;
+    font-weight: 400;
   }
 
   #contactEmail, #contactPhone, #gitLink, #about {
@@ -410,9 +428,9 @@ hr {
     padding-bottom: 2em;
   }
 }
-#homeTitle {
+#homeTitle, #homeTitle2 {
   animation-delay: 0.5s;
-  animation: fadeInLeftHome 1.5s ease-in-out;
+  animation: fadeInLeftHome 1.8s ease-in-out;
 }
 
 #aboutTitle, #contactTitle {
