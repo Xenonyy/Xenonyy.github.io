@@ -5,7 +5,6 @@ const body = $("body"),
     contactpage = $("contactPage");
     pages = $(".page");
 
-window.scrollTo(0,0); //Pages disappear until u start scrolling if you come back to the site without this.
 body.removeClass("stop-scrolling");
 function homeAni() {
     homepage.fadeIn(2000);
@@ -47,13 +46,6 @@ function changeBG(source) {
 // });
 
 
-// Turning the website into a scrollable format
-$(document).scroll(function() {
-    if ($(this).scrollTop() > 100) {
-        $('#aboutPanel').show();
-    }
-});
-
 // Navigation
 $("#home").on("click", function () {
     document.getElementById("homePage").scrollIntoView({behavior: "smooth", block: "start", inline: "start"});
@@ -64,3 +56,18 @@ $("#aboutMe").on("click", function () {
 $("#contact").click(function () {
     document.getElementById("footer").scrollIntoView({behavior: "smooth", block: "center", inline: "center"});
 });
+
+
+// Animations
+function aboutAni() {       
+    $('#aboutTitle, #contactTitle').css({
+        'animation': 'fadeInLeftTitle 1.5s cubic-bezier(0.22, 0.61, 0.36, 1)'
+    });
+}
+if (document.readyState === 'interactive') {
+    $(document).scroll(function() {
+        if ($(this).scrollTop() > 100) {
+            aboutAni();
+        }
+    });
+}
