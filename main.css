@@ -132,7 +132,7 @@ body {
   line-height: 0.9em;
   letter-spacing: 0.25px;
   color: rgba(255, 255, 255, 0.9);
-  text-shadow: black 3px 3px;
+  text-shadow: black 2px 2px;
   margin: 0 auto;
   display: inline-flex;
   justify-content: left;
@@ -144,7 +144,7 @@ body {
   font-size: 3rem;
   font-weight: 400;
   color: rgba(255, 255, 255, 0.9);
-  text-shadow: black 3px 3px;
+  text-shadow: black 2px 2px;
   text-align: center;
   margin-bottom: 10px;
   display: block;
@@ -192,7 +192,7 @@ body {
 }
 
 #aboutPanel {
-  background: #252525;
+  background: #25101a;
   height: inherit;
 }
 
@@ -219,7 +219,7 @@ body {
   letter-spacing: 0.25px;
   font-weight: 300;
   color: rgba(255, 255, 255, 0.9);
-  text-shadow: black 3px 3px;
+  text-shadow: black 2px 2px;
   background-color: #86154938;
   border-color: #b82669;
   border-style: solid;
@@ -288,7 +288,7 @@ hr {
 
 #contactEmail, #contactPhone, #contactGitHub, #gitLink {
   color: lightgray;
-  text-shadow: black 3px 3px;
+  text-shadow: black 2px 2px;
   text-decoration: none;
   position: relative;
 }

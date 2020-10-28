@@ -1,5 +1,5 @@
 $secondary-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
-$primary-text-shadow: rgb(0, 0, 0) 3px 3px;
+$primary-text-shadow: rgb(0, 0, 0) 2px 2px;
 $gradient: linear-gradient(135deg, rgba(191, 35, 165, 0.4) 0%, rgba(0, 87, 137, 0.4) 100%);
 $white: hsla(0, 0%, 100%, 0.9);
 @font-face {
@@ -151,7 +151,7 @@ body{
     top: 1em;
 }
 #aboutPanel {
-    background: #252525;
+    background: #25101a;
     height: inherit;
 }
 #aboutContainer {
@@ -320,7 +320,7 @@ hr {
 @media only screen and (min-width: 200px) and (max-width: 499px) {
     .body-bg {background: black;}
     body {max-height: 100vh;}
-    html {font-family: $secondary-font; font-size: 0.6rem; line-height: 1em;}
+    html {/*font-family: $secondary-font;*/ font-size: 0.6rem; line-height: 1em;}
     #homeTitle {font-size: 4rem; text-shadow: #b73785 3px 2px;}
     #homeTitle2 {font-size: 2rem; height: 4%; text-shadow: #00a3e1 1.2px 1.2px; font-weight: 400;}
     #contactEmail, #contactPhone, #gitLink, #about {text-shadow: black 1px 1px;}
