@@ -45,7 +45,6 @@ html, body {
     overflow: hidden;
 }
 body{
-    // font-family: $secondary-font;
     line-height: 2em;
     letter-spacing: 0.25px;
     font-weight: 300;
@@ -331,7 +330,8 @@ hr {
     #aboutPanel {padding-bottom: 2em;}
 }
 
-// IE browser support
+
+/************************ Browser support **********************/
 // IE10+
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
     #homePage {min-width: 100%; height: 100vh;}
@@ -340,8 +340,14 @@ hr {
     img {width: 92%; height: 100%; transform: scale(1);}
     #homeTitle {height: 48%;}
 }
+// FireFox
+@-moz-document url-prefix() {
+    html, body {font-family: $secondary-font; font-style: italic;}
+    #homePage {min-width: 100%; height: 100vh; display: block !important;}
+    #skills {width: 18em; height: 13em;}
+}
 
-/*************************************** Animations*******************************************/
+/************************** Animations *************************/
 #homeTitle, #homeTitle2 {
     animation-delay: 0.5s;
     animation: fadeInLeftHome 1.8s ease-in-out;
