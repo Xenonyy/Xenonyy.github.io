@@ -23,14 +23,14 @@ homeAni();
 // });
 
 // Navigation in between pages
-async function loadAnimation(ms, page) {
-    pages.slideUp(ms);
-    return new Promise(resolve => setTimeout(resolve, ms))
-        .then(() => page.slideDown(600));
-}
-function changeBG(source) {	
-    document.body.style.backgroundImage = "url(" + source + ")";	
-}
+// async function loadAnimation(ms, page) {
+//     pages.slideUp(ms);
+//     return new Promise(resolve => setTimeout(resolve, ms))
+//         .then(() => page.slideDown(600));
+// }
+// function changeBG(source) {	
+//     document.body.style.backgroundImage = "url(" + source + ")";	
+// }
 
 // $("#home").click(async function () {
     // await loadAnimation(400, homepage);
