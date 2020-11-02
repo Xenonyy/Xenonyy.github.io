@@ -392,7 +392,8 @@ hr {
   }
 
   html {
-    /*font-family: $secondary-font;*/
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
+    font-style: italic;
     font-size: 0.6rem;
     line-height: 1em;
   }
