@@ -1,7 +1,9 @@
 @font-face {
   font-family: Quicksand;
-  src: url("/Quicksand_Book_Oblique.otf") format("otf"), url("/Segoe UI.ttf") format("ttf");
-  font-display: fallback;
+  src: url("/Quicksand_Book_Oblique.otf") format("otf");
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
+  font-style: oblique;
+  font-display: swap;
 }
 * {
   box-sizing: border-box;
@@ -390,7 +392,7 @@ hr {
   }
 
   html {
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
+    /*font-family: $secondary-font;*/
     font-size: 0.6rem;
     line-height: 1em;
   }
@@ -427,6 +429,32 @@ hr {
     padding-bottom: 2em;
   }
 }
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  #homePage {
+    min-width: 100%;
+    height: 100vh;
+  }
+
+  .header {
+    position: fixed;
+    width: 100%;
+  }
+
+  #skills {
+    height: 17em;
+  }
+
+  img {
+    width: 92%;
+    height: 100%;
+    transform: scale(1);
+  }
+
+  #homeTitle {
+    height: 48%;
+  }
+}
+/*************************************** Animations*******************************************/
 #homeTitle, #homeTitle2 {
   animation-delay: 0.5s;
   animation: fadeInLeftHome 1.8s ease-in-out;
