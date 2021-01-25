@@ -4,7 +4,7 @@ const homepage = $("#homePage"),
 window.onload = () => {
     homepage.fadeIn(2000);
     homepage.css({"display": "inline-table"});
-    location.assign("#home");
+    location.assign("#homePage");
 }
 
 // Animations
