@@ -1,5 +1,18 @@
+# Images
 *.png
 *.jpg
+
+# dependencies
+/node_modules
+
+# VSC
 .vscode
 *.code-workspace
+
+# Sass map
 *.map
+
+# Backend
+server.js
+package-lock.json
+package.json
