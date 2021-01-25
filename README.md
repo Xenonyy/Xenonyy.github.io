@@ -1,8 +1,10 @@
-# Xenonyan.github.io
+# About this project
 
 A fully responsive website I designed and built from scratch to showcase my projects along with my web developer skills!
                      
 ![alt text](https://i.gyazo.com/9810dbc22aa8081d670dd0e0a27e035d.png)
+
+View this project at: https://xenonyy.github.io/
 
 # Technologies used
 
