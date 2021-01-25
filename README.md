@@ -1,8 +1,18 @@
 # Xenonyan.github.io
 
-A fully responsive website I designed and built from scratch to show my web developer skills!                        
-Built with JS, jQuery, HTML5 and CSS3 + Sass.
+A fully responsive website I designed and built from scratch to showcase my projects along with my web developer skills!
+                     
+![alt text](https://i.gyazo.com/9810dbc22aa8081d670dd0e0a27e035d.png)
 
-![alt text](https://github.com/Xenonyy/Xenonyy.github.io/blob/master/Screenshot%202020-11-02%20143203.png?raw=true)
+# Technologies used
 
-Plan to expand it more in the future with some personal projects!
+JavaScript, HTML, CSS\
+jQuery - DOM Manipulation (JavaScript Library)\
+Sass - Syntactically Awesome Style Sheets (CSS extension)\
+Git - Version Control System
+
+# Author
+
+* **Armand Gonda**
+
+Plan to expand it more in the future with more personal projects!
