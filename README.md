@@ -6,10 +6,10 @@ A fully responsive website I designed and built from scratch to showcase my proj
 
 # Technologies used
 
-JavaScript, HTML, CSS\
-jQuery - DOM Manipulation (JavaScript Library)\
-Sass - Syntactically Awesome Style Sheets (CSS extension)\
-Git - Version Control System
+* JavaScript, HTML, CSS\
+* jQuery - DOM Manipulation (JavaScript Library)\
+* Sass - Syntactically Awesome Style Sheets (CSS extension)\
+* Git - Version Control System
 
 # Author
 
