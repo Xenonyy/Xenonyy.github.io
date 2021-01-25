@@ -124,6 +124,7 @@ body{
     display: inline-flex;
     padding: 5px;
     position: relative;
+    text-decoration: none;
 }
 .title {
     font-size: 3rem;
@@ -243,6 +244,9 @@ hr {
     border: #b82669;
     background-color: #b82669;
     height: 0.1em;
+}
+#contactPage {
+    scroll-margin-top: 12em;
 }
 #contactTitle {
     margin: 2rem;
