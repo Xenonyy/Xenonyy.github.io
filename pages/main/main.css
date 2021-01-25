@@ -231,10 +231,9 @@ img {
   transform: scale(0.9); }
 
 hr {
-  width: 82%;
+  width: 80%;
   margin-top: 2em;
-  border-radius: 2px;
-  border: #b82669;
+  border: none;
   background-color: #b82669;
   height: 0.1em; }
 
@@ -289,20 +288,23 @@ hr {
 
 /*************************** PROJECTS PAGE ************************/
 #projectsPage {
-  height: 100vh;
+  min-height: 100vh;
+  height: fit-content;
   background-color: #1f1f1f;
-  scroll-margin-top: 3em; }
+  scroll-margin-top: 3em;
+  justify-content: flex-start; }
 
 #projectsTitle {
   width: 100%;
-  height: 15%; }
+  height: 15%;
+  margin: 2em 0 1em; }
 
 #projectsPanel {
   width: 90%;
-  height: 80%;
   background-color: #2f2f2f;
   justify-content: flex-start;
-  padding: 2em; }
+  padding: 2em;
+  margin: 1em; }
 
 #projectsContainer-1 {
   width: 95%;
@@ -413,6 +415,15 @@ git {
   padding: 0 0 0.15em;
   font-family: Capriola; }
 
+#hr2 {
+  width: 65%;
+  margin: 3em;
+  background-color: #8063a5;
+  height: 0.15em; }
+
+#projectsTitle-2 {
+  margin: 1em 0; }
+
 /*************************** ANIMATIONS ***************************/
 @media (hover: hover) {
   /* Only works if the deivce supports hover state*/
@@ -449,8 +460,8 @@ git {
     line-height: 1.2em; }
   #skills {
     width: 20em; }
-  #skillImg {
-    transform: scale(0.6); }
+  #skillsImg {
+    transform: scale(0.7); }
   #projectsImg-1 {
     transform: scale(0.8); }
   #projectsTechnologies-1, #projectsDescription-1 {
@@ -459,8 +470,6 @@ git {
     margin: 1em 0; } }
 
 @media only screen and (min-width: 200px) and (max-width: 499px) {
-  .body-bg {
-    background: black; }
   body {
     max-height: 100vh; }
   html {
@@ -468,24 +477,45 @@ git {
     font-style: italic;
     font-size: 0.6rem;
     line-height: 1em; }
+  .title {
+    font-size: 2.5rem;
+    margin-bottom: 0; }
+  .menu, .divider {
+    font-size: 1.2rem !important; }
+  #homeName {
+    font-size: 3.5rem;
+    text-shadow: #b73785 3px 3px; }
   #homeTitle {
-    font-size: 4rem;
-    text-shadow: #b73785 3px 2px; }
-  #homeTitle2 {
-    font-size: 2rem;
-    height: 4%;
-    text-shadow: #00a3e1 1.2px 1.2px;
-    font-weight: 400; }
-  #contactEmail, #contactPhone, #gitLink, #about {
-    text-shadow: black 1px 1px; }
-  .cell {
-    margin: 2em 0em 1em 4em; }
-  #aboutContainer {
-    margin: 5em 1em 0 1em; }
+    font-size: 1.5rem;
+    text-shadow: #00a3e1 1.5px 1.5px; }
   #aboutPage {
-    height: 70vh; }
-  #aboutPanel {
-    padding-bottom: 2em; } }
+    padding-bottom: 2em; }
+  #skillsImg {
+    transform: scale(0.5); }
+  #projectsImg-1 {
+    transform: scale(0.5); }
+  #projectsImgHover-1 {
+    width: 90%; }
+  #projectsImgContainer-1 {
+    margin: 1em 0;
+    width: 100%;
+    height: 200px; }
+  #about, #projectsDescription-1 {
+    font-size: 1rem; }
+  #projectsDetailContainer-1 {
+    width: 100%;
+    margin: 0; }
+  #projectsTechnologiesDivContainer {
+    transform: scale(0.58); }
+  .tech {
+    margin: 0; }
+  react, sass, gsap, git {
+    font-size: 2rem; }
+  #projectsLinkContainer-1 {
+    width: 100%;
+    margin: 2em 2em 0; }
+  #contactPage {
+    scroll-margin-top: 18em; } }
 
 /************************ Browser support **********************/
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
