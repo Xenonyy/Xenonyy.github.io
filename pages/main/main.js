@@ -4,6 +4,7 @@ const homepage = $("#homePage"),
 window.onload = () => {
     homepage.fadeIn(2000);
     homepage.css({"display": "inline-table"});
+    homepage.scrollTop();
     location.assign("#homePage");
 }
 
