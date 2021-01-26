@@ -23,7 +23,7 @@ if (d.readyState === 'interactive') {
 
 // Slideshow
 let skillsImageArray = ["./images/react.png", "./images/html-js-css.png", "./images/sass.png", "./images/jquery.png", "./images/gsap.png", "./images/git.png"];
-let skillsImageArrayName = ["React (JavaScript UI Library)", "HTML5-ES6-CSS3 (Core) ", "Sass (CSS Extension)","jQuery (JavaScript Library)", "Gsap (JavaScript Animation Library)", "Git (Version Control System)"]
+let skillsImageArrayName = ["React (JavaScript UI Library)", "HTML-JS-CSS (Core) ", "Sass (CSS Extension)","jQuery (JavaScript Library)", "Gsap (JavaScript Animation Library)", "Git (Version Control System)"]
 const timer = ms => new Promise(res => setTimeout(res, ms)) // Returns a Promise that resolves after "ms" Milliseconds
 let i = 0;
 
