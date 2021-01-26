@@ -148,7 +148,7 @@ body{
     bottom: 0;
     background-color: rgb(54, 37, 147);
     width: 100%;
-    height: 2.3rem;
+    height: 2.5rem;
     @extend %flex;
     color: #bfb7efd9;
     font-family: $secondary-font;
@@ -493,11 +493,13 @@ git {color: #df4b33; left: -2.8em;}
     #projectsImgContainer-1 {margin: 1em 0; width: 100%; height: 200px; padding: 1em;}
     #about, #projectsDescription-1 {font-size: 1rem; line-height: 1.5em;}
     #projectsDetailContainer-1 { width: 100%; margin: 0;}
-    #projectsTechnologiesDivContainer {transform: scale(0.58); -ms-transform: scale(0.58); -webkit-transform: scale(0.58);}
+    #projectsTechnologiesDivContainer {transform: scale(0.9); -ms-transform: scale(0.9); -webkit-transform: scale(0.9);}
     .tech {margin: 0;}
-    react, sass, gsap, git {font-size: 2rem;}
+    react, sass, gsap, git {font-size: 1.5rem; left: -2.8em;}
+    react {left: -3.5em;}
     #projectsLinkContainer-1 { width: 100%; margin: 2em 2em 0;}
     #contactPage {scroll-margin-top: 18em;}
+    #footer {height: 3rem;}
 }
 
 
