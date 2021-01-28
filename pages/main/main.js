@@ -3,21 +3,26 @@ const homepage = $("#homePage"),
 
 window.onload = () => {
     homepage.fadeIn(2000);
-    homepage.css({"display": "inline-table"});
-    homepage.scrollTop();
-    location.assign("#homePage");
+    homepage.css({"opacity": "1"});
+    // homepage.scrollTop();
+    // location.assign("#homePage");
 }
 
 // Animations
 function aboutAni() {       
     $('#aboutTitle, #contactTitle').css({
-        'animation': 'fadeInLeftTitle 1.5s cubic-bezier(0.22, 0.61, 0.36, 1)'
+        'animation': 'fadeInLeftTitle 2s cubic-bezier(0.22, 0.61, 0.36, 1)'
     });
 }
 if (d.readyState === 'interactive') {
     $(d).scroll(function() {
         if ($(this).scrollTop() > 100) {
             aboutAni();
+        }
+        if ($(this).scrollTop() > 1000) {
+            $('#projectsTitle').css({
+                'animation': 'fadeInLeftTitle 2s cubic-bezier(0.22, 0.61, 0.36, 1)'
+            });
         }
     });
 }
