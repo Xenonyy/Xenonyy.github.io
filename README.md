@@ -18,7 +18,7 @@ View this project at: https://xenonyy.github.io/
 # Getting Started
 ## Prerequisites
 
-To run this project you will need NodeJS installed. This project uses v12.14.1.\
+To run this project you will need Node.js installed. This project uses v12.14.1\
 Check your current version with ``` node -v ```\
 If you dont have Node installed, install it with ``` npm install node ```
 ## Installation
@@ -31,8 +31,8 @@ In the project directory, you can run:
 
 ### `npm start`
 
-Runs the app via NodeJS.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Runs the app via Node.js.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.\
 Reload the server to see changes.
 
 # Author
