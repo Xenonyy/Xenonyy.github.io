@@ -19,48 +19,50 @@
     <meta name="msapplication-TileColor" content="#7b68ee">
     <meta name="msapplication-TileImage" content="./images/favicon/ms-icon-144x144.png">
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-    <title>Gonda Armand - Portfolio</title>
+    <title>Armand Gonda - Portfolio</title>
     <link rel="stylesheet" type="text/css" href="./pages/main/main.css"/>
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,200;0,400;0,600;1,400&family=Aleo:ital,wght@0,300;0,400;1,300&family=Gabriela&family=Capriola&family=Kalam:wght@700&display=swap" rel="stylesheet">
     <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script defer src="./pages/main/main.js"></script>
 </head>
 <body>
-    <div id="content-wrap">
+    <main id="content-wrap">
         <header class="header non_selectable">
-            <a href="#homePage" id="home" class="menu">Home</a>
-            <span class="divider"> | </span>
-            <a href="#aboutPage" id="aboutMe" class="menu">About Me</a>
-            <span class="divider"> | </span>
-            <a href="#contactPage" id="contact" class="menu">Contact</a>
-            <span class="divider"> | </span>
-            <a href="#projectsPage" id="projects" class="menu">Projects</a>
+            <nav>
+                <a href="#homePage" id="home" class="menu">Home</a>
+                    <h1 class="divider"> | </h1>
+                <a href="#aboutPage" id="aboutMe" class="menu">About Me</a>
+                    <h1 class="divider"> | </h1>
+                <a href="#contactPage" id="contact" class="menu">Contact</a>
+                    <h1 class="divider"> | </h1>
+                <a href="#projectsPage" id="projects" class="menu">Projects</a>
+            </nav>
         </header>
-        <div id="homePage" class="page">
-            <div id="homeTextContainer">
-                <p id="homeName" class="title non_selectable">Armand Gonda</p>
-                <p id="homeTitle" class="title non_selectable">Front-end Web Developer</p>
-            </div>
-        </div>
-        <div id="aboutPage" class="page otherPages">
-            <span id="aboutTitle" class="title non_selectable">About Me</span>
-            <div id="aboutContainer">
+        <article id="homePage" class="page">
+            <section id="homeTextContainer">
+                <h1 id="homeName" class="title non_selectable">Armand Gonda</h1>
+                <h1 id="homeTitle" class="title non_selectable">Front-end Web Developer</h1>
+            </section>
+        </article>
+        <article id="aboutPage" class="page otherPages">
+            <h1 id="aboutTitle" class="title non_selectable">About Me</h1>
+            <section id="aboutContainer">
                 <ul id="about">
-                    <li>My name is Armand Gonda and I'm a self-taught programmer.</li>
+                    <li>My name is Armand Gonda and I'm a <b>self-taught</b> programmer.</li>
                     <li>I've started programming at the age of 15 and been a fan of it since.</li>
-                    <li>I specialize in Front-End Web Development.</li>
-                    <li>Key skills: React, JavaScript (ES6), HTML5, CSS3, SASS, jQuery, Gsap, Git</li>
+                    <li>I specialize in <b>Front-End Web Development</b>.</li>
+                    <li>Key skills: <b>React</b>, JavaScript (ES6), HTML5, CSS3, SASS, jQuery, Gsap, Git</li>
                 </ul>
-                <div id="skills">
-                    <span id="slideCounter"></span>
+                <section id="skills">
+                    <p id="slideCounter"></p>
                     <img id="skillsImg" src="" alt="Skills">
-                    <span id="slideName"></span>
-                </div>
+                    <p id="slideName"></p>
+                </section>
                 <hr>
-                <div id="contactPage" class="page otherPages">
+                <section id="contactPage" class="page otherPages">
                     <div id="contactPanel">
-                        <span id="contactTitle" class="title non_selectable">Contact Information</span>
-                        <div id="contactInfo">
+                        <h1 id="contactTitle" class="title non_selectable">Contact Information</h1>
+                        <section id="contactInfo">
                             <img src="./images/phone.png" alt="" id="phone" class="contact-img" width="512" height="512">
                             <div class="cell" id="contactPhone">+36 20 332 32 15</div>
                             <img src="./images/email.png" alt="" id="email" class="contact-img" width="512" height="512">
@@ -69,27 +71,27 @@
                             <div class="cell" id="contactGitHub">
                                 <a id="gitLink" class="code non_selectable" href="https://github.com/Xenonyy">GitHub Page</a>
                             </div>
-                        </div>       
+                        </section>       
                     </div>
-                </div>
-            </div>
-        </div>
-        <div id="projectsPage" class="page otherPages">
-            <span id="projectsTitle" class="title non_selectable">Projects</span>
+                </section>
+            </section>
+        </article>
+        <article id="projectsPage" class="page otherPages">
+            <h1 id="projectsTitle" class="title non_selectable">Projects</h1>
             <div id="projectsPanel" class="col-12">
-                <div id="projectsContainer-1">
+                <section id="projectsContainer-1">
                     <div id="projectsImgContainer-1">
                         <img id="projectsImg-1" src="./images/league-library.png" alt="League Library" width="192" height="192"/>
                         <video autoplay loop preload="auto" id="projectsImgHover-1" src="https://i.gyazo.com/781c19557aa27ba7f65ea30df7bb0621.mp4" alt="League Library Homepage" width="192" height="192" class="hide"></video>
-                        <span id="projectsTitle-1">League Library</span>
+                        <h1 id="projectsTitle-1">League Library</h1>
                     </div>
-                    <div id="projectsDetailContainer-1">
-                        <div id="projectsDescriptionContainer-1">
-                            <div id="projectsDescription-1">This project is based on a game called League of Legends, where you can freely browse all the champions from the game using Riot Games' APIs. 
-                                <br> The website is responsive, optimized for most browsers and screen sizes.</div>
-                        </div>
-                        <div id="projectsTechnologiesContainer-1">
-                            <div id="projectsTechnologies-1"> Technologies used: 
+                    <section id="projectsDetailContainer-1">
+                        <section id="projectsDescriptionContainer-1">
+                            <p id="projectsDescription-1">This project is based on a game called League of Legends, where you can freely browse all the champions from the game using Riot Games' APIs. 
+                                <br> The website is responsive, optimized for most browsers and screen sizes.</p>
+                        </section>
+                        <section id="projectsTechnologiesContainer-1">
+                            <section id="projectsTechnologies-1"> Technologies used: 
                                 <div id="projectsTechnologiesDivContainer">
                                     <img src="./images/react.png" alt="ReactJS" width="92px" height="92px" class="react tech">
                                     <react class="hide">ReactJS</react>
@@ -100,21 +102,21 @@
                                     <img src="./images/git.png" alt="Git" width="92px" height="92px" class="git tech">
                                     <git class="hide">Git</git>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="projectsLinkContainer-1">
-                        <div id="projectsLinkText-1">View the project at:
+                            </section>
+                        </section>
+                    </section>
+                    <section id="projectsLinkContainer-1">
+                        <section id="projectsLinkText-1">View the project at:
                             <a class="link" href="https://leaguelibrary.netlify.app/">Netlify</a>
-                        </div>
-                    </div>
-                </div>
+                        </section>
+                    </section>
+                </section>
                 <hr id="hr2">
-                <div id="projectsContainer-2">
-                    <span id="projectsTitle-2" class="title non_selectable">More coming soon...</span>
-                </div>
+                <section id="projectsContainer-2">
+                    <h1 id="projectsTitle-2" class="title non_selectable">More coming soon...</h1>
+                </section>
             </div>
-        </div>
-    </div>
+        </article>
+    </main>
         <footer id="footer">&copy; 2021 Gonda Armand</footer>
 </body>
