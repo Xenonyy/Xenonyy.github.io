@@ -59,6 +59,7 @@ $white: hsla(0, 0%, 100%, 0.9);
 .col-12 {width: 100%;}
 
 html, body {
+    background-color: #1d1d1d; // No more annoying white while loading
     scroll-behavior: smooth;
     font-size: 100%; //by default 16px
     font-family: $primary-font;
