@@ -11,8 +11,8 @@ View this project at: https://xenonyy.github.io/
 * JavaScript, HTML, CSS
 * jQuery - DOM Manipulation (JavaScript Library)
 * Sass - Syntactically Awesome Style Sheets (CSS extension)
-* Node.js - Back end JavaScript runtime environment
-* Express.js - Back end framework for Node.js
+* Node.js - Back-end JavaScript runtime environment
+* Express.js - Back-end framework for Node.js
 * Git - Version Control System
 
 # Getting Started
