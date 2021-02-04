@@ -345,6 +345,7 @@ hr {
     @extend %flex;
     background-image: linear-gradient(0deg, #362593, #313131 80%);
     filter: drop-shadow(2px 4px 6px black);
+    height: 20em;
 }
 #projectsImg-1 {
     width: 192px;
@@ -355,9 +356,8 @@ hr {
 #projectsImgHover-1{
     transition: opacity .4s linear;
     width: max-content;
-    max-width: -webkit-fill-available;
-    max-width: -moz-available;
-    margin-top: 1em;
+    max-width: 90%;
+    margin-top: 2em;
     mask-image: linear-gradient(#000 65%, #0000 100%);
     -webkit-mask-image: linear-gradient(#000 65%, #0000 100%);
 }
