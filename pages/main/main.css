@@ -450,6 +450,11 @@ git {
 #projectsTitle-2 {
   margin: 1em 0; }
 
+#svg-container {
+  overflow: hidden;
+  display: grid;
+  width: inherit; }
+
 /*************************** ANIMATIONS ***************************/
 @media (hover: hover) {
   /* Only works if the deivce supports hover state*/
@@ -498,7 +503,9 @@ git {
   #projectsTechnologies-1, #projectsDescription-1 {
     padding: 1rem; }
   #projectsLinkContainer-1 {
-    margin: 1em 0; } }
+    margin: 1em 0; }
+  svg {
+    height: 100px !important; } }
 
 @media only screen and (min-width: 200px) and (max-width: 499px) {
   body {
@@ -519,8 +526,6 @@ git {
   #homeTitle {
     font-size: 4vw;
     text-shadow: #00a3e1 1px 1px; }
-  #aboutPage {
-    padding-bottom: 2em; }
   #skillsImg {
     transform: scale(0.5);
     -ms-transform: scale(0.5);
@@ -559,7 +564,9 @@ git {
   #contactPage {
     scroll-margin-top: 18em; }
   #footer {
-    height: 3rem; } }
+    height: 3rem; }
+  svg {
+    height: 60px !important; } }
 
 /************************ Extra Browser support **********************/
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {

@@ -433,6 +433,12 @@ git {color: #df4b33; left: -2.8em;}
 #projectsTitle-2 {margin: 1em 0;}
 
 
+#svg-container {
+    overflow: hidden;
+    display: grid;
+    width: inherit;
+}
+
 /*************************** ANIMATIONS ***************************/
 @media (hover: hover) { /* Only works if the deivce supports hover state*/
     input:hover {
@@ -480,6 +486,7 @@ git {color: #df4b33; left: -2.8em;}
     #projectsImg-1 {transform: scale(0.8); -ms-transform: scale(0.8); -webkit-transform: scale(0.8);}
     #projectsTechnologies-1, #projectsDescription-1 {padding: 1rem;}
     #projectsLinkContainer-1 {margin: 1em 0;}
+    svg {height: 100px !important;}
 }
 @media only screen and (min-width: 200px) and (max-width: 499px) {
     body {max-height: 100vh;}
@@ -488,7 +495,7 @@ git {color: #df4b33; left: -2.8em;}
     .menu, .divider {font-size: 1.3rem !important;}
     #homeName {font-size: 8vw; text-shadow: #b73785 2px 2px;}
     #homeTitle {font-size: 4vw; text-shadow: #00a3e1 1px 1px;}
-    #aboutPage {padding-bottom: 2em;}
+    // #aboutPage {padding-bottom: 2em;} Removed because of SVG
     #skillsImg {transform: scale(0.5); -ms-transform: scale(0.5); -webkit-transform: scale(0.5);}
     #projectsImg-1 {transform: scale(0.5); -ms-transform: scale(0.5); -webkit-transform: scale(0.5);}
     #projectsImgHover-1 {width: 90%;}
@@ -502,6 +509,7 @@ git {color: #df4b33; left: -2.8em;}
     #projectsLinkContainer-1 { width: 100%; margin: 2em 2em 0;}
     #contactPage {scroll-margin-top: 18em;}
     #footer {height: 3rem;}
+    svg {height: 50px !important;}
 }
 
 
