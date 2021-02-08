@@ -11,7 +11,7 @@ window.onload = () => {
 // Animations
 function aboutAni() {       
     $('#aboutTitle, #contactTitle').css({
-        'animation': 'fadeInLeftTitle 2s cubic-bezier(0.22, 0.61, 0.36, 1)'
+        'animation': 'fadeInLeftTitle 1.5s cubic-bezier(0.22, 0.61, 0.36, 1)'
     });
 }
 if (d.readyState === 'interactive') {
@@ -21,7 +21,7 @@ if (d.readyState === 'interactive') {
         }
         if ($(this).scrollTop() > 1000) {
             $('#projectsTitle').css({
-                'animation': 'fadeInLeftTitle 2s cubic-bezier(0.22, 0.61, 0.36, 1)'
+                'animation': 'fadeInLeftTitle 1.5s cubic-bezier(0.22, 0.61, 0.36, 1)'
             });
         }
     });
