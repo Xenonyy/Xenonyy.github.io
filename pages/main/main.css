@@ -1,4 +1,4 @@
-#homeTextContainer, #footer, #aboutPage, #aboutContainer, #about, #skills, #slideCounter, #slideName, #projectsPage, #projectsTitle, #projectsPanel, #projectsContainer-1, #projectsImgContainer-1, #projectsDescription-1, #projectsTechnologies-1, #projectsTechnologiesDivContainer, #projectsLinkContainer-1, #phone-nav, #phone-nav a {
+#homeTextContainer, #footer, #aboutPage, #aboutContainer, #about, #skills, #slideCounter, #slideName, #projectsPage, #projectsTitle, #projectsPanel, #projectsContainer-1, #projectsImgContainer-1, #projectsDescription-1, #projectsTechnologies-1, #projectsTechnologiesDivContainer, #projectsLinkContainer-1, .projectsLink-1, #phone-nav, #phone-nav a {
   display: flex;
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -12,7 +12,7 @@
   border-width: 1px;
   border-radius: 10px; }
 
-#projectsPanel, #projectsImgContainer-1, #projectsDescriptionContainer-1, #projectsTechnologiesContainer-1, #projectsLinkContainer-1 {
+#projectsPanel, #projectsImgContainer-1, #projectsDescriptionContainer-1, #projectsTechnologiesContainer-1, .projectsLink-1 {
   border-color: #8063a5;
   border-style: solid;
   border-width: 1px;
@@ -109,7 +109,7 @@ body {
   scroll-margin: 5em; }
 
 #homeTextContainer {
-  height: 90vh;
+  height: 85vh;
   font-family: Capriola; }
 
 #homeName {
@@ -422,13 +422,18 @@ git {
   flex-flow: row; }
 
 #projectsLinkContainer-1 {
+  width: 95%;
+  align-items: flex-start; }
+
+.projectsLink-1 {
   width: 30%;
-  min-inline-size: 20em;
+  min-inline-size: max-content;
   height: 3em;
   background-color: #3f3f3f;
-  padding: 1rem; }
+  padding: 1rem;
+  margin: 1em 0 0; }
 
-#projectsLinkText-1 {
+.projectsLinkText {
   color: rgba(255, 255, 255, 0.9);
   text-shadow: black 2px 2px;
   font-size: 1rem; }
@@ -443,19 +448,19 @@ git {
 
 #hr2 {
   width: 65%;
-  margin: 3em;
+  margin: 3em 0 0;
   background-color: #8063a5;
   height: 0.15em; }
 
 #projectsTitle-2 {
-  margin: 1em 0; }
+  margin: 1em 0 0.5em; }
 
 #svg-container {
   overflow: hidden;
   display: grid;
   width: inherit; }
 
-/************** HAMBURGER MENU ON PHONE **************************/
+/************** HAMBURGER MENU AND HEADER ON PHONE **************************/
 * {
   transition: .25s ease-in-out; }
 
@@ -569,15 +574,38 @@ git {
 
 #phone-nav {
   width: -moz-fit-content;
-  width: fit-content; }
+  width: fit-content;
+  align-items: baseline;
+  justify-content: flex-start;
+  height: 70%;
+  position: absolute; }
 
 #phone-nav a {
-  font-size: 3rem !important;
+  font-size: 2.7rem !important;
   line-height: 2;
-  width: 100%; }
+  width: 100%;
+  margin: .7em 0;
+  border-radius: 10px;
+  background-color: rgba(51, 44, 90, 0.25);
+  border: 1px solid #8063a5;
+  padding: 0 1em; }
 
 .hidden {
   opacity: 0; }
+
+#contact-phone {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-flow: wrap;
+  align-items: flex-end;
+  height: 100%; }
+
+.header-contact-img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 1.5em;
+  filter: drop-shadow(1px 2px 2px black); }
 
 /*************************** ANIMATIONS ***************************/
 @media (hover: hover) {
@@ -631,7 +659,7 @@ git {
   svg {
     height: 100px !important; } }
 
-@media only screen and (min-width: 200px) and (max-width: 768px) {
+@media only screen and (min-width: 320px) and (max-width: 768px) {
   html {
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
     font-style: italic;
@@ -639,7 +667,7 @@ git {
     line-height: 1em; }
   .title {
     font-size: 2.5rem;
-    margin: 5px; }
+    margin: 0 0 0.5em; }
   .menu, .divider {
     font-size: 1.3rem !important; }
   #homeName {
@@ -681,8 +709,8 @@ git {
   react {
     left: -3.5em; }
   #projectsLinkContainer-1 {
-    width: 100%;
-    margin: 2em 2em 0; }
+    margin: 2em 0 0;
+    align-items: center; }
   #contactPage {
     scroll-margin-top: 18em; }
   #footer {
@@ -703,6 +731,70 @@ git {
     min-height: fit-content; }
   #projectsPage {
     scroll-margin: 0; } }
+
+@media screen and (orientation: landscape) and (min-device-width: 320px) and (max-device-width: 900px) {
+  .header {
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; }
+  nav {
+    display: none; }
+  .phone {
+    display: flex; }
+  #header-menu {
+    width: 50%; }
+  #phone-nav a {
+    font-size: 2rem !important; }
+  #phone-nav {
+    height: 90%; }
+  .header-contact-img {
+    width: 40px;
+    height: 40px; }
+  #about {
+    max-width: 48%; }
+  #skills {
+    width: 17em; }
+  #projectsImgContainer-1 {
+    margin: 1em 1em 0 0;
+    width: 40%;
+    padding: 0; }
+  #projectsDetailContainer-1 {
+    width: 55%; }
+  #projectsDescription-1 {
+    font-size: 1rem; } }
+
+@media screen and (min-device-width: 768px) and (max-width: 1200px) {
+  .header {
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; }
+  nav {
+    display: none; }
+  .phone {
+    display: flex; }
+  html {
+    font-size: 0.9rem; }
+  #header-menu {
+    width: 65%;
+    transform: translateX(40em); }
+  #phone-nav a {
+    font-size: 2.7rem !important; }
+  #about {
+    max-width: 48%;
+    margin: 1em 0;
+    line-height: 1.5; }
+  #skills {
+    width: 15em; }
+  #projectsImgContainer-1 {
+    height: 280px;
+    margin: 1em 1em 0 0; }
+  #projectsLinkContainer-1 {
+    align-items: center; }
+  .header-contact-img {
+    width: 60px;
+    height: 60px; } }
 
 /************************ Extra Browser support **********************/
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
