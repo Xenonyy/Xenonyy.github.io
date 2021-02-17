@@ -14,7 +14,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-icon-180x180.png" type="image/png">
     <link rel="icon" type="image/x-icon" href="./favicon/favicon.ico">
     <meta name="msapplication-TileColor" content="#7b68ee">
-    <meta name="msapplication-TileImage" content="./favicon/ms-icon-144x144.png" type="image/png">
+    <meta name="msapplication-TileImage" content="./favicon/ms-icon-144x144.png">
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <title>Armand Gonda - Portfolio</title>
     <link rel="stylesheet" type="text/css" href="./pages/main/main.css"/>
@@ -33,13 +33,13 @@
             </nav>
             <div id="contact-phone">
                 <a class="non_selectable" href="https://github.com/Xenonyy">
-                    <img src="./images/github.png" alt="" class="header-contact-img" width="512" height="512">
+                    <img src="./images/github.png" alt="GitHub" class="header-contact-img" width="48" height="48">
                 </a>
                 <a class="non_selectable" href="https://www.linkedin.com/in/armand-gonda-a72125205/">
-                    <img src="./images/linkedin.png" alt="" class="header-contact-img" width="512" height="512">
+                    <img src="./images/linkedin.png" alt="LinkedIn" class="header-contact-img" width="48" height="48">
                 </a>
                 <a class="non_selectable" href="https://twitter.com/Xenonyy">
-                    <img src="./images/twitter.png" alt="" class="header-contact-img" width="518" height="518">
+                    <img src="./images/twitter.png" alt="Twitter" class="header-contact-img" width="48" height="48">
                 </a>
             </div>
         </section>
@@ -55,17 +55,28 @@
             </div>
         </div>
         <header class="header non_selectable">
-            <img src="./favicon/favicon-96x96.png" alt="Armand Gonda" id="header-img" class="phone">
+            <img src="./favicon/favicon-96x96.png" alt="Favicon" id="header-img" class="phone" sizes="96x96">
             <p id="header-text" class="phone">Armand Gonda</p>
             <nav>
                 <a href="#homePage" id="home" class="menu">Home</a>
-                    <h1 class="divider"> | </h1>
+                    <p class="divider"> | </p>
                 <a href="#aboutPage" id="aboutMe" class="menu">About Me</a>
-                    <h1 class="divider"> | </h1>
+                    <p class="divider"> | </p>
                 <a href="#contactPage" id="contact" class="menu">Contact</a>
-                    <h1 class="divider"> | </h1>
+                    <p class="divider"> | </p>
                 <a href="#projectsPage" id="projects" class="menu">Projects</a>
             </nav>
+            <div id="contact-desktop">
+                <a class="non_selectable" href="https://github.com/Xenonyy">
+                    <img src="./images/github.png" alt="GitHub" class="header-contact-desktop-img" width="48" height="48">
+                </a>
+                <a class="non_selectable" href="https://www.linkedin.com/in/armand-gonda-a72125205/">
+                    <img src="./images/linkedin.png" alt="LinkedIn" class="header-contact-desktop-img" width="48" height="48">
+                </a>
+                <a class="non_selectable" href="https://twitter.com/Xenonyy">
+                    <img src="./images/twitter.png" alt="Twitter" class="header-contact-desktop-img" width="48" height="48">
+                </a>
+            </div>
         </header>
         <article id="homePage" class="page">
             <section id="homeTextContainer">
@@ -92,13 +103,13 @@
                     <div id="contactPanel">
                         <h1 id="contactTitle" class="title non_selectable">Contact Information</h1>
                         <section id="contactInfo">
-                            <img src="./images/phone.png" alt="" id="phone" class="contact-img" width="512" height="512">
+                            <img src="./images/phone.png" alt="Phone" id="phone" class="contact-img" width="48" height="48">
                             <div class="cell" id="contactPhone">+36 20 332 32 15</div>
-                            <img src="./images/email.png" alt="" id="email" class="contact-img" width="512" height="512">
-                            <img src="./images/github.png" alt="" id="github" class="contact-img" width="512" height="512">
+                            <img src="./images/email.png" alt="Email" id="email" class="contact-img" width="48" height="48">
+                            <img src="./images/linkedinblack.png" alt="LinkedIn" id="linkedin" class="contact-img" width="48" height="48">
                             <div class="cell" id="contactEmail">gonda.armand@gmail.com</div>
-                            <div class="cell" id="contactGitHub">
-                                <a id="gitLink" class="code non_selectable" href="https://github.com/Xenonyy">GitHub Profile</a>
+                            <div class="cell" id="contactLinkedIn">
+                                <a id="linkedInLink" class="code non_selectable" href="https://www.linkedin.com/in/armand-gonda-a72125205/">LinkedIn Profile</a>
                             </div>
                         </section>       
                     </div>
@@ -129,7 +140,7 @@
                 <section id="projectsContainer-1">
                     <div id="projectsImgContainer-1">
                         <img id="projectsImg-1" src="./images/league-library.png" alt="League Library" width="192" height="192"/>
-                        <video autoplay loop preload="auto" id="projectsImgHover-1" src="https://i.gyazo.com/781c19557aa27ba7f65ea30df7bb0621.mp4" alt="League Library Homepage" width="192" height="192" class="hide"></video>
+                        <video autoplay loop preload="auto" id="projectsImgHover-1" src="https://i.gyazo.com/781c19557aa27ba7f65ea30df7bb0621.mp4" width="192" height="192" class="hide"></video>
                         <h1 id="projectsTitle-1">League Library</h1>
                     </div>
                     <section id="projectsDetailContainer-1">
@@ -140,13 +151,13 @@
                         <section id="projectsTechnologiesContainer-1">
                             <div id="projectsTechnologies-1"> Technologies used: 
                                 <div id="projectsTechnologiesDivContainer">
-                                    <img src="./images/react.png" alt="ReactJS" width="92px" height="92px" class="react tech">
+                                    <img src="./images/react.png" alt="ReactJS" width="92" height="92" class="react tech">
                                     <react class="hide">ReactJS</react>
-                                    <img src="./images/sass.png" alt="Sass" width="92px" height="92px" class="sass tech">
+                                    <img src="./images/sass.png" alt="Sass" width="92" height="92" class="sass tech">
                                     <sass class="hide">Sass</sass>
-                                    <img src="./images/gsap.png" alt="Gsap" width="92px" height="92px" class="gsap tech">
+                                    <img src="./images/gsap.png" alt="Gsap" width="92" height="92" class="gsap tech">
                                     <gsap class="hide">Gsap</gsap>
-                                    <img src="./images/git.png" alt="Git" width="92px" height="92px" class="git tech">
+                                    <img src="./images/git.png" alt="Git" width="92" height="92" class="git tech">
                                     <git class="hide">Git</git>
                                 </div>
                             </div>
