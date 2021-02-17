@@ -1,6 +1,6 @@
 $primary-font: Aleo;
 $secondary-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
-$primary-text-shadow: rgb(0, 0, 0) 2px 2px;
+$primary-text-shadow: rgb(0, 0, 0) 1px 1px;
 $gradient: linear-gradient(135deg, rgba(191, 35, 165, 0.4) 0%, rgba(0, 87, 137, 0.4) 100%);
 $white: hsla(0, 0%, 100%, 0.9);
 
@@ -145,6 +145,28 @@ body{
     z-index: 1;
     padding: 0.8em 0 0.8em 1em;
 }
+.menu:hover, #home:hover {
+    // filter: drop-shadow(0px 0px 1px white); Buggy interaction, glitches if hovering too fast
+    color: #c75dac;
+}
+#contact-desktop {
+    display: flex;
+    justify-content: space-evenly;
+    width: 18rem;
+    height: 3rem;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 6px;
+    right: 0;
+}
+.header-contact-desktop-img {
+    width: 3rem;
+    height: 3rem;
+    filter: drop-shadow(0px 0px 1px #b82669);
+}
+.header-contact-desktop-img:hover {
+    filter: drop-shadow(0px 0px 1.2px white);
+}
 #footer {
     position: relative;
     bottom: 0;
@@ -275,16 +297,18 @@ hr {
     -webkit-transform: scale(0.6, 0.6);
     transform: scale(0.6, 0.6);
 }
-#github {
+#linkedin {
     -ms-transform: scale(0.5, 0.5);
     -webkit-transform: scale(0.5, 0.5);
     transform: scale(0.5, 0.5);
 }
-#contactEmail, #contactPhone, #contactGitHub, #gitLink {
-    color: rgb(211, 211, 211);
-    text-shadow: $primary-text-shadow;
+#linkedInLink {
     text-decoration: none;
-    position: relative; // For gitlink to have proper hover animation
+    color: #b82669;
+    position: relative;
+}
+#linkedInLink::after {
+    background-color: #e24892;
 }
 .contact-img {
     height: 4em;
@@ -300,6 +324,8 @@ hr {
     flex-direction: row;
     line-height: 2em;
     margin: 2em 0em 1em 5em;
+    text-shadow: $primary-text-shadow;
+    color: whitesmoke;
 }
 #contactPhone {
     margin-top: 1em;
@@ -339,7 +365,7 @@ hr {
 }
 #projectsImgContainer-1 {
     margin: 1em 4em 0 0;
-    width: 30%;
+    width: 32%;
     min-inline-size: 20em;
     background-color: #3f3f3f;
     @extend %border-proj;
@@ -416,7 +442,7 @@ git {color: #df4b33; left: -2.8em;}
 }
 .projectsLink-1 {
     @extend %flex;
-    width: 30%;
+    width: 32%;
     min-inline-size: max-content;
     height: 3em;
     background-color: #3f3f3f;
@@ -685,6 +711,7 @@ git {color: #df4b33; left: -2.8em;}
     .phone {display: flex;}
     #aboutPage {scroll-margin: 0; min-height: fit-content;}
     #projectsPage {scroll-margin: 0;}
+    #contact-desktop {display: none;}
 }
 // Mobile landscape
 @media screen and (orientation:landscape) and (min-device-width: 320px) and (max-device-width: 900px) {
@@ -695,14 +722,16 @@ git {color: #df4b33; left: -2.8em;}
     #phone-nav a {font-size: 2rem !important;}
     #phone-nav {height: 90%;}
     .header-contact-img {width: 40px; height: 40px;}
-    #about {max-width: 48%;}
-    #skills {width: 17em;}
+    #about {max-width: 54%; margin: 0 1em 0 0;}
+    #skills {width: 43%; margin: 0;}
     #projectsImgContainer-1 {margin: 1em 1em 0 0; width: 40%; padding: 0;}
     #projectsDetailContainer-1 {width: 55%;}
     #projectsDescription-1 {font-size: 1rem;}
+    #contactPage {scroll-margin-top: 10em;}
+    #contact-desktop {display: none;}
 }
 // Tablets
-@media screen and (min-device-width: 768px) and (max-width: 1200px){
+@media screen and (min-device-width: 768px) and (max-width: 999px){
     .header {height: 75px; display: flex; align-items: center; justify-content: flex-start;}
     nav {display: none;}
     .phone {display: flex;}
@@ -714,6 +743,7 @@ git {color: #df4b33; left: -2.8em;}
     #projectsImgContainer-1 {height: 280px; margin: 1em 1em 0 0;}
     #projectsLinkContainer-1 {align-items: center;}
     .header-contact-img {width: 60px; height: 60px;}
+    #contact-desktop {display: none;}
 }
 
 
