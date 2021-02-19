@@ -160,8 +160,8 @@ body{
     right: 0;
 }
 .header-contact-desktop-img {
-    width: 3rem;
-    height: 3rem;
+    width: 2.8rem;
+    height: 2.8rem;
     filter: drop-shadow(0px 0px 1px #b82669);
 }
 .header-contact-desktop-img:hover {
@@ -307,8 +307,12 @@ hr {
     color: #b82669;
     position: relative;
 }
+#linkedInLink:hover {
+    color: #cc85a6;
+}
 #linkedInLink::after {
     background-color: #e24892;
+    bottom: 5px;
 }
 .contact-img {
     height: 4em;
@@ -455,7 +459,14 @@ git {color: #df4b33; left: -2.8em;}
     text-shadow: $primary-text-shadow;
     font-size: 1rem;
 }
-.link {text-shadow: none; text-decoration: none; position: relative; color: #735afb; padding: 0 0 0.15em; font-family: Capriola;}
+.link {
+    text-shadow: none; 
+    text-decoration: none; 
+    position: relative; 
+    color: #735afb; 
+    padding: 0 0 0.15em; 
+    font-family: Capriola;
+}
 #hr2 {
     width: 65%;
     margin: 3em 0 0;
@@ -472,9 +483,6 @@ git {color: #df4b33; left: -2.8em;}
 }
 
 /************** HAMBURGER MENU AND HEADER ON PHONE **************************/
-* {
-    transition:.25s ease-in-out;
-}
 #menu-toggle #hamburger span {
     display: block;
     background: #735afb;
@@ -498,6 +506,7 @@ git {color: #df4b33; left: -2.8em;}
 	width: 100%;
 }
 #hamburger span {
+    transition:.25s ease-in-out;
 	width: 60px;
 	height: 4px;
 	position: relative;
@@ -521,6 +530,7 @@ git {color: #df4b33; left: -2.8em;}
 	transform: rotate(45deg);
 }
 #cross span {
+    transition:.25s ease-in-out;
 	&:nth-child(1) {
 		height: 0%;
 		width: 4px;
@@ -671,6 +681,13 @@ git {color: #df4b33; left: -2.8em;}
     .link:after {
         background-color: #8063a5;
         transition: width 0.5s ease 0s, left 0.5s ease 0s;
+    }
+    .link:hover {
+        color: #9885ff;
+    }
+    .header-contact-desktop-img:hover {
+        transform: scale(1.025);
+        transition-duration: 0.5s;
     }
 }
 
