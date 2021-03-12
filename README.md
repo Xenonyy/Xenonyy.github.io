@@ -2,7 +2,7 @@
 
 A fully responsive website I designed and built from scratch to showcase my projects along with my web developer skills!
                      
-![alt text](https://i.gyazo.com/9810dbc22aa8081d670dd0e0a27e035d.png)
+![alt text](https://i.gyazo.com/ca90f08a8f8b509a11481e3261c38a81.png)
 
 View this project at: https://xenonyy.github.io/
 
