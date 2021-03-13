@@ -304,11 +304,11 @@ hr {
 }
 #linkedInLink {
     text-decoration: none;
-    color: #b82669;
+    color: #ff3d96;
     position: relative;
 }
 #linkedInLink:hover {
-    color: #cc85a6;
+    color: #f762a7;
 }
 #linkedInLink::after {
     background-color: #e24892;
@@ -463,7 +463,8 @@ git {color: #df4b33; left: -2.8em;}
     text-shadow: none; 
     text-decoration: none; 
     position: relative; 
-    color: #735afb; 
+    // color: #735afb;
+    color: #b0a2ff; 
     padding: 0 0 0.15em; 
     font-family: Capriola;
 }
@@ -683,7 +684,7 @@ git {color: #df4b33; left: -2.8em;}
         transition: width 0.5s ease 0s, left 0.5s ease 0s;
     }
     .link:hover {
-        color: #9885ff;
+        color: #bb99ff;
     }
     .header-contact-desktop-img:hover {
         transform: scale(1.025);
