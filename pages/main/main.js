@@ -25,7 +25,7 @@ if (d.readyState === 'interactive') {
 }
 
 // Slideshow of images of skills on 'About Me' page
-let skillsImageArray = ["./images/react.png", "./images/html-js-css.png", "./images/sass.png", "./images/jquery.png", "./images/gsap.png", "./images/git.png"];
+let skillsImageArray = ["./images/webp/react.webp", "./images/webp/html-js-css.webp", "./images/webp/sass.webp", "./images/webp/jquery.webp", "./images/webp/gsap.webp", "./images/webp/git.webp"];
 let skillsImageArrayName = ["React (JavaScript UI Library)", "HTML-JS-CSS (Core) ", "Sass (CSS Extension)","jQuery (JavaScript Library)", "Gsap (JavaScript Animation Library)", "Git (Version Control System)"]
 const timer = ms => new Promise(res => setTimeout(res, ms)) // Returns a Promise that resolves after "ms" Milliseconds
 let i = 0;
