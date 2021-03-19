@@ -360,14 +360,14 @@ hr {
     padding: 2em;
     margin: 1em 1em 5em;
 }
-#projectsContainer-1 {
+.projectContainer {
     @extend %flex;
     width: 95%;
     justify-content: flex-start;
     align-items: flex-start;
     flex-flow: wrap;
 }
-#projectsImgContainer-1 {
+.projectImgContainer {
     margin: 1em 4em 0 0;
     width: 32%;
     min-inline-size: 20em;
@@ -392,7 +392,7 @@ hr {
     mask-image: linear-gradient(#000 65%, #0000 100%);
     -webkit-mask-image: linear-gradient(#000 65%, #0000 100%);
 }
-#projectsTitle-1 {
+.projectTitle {
     color: $white;
     text-shadow: $primary-text-shadow;
     font-size: 1.5rem;
@@ -400,7 +400,7 @@ hr {
     filter: drop-shadow(2px 4px 6px black);
     font-family: Capriola;
 }
-#projectsDetailContainer-1 {
+.projectDetails {
     min-inline-size: -webkit-min-content;
     min-inline-size: min-content;
     min-inline-size: -moz-min-content;
@@ -411,7 +411,7 @@ hr {
 
     letter-spacing: 0.5px;
 }
-#projectsDescriptionContainer-1, #projectsTechnologiesContainer-1 {
+.projectDescriptionContainer, #projectsTechnologiesContainer-1 {
     filter: drop-shadow(2px 2px 4px black);
     background: #342e54;
     @extend %border-proj;
@@ -420,7 +420,7 @@ hr {
     min-inline-size: fit-content;
     min-inline-size: -moz-fit-content;
 }
-#projectsDescription-1, #projectsTechnologies-1 {
+.projectDescription, #projectsTechnologies-1 {
     font-size: 1.3rem;
     color: $white;
     padding: 1.5rem;
@@ -468,13 +468,13 @@ git {color: #df4b33; left: -2.8em;}
     padding: 0 0 0.15em; 
     font-family: Capriola;
 }
-#hr2 {
+.hr2 {
     width: 65%;
     margin: 3em 0 0;
     background-color: #8063a5;
     height: 0.15em;
 }
-#projectsTitle-2 {margin: 1em 0 0.5em;}
+#projectsTextSoon {margin: 1em 0 0.5em;}
 
 // SVG page division
 #svg-container {
