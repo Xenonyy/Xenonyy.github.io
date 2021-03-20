@@ -378,13 +378,13 @@ hr {
     filter: drop-shadow(2px 4px 6px black);
     height: 20em;
 }
-#projectsImg-1 {
+.projectImg {
     width: 192px;
     position: absolute;
     transition: opacity .4s linear;
     margin-bottom: 2em;
 }
-#projectsImgHover-1{
+#projectsImgHover-1, #projectsImgHover-2{
     transition: opacity .4s linear;
     width: max-content;
     max-width: 90%;
@@ -411,7 +411,7 @@ hr {
 
     letter-spacing: 0.5px;
 }
-.projectDescriptionContainer, #projectsTechnologiesContainer-1 {
+.projectDescriptionContainer, .projectTechContainer {
     filter: drop-shadow(2px 2px 4px black);
     background: #342e54;
     @extend %border-proj;
@@ -420,7 +420,7 @@ hr {
     min-inline-size: fit-content;
     min-inline-size: -moz-fit-content;
 }
-.projectDescription, #projectsTechnologies-1 {
+.projectDescription, .projectTech {
     font-size: 1.3rem;
     color: $white;
     padding: 1.5rem;
@@ -429,22 +429,26 @@ hr {
     flex-flow: column;
     text-shadow: $primary-text-shadow;
 }
-react, sass, gsap, git {position: relative; left: -3.8em; transition: opacity .25s linear; width: 10px; font-size: 1.5rem; text-shadow: $primary-text-shadow;}
-.react {transform: scale(1.3); -ms-transform: scale(1.3); -webkit-transform: scale(1.3);}
-.git {transform: scale(1.5); -ms-transform: scale(1.5); -webkit-transform: scale(1.5);}
+react, sass, gsap, git {position: relative; left: -3.8em; transition: opacity .25s linear; width: 10px; font-size: 1.5rem; -webkit-text-stroke: medium;}
+socketio2, react2, sass2, node2, git2 {position: relative; left: -3.8em; transition: opacity .25s linear; width: 10px; font-size: 1.5rem; -webkit-text-stroke: medium;}
+.react, .react2 {transform: scale(1.3); -ms-transform: scale(1.3); -webkit-transform: scale(1.3);}
+.git, .git2 {transform: scale(1.5); -ms-transform: scale(1.5); -webkit-transform: scale(1.5);}
+.node2 {transform: scale(0.8); -ms-transform: scale(0.8); -webkit-transform: scale(0.8);}
 .tech {z-index: 2;transition: opacity .25s linear; max-width: 92px; min-width: 50px; margin: 0 0.5em;}
-react {color: #55c6e4; left: -4.2em;}
-sass {color: #ce679a}
+react, react2 {color: #55c6e4; left: -4.2em;}
+sass, sass2 {color: #ce679a}
 gsap {color: #93d400}
-git {color: #df4b33; left: -2.8em;}
-#projectsTechnologiesDivContainer {@extend %flex; flex-flow: row;}
+git, git2 {color: #df4b33; left: -2.8em;}
+node2 {color: #89bd5e; left: -4em}
+socketio2 {color: #fff; left: -4.4em}
+.projectTechDivContainer {@extend %flex; flex-flow: row;}
 
-#projectsLinkContainer-1 {
+.projectLinkContainer {
     width: 95%;
     @extend %flex;
     align-items: flex-start;
 }
-.projectsLink-1 {
+.projectLink {
     @extend %flex;
     width: 32%;
     min-inline-size: max-content;
@@ -454,7 +458,7 @@ git {color: #df4b33; left: -2.8em;}
     margin: 1em 0 0;
     @extend %border-proj;
 }
-.projectsLinkText {
+.projectLinkText {
     color: $white;
     text-shadow: $primary-text-shadow;
     font-size: 1rem;
@@ -470,11 +474,11 @@ git {color: #df4b33; left: -2.8em;}
 }
 .hr2 {
     width: 65%;
-    margin: 3em 0 0;
+    margin: 3em 0;
     background-color: #8063a5;
     height: 0.15em;
 }
-#projectsTextSoon {margin: 1em 0 0.5em;}
+#projectsTextSoon {margin: 0 0 0.5em;}
 
 // SVG page division
 #svg-container {

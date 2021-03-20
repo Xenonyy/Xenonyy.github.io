@@ -1,4 +1,4 @@
-#homeTextContainer, #footer, #aboutPage, #aboutContainer, #about, #skills, #slideCounter, #slideName, #projectsPage, #projectsTitle, #projectsPanel, .projectContainer, .projectImgContainer, .projectDescription, #projectsTechnologies-1, #projectsTechnologiesDivContainer, #projectsLinkContainer-1, .projectsLink-1, #phone-nav, #phone-nav a {
+#homeTextContainer, #footer, #aboutPage, #aboutContainer, #about, #skills, #slideCounter, #slideName, #projectsPage, #projectsTitle, #projectsPanel, .projectContainer, .projectImgContainer, .projectDescription, .projectTech, .projectTechDivContainer, .projectLinkContainer, .projectLink, #phone-nav, #phone-nav a {
   display: flex;
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -12,7 +12,7 @@
   border-width: 1px;
   border-radius: 10px; }
 
-#projectsPanel, .projectImgContainer, .projectDescriptionContainer, #projectsTechnologiesContainer-1, .projectsLink-1 {
+#projectsPanel, .projectImgContainer, .projectDescriptionContainer, .projectTechContainer, .projectLink {
   border-color: #8063a5;
   border-style: solid;
   border-width: 1px;
@@ -360,13 +360,13 @@ hr {
   filter: drop-shadow(2px 4px 6px black);
   height: 20em; }
 
-#projectsImg-1 {
+.projectImg {
   width: 192px;
   position: absolute;
   transition: opacity .4s linear;
   margin-bottom: 2em; }
 
-#projectsImgHover-1 {
+#projectsImgHover-1, #projectsImgHover-2 {
   transition: opacity .4s linear;
   width: max-content;
   max-width: 90%;
@@ -392,7 +392,7 @@ hr {
   width: 60%;
   letter-spacing: 0.5px; }
 
-.projectDescriptionContainer, #projectsTechnologiesContainer-1 {
+.projectDescriptionContainer, .projectTechContainer {
   filter: drop-shadow(2px 2px 4px black);
   background: #342e54;
   margin: 1em 0 0;
@@ -400,7 +400,7 @@ hr {
   min-inline-size: fit-content;
   min-inline-size: -moz-fit-content; }
 
-.projectDescription, #projectsTechnologies-1 {
+.projectDescription, .projectTech {
   font-size: 1.3rem;
   color: rgba(255, 255, 255, 0.9);
   padding: 1.5rem;
@@ -414,17 +414,30 @@ react, sass, gsap, git {
   transition: opacity .25s linear;
   width: 10px;
   font-size: 1.5rem;
-  text-shadow: black 1px 1px; }
+  -webkit-text-stroke: medium; }
 
-.react {
+socketio2, react2, sass2, node2, git2 {
+  position: relative;
+  left: -3.8em;
+  transition: opacity .25s linear;
+  width: 10px;
+  font-size: 1.5rem;
+  -webkit-text-stroke: medium; }
+
+.react, .react2 {
   transform: scale(1.3);
   -ms-transform: scale(1.3);
   -webkit-transform: scale(1.3); }
 
-.git {
+.git, .git2 {
   transform: scale(1.5);
   -ms-transform: scale(1.5);
   -webkit-transform: scale(1.5); }
+
+.node2 {
+  transform: scale(0.8);
+  -ms-transform: scale(0.8);
+  -webkit-transform: scale(0.8); }
 
 .tech {
   z-index: 2;
@@ -433,28 +446,36 @@ react, sass, gsap, git {
   min-width: 50px;
   margin: 0 0.5em; }
 
-react {
+react, react2 {
   color: #55c6e4;
   left: -4.2em; }
 
-sass {
+sass, sass2 {
   color: #ce679a; }
 
 gsap {
   color: #93d400; }
 
-git {
+git, git2 {
   color: #df4b33;
   left: -2.8em; }
 
-#projectsTechnologiesDivContainer {
+node2 {
+  color: #89bd5e;
+  left: -4em; }
+
+socketio2 {
+  color: #fff;
+  left: -4.4em; }
+
+.projectTechDivContainer {
   flex-flow: row; }
 
-#projectsLinkContainer-1 {
+.projectLinkContainer {
   width: 95%;
   align-items: flex-start; }
 
-.projectsLink-1 {
+.projectLink {
   width: 32%;
   min-inline-size: max-content;
   height: 3em;
@@ -462,7 +483,7 @@ git {
   padding: 1rem;
   margin: 1em 0 0; }
 
-.projectsLinkText {
+.projectLinkText {
   color: rgba(255, 255, 255, 0.9);
   text-shadow: black 1px 1px;
   font-size: 1rem; }
@@ -477,12 +498,12 @@ git {
 
 .hr2 {
   width: 65%;
-  margin: 3em 0 0;
+  margin: 3em 0;
   background-color: #8063a5;
   height: 0.15em; }
 
 #projectsTextSoon {
-  margin: 1em 0 0.5em; }
+  margin: 0 0 0.5em; }
 
 #svg-container {
   overflow: hidden;
