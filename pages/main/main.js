@@ -25,14 +25,14 @@ if (d.readyState === 'interactive') {
 }
 
 // Slideshow of images of skills on 'About Me' page
-let skillsImageArray = ["./images/webp/react.webp", "./images/webp/html-js-css.webp", "./images/webp/sass.webp", "./images/webp/jquery.webp", "./images/webp/gsap.webp", "./images/webp/git.webp"];
-let skillsImageArrayName = ["React (JavaScript UI Library)", "HTML-JS-CSS (Core) ", "Sass (CSS Extension)","jQuery (JavaScript Library)", "Gsap (JavaScript Animation Library)", "Git (Version Control System)"]
+let skillsImageArray = ["./images/webp/react.webp", "./images/webp/node.webp", "./images/webp/html-js-css.webp", "./images/webp/sass.webp", "./images/webp/jquery.webp", "./images/webp/gsap.webp", "./images/webp/git.webp"];
+let skillsImageArrayName = ["React (JavaScript UI Library)", "Node.js (Back-end JS Environment)", "HTML-JS-CSS (Core) ", "Sass (CSS Extension)","jQuery (JavaScript Library)", "Gsap (JavaScript Animation Library)", "Git (Version Control System)"]
 const timer = ms => new Promise(res => setTimeout(res, ms)) // Returns a Promise that resolves after "ms" Milliseconds
 let i = 0;
 
 const SlideShow = async() => {
     for (let i = 0; i < skillsImageArray.length; i++) {
-        $("#slideCounter").text(`${i+1}/6`);
+        $("#slideCounter").text(`${i+1}/${skillsImageArray.length}`);
         $("#slideName").text(skillsImageArrayName[i]);
         d.querySelector("#skillsImg").classList.remove("hide");
         d.querySelector("#skillsImg").src = skillsImageArray[i];
@@ -56,6 +56,18 @@ for (const tech of Object.entries(techArr)) {
 
     });
 }
+// Hover animation for the second project (so the same technologies don't get highlighted everywhere by hovering one of them)
+let techArr2 = ["socketio2", "react2", "sass2", "node2", "git2"];
+for (const tech of Object.entries(techArr2)) {
+    $(`.${tech[1]}`).hover(() => {
+        $(tech[1]).removeClass("hide");
+        $(`.${tech[1]}`).addClass("hide-almost");
+    }, () => {
+        $(tech[1]).addClass("hide");
+        $(`.${tech[1]}`).removeClass("hide-almost");
+
+    });
+}
 // Switch to another image/gif when hovering a project's image to showcase project.
 $("#projectsImgContainer-1").hover(() => {
     $("#projectsImg-1").addClass("hide");
@@ -66,6 +78,19 @@ $("#projectsImgContainer-1").hover(() => {
 });
 // Wait for fade out animation to end, then reset the video.
 $("#projectsImgContainer-1").mouseout(async() => {
+    await timer(400);
+    $("video").get(0).currentTime = 0;
+});
+// Same on second project
+$("#projectsImgContainer-2").hover(() => {
+    $("#projectsImg-2").addClass("hide");
+    $("#projectsImgHover-2").removeClass("hide");
+}, () => {
+    $("#projectsImg-2").removeClass("hide");
+    $("#projectsImgHover-2").addClass("hide");
+});
+// Wait for fade out animation to end, then reset the video.
+$("#projectsImgContainer-2").mouseout(async() => {
     await timer(400);
     $("video").get(0).currentTime = 0;
 });
