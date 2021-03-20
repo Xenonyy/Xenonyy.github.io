@@ -91,7 +91,7 @@
                     <li>My name is Armand Gonda and I'm a <b>self-taught</b> programmer.</li>
                     <li>I've started programming at the age of 15 and been a fan of it since.</li>
                     <li>I specialize in <b>Front-End Web Development</b>.</li>
-                    <li>Key skills: <b>React</b>, JavaScript (ES6), HTML5, CSS3, SASS, jQuery, Gsap, Git</li>
+                    <li>Key skills: <b>React,</b> <b>Node.js,</b> <b>JavaScript (ES6),</b> HTML5, CSS3, SASS, jQuery, Gsap, Git</li>
                 </ul>
                 <section id="skills">
                     <p id="slideCounter"></p>
@@ -137,20 +137,20 @@
         <article id="projectsPage" class="page otherPages">
             <h1 id="projectsTitle" class="title non_selectable">Projects</h1>
             <div id="projectsPanel" class="col-12">
-                <section id="projectsContainer-1" class="projectContainer">
-                    <div id="projectsImgContainer-1" class="projectImgContainer">
-                        <img id="projectsImg-1" src="./images/webp/league-library.webp" alt="League Library" width="192" height="192"/>
+                <section class="projectContainer">
+                    <div class="projectImgContainer" id="projectsImgContainer-1">
+                        <img class="projectImg" id="projectsImg-1" src="./images/webp/league-library.webp" alt="League Library" width="192" height="192"/>
                         <video autoplay loop preload="metadata" id="projectsImgHover-1" src="https://i.gyazo.com/781c19557aa27ba7f65ea30df7bb0621.mp4" width="192" height="192" class="hide"></video>
-                        <h1 id="projectsTitle-1" class="projectTitle">League Library</h1>
+                        <h1 class="projectTitle">League Library</h1>
                     </div>
-                    <section id="projectsDetailContainer-1" class="projectDetails">
-                        <section id="projectsDescriptionContainer-1" class="projectDescriptionContainer">
-                            <p id="projectsDescription-1" class="projectDescription">This project is based on a game called League of Legends, where you can freely browse all the champions from the game using Riot Games' APIs. 
+                    <section class="projectDetails">
+                        <section class="projectDescriptionContainer">
+                            <p class="projectDescription">This project is based on a game called League of Legends, where you can freely browse all the champions from the game using Riot Games' APIs. 
                                 <br> The website is responsive, optimized for most browsers and screen sizes.</p>
                         </section>
-                        <section id="projectsTechnologiesContainer-1">
-                            <div id="projectsTechnologies-1"> Technologies used: 
-                                <div id="projectsTechnologiesDivContainer">
+                        <section class="projectTechContainer">
+                            <div class="projectTech"> Technologies used: 
+                                <div class="projectTechDivContainer">
                                     <img src="./images/webp/react.webp" alt="ReactJS" width="92" height="92" class="react tech">
                                     <react class="hide">ReactJS</react>
                                     <img src="./images/webp/sass.webp" alt="Sass" width="92" height="92" class="sass tech">
@@ -164,55 +164,57 @@
                         </section>
                     </section>
                 </section>
-                <section id="projectsLinkContainer-1">
-                    <div class="projectsLink-1">
-                        <div class="projectsLinkText">View this project's repository at:
+                <section class="projectLinkContainer">
+                    <div class="projectLink">
+                        <div class="projectLinkText">View this project's repository at:
                             <a class="link" href="https://github.com/Xenonyy/league-library">GitHub</a>
                         </div>
                     </div>
-                    <div class="projectsLink-1">
-                        <div class="projectsLinkText">View this project at:
+                    <div class="projectLink">
+                        <div class="projectLinkText">View this project at:
                             <a class="link" href="https://leaguelibrary.netlify.app/">Netlify</a>
                         </div>
                     </div>
                 </section>
                 <hr class="hr2">
-                <section id="projectsContainer-2" class="projectContainer">
-                        <div id="projectsImgContainer-2" class="projectImgContainer">
-                            <img id="projectsImg-2" src="./images/webp/league-library.webp" alt="League Library" width="192" height="192"/>
-                            <video autoplay loop preload="metadata" id="projectsImgHover-2" src="https://i.gyazo.com/781c19557aa27ba7f65ea30df7bb0621.mp4" width="192" height="192" class="hide"></video>
-                            <h1 id="projectsTitle-2" class="projectTitle">Xenochat</h1>
+                <section class="projectContainer">
+                        <div class="projectImgContainer" id="projectsImgContainer-2">
+                            <img class="projectImg" id="projectsImg-2" src="./images/webp/xenochat.webp" alt="Xenochat" width="192" height="192"/>
+                            <video autoplay loop preload="metadata" id="projectsImgHover-2" src="https://i.gyazo.com/0ab76a29fefe0d54f6cc98b64ea2597c.mp4" width="192" height="192" class="hide"></video>
+                            <h1 class="projectTitle">Xenochat</h1>
                         </div>
-                        <section id="projectsDetailContainer-2" class="projectDetails">
-                            <section id="projectsDescriptionContainer-2" class="projectDescriptionContainer">
-                                <p id="projectsDescription-2" class="projectDescription">This project is a chat app, where you can a public chatroom and chat with anyone who joins. 
-                                    <br> The website is fully responsive, optimized for most browsers and screen sizes.</p>
+                        <section class="projectDetails">
+                            <section class="projectDescriptionContainer">
+                                <p class="projectDescription">This project is a chat app, where you get automatically joined to a public chatroom and chat with anyone else who connects. 
+                                    <br> The web app is fully responsive, optimized for most browsers and screen sizes.</p>
                             </section>
-                            <section id="projectsTechnologiesContainer-2">
-                                <div id="projectsTechnologies-2"> Technologies used: 
-                                    <div id="projectsTechnologiesDivContainer">
-                                        <img src="./images/webp/react.webp" alt="ReactJS" width="92" height="92" class="react tech">
-                                        <react class="hide">ReactJS</react>
-                                        <img src="./images/webp/sass.webp" alt="Sass" width="92" height="92" class="sass tech">
-                                        <sass class="hide">Sass</sass>
-                                        <img src="./images/webp/node.webp" alt="Node" width="92" height="92" class="node tech">
-                                        <node class="hide">Node.js</node>
-                                        <img src="./images/webp/git.webp" alt="Git" width="92" height="92" class="git tech">
-                                        <git class="hide">Git</git>
+                            <section class="projectTechContainer">
+                                <div class="projectTech"> Technologies used: 
+                                    <div class="projectTechDivContainer">
+                                        <img src="./images/webp/socketio.webp" alt="Socket.io" width="92" height="92" class="socketio2 tech">
+                                        <socketio2 class="hide">Socket.io</socketio2>
+                                        <img src="./images/webp/nodejs.webp" alt="Node.js" width="92" height="92" class="node2 tech">
+                                        <node2 class="hide">Node.js</node2>
+                                        <img src="./images/webp/react.webp" alt="ReactJS" width="92" height="92" class="react2 tech">
+                                        <react2 class="hide">ReactJS</react2>
+                                        <img src="./images/webp/sass.webp" alt="Sass" width="92" height="92" class="sass2 tech">
+                                        <sass2 class="hide">Sass</sass2>
+                                        <img src="./images/webp/git.webp" alt="Git" width="92" height="92" class="git2 tech">
+                                        <git2 class="hide">Git</git2>
                                     </div>
                                 </div>
                             </section>
                         </section>
                     </section>
-                    <section id="projectsLinkContainer-2">
-                        <div class="projectsLink-2">
-                            <div class="projectsLinkText">View this project's repository at:
-                                <a class="link" href="https://github.com/Xenonyy/league-library">GitHub</a>
+                    <section class="projectLinkContainer">
+                        <div class="projectLink">
+                            <div class="projectLinkText">View this project's repository at:
+                                <a class="link" href="https://github.com/Xenonyy/ReactChatApp">GitHub</a>
                             </div>
                         </div>
-                        <div class="projectsLink-2">
-                            <div class="projectsLinkText">View this project at:
-                                <a class="link" href="https://leaguelibrary.netlify.app/">Heroku</a>
+                        <div class="projectLink">
+                            <div class="projectLinkText">View this project at:
+                                <a class="link" href="https://xenochat-io.herokuapp.com/">Heroku</a>
                             </div>
                         </div>
                 </section>
