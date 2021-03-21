@@ -440,7 +440,7 @@ socketio2, express2, react2, sass2, git2 {position: relative; left: -3.8em; tran
 .git, .git2 {transform: scale(1.5); -ms-transform: scale(1.5); -webkit-transform: scale(1.5);}
 // .node2 {transform: scale(0.8); -ms-transform: scale(0.8); -webkit-transform: scale(0.8);}
 .express2 {transform: scale(1.5); -ms-transform: scale(1.5); -webkit-transform: scale(1.5); filter: brightness(0.2);}
-.tech {z-index: 2;transition: opacity .25s linear; max-width: 92px; min-width: 50px; margin: 0 0.5em;}
+.tech {z-index: 2;transition: opacity .25s linear; max-width: 92px; min-width: 40px; margin: 0 0.5em;}
 react, react2 {color: #55c6e4; left: -4.2em;}
 sass, sass2 {color: #ce679a}
 gsap {color: #93d400}
@@ -649,7 +649,7 @@ socketio2 {color: #fff; left: -4.4em}
     justify-content: space-evenly;
     flex-flow: wrap;
     align-items: flex-end;
-    height: 92vh;
+    height: 95vh;
 }
 .header-contact-img {
     width: 50px;
@@ -710,9 +710,9 @@ socketio2 {color: #fff; left: -4.4em}
     html {font-size: 0.8rem; line-height: 1.2em;}
     #skills {width: 20em;}
     #skillsImg {transform: scale(0.7); -ms-transform: scale(0.7); -webkit-transform: scale(0.7);}
-    #projectsImg-1 {transform: scale(0.8); -ms-transform: scale(0.8); -webkit-transform: scale(0.8);}
-    #projectsTechnologies-1, #projectsDescription-1 {padding: 1rem;}
-    #projectsLinkContainer-1 {margin: 1em 0;}
+    .projectImg {transform: scale(0.8); -ms-transform: scale(0.8); -webkit-transform: scale(0.8);}
+    .projectTechn, .projectDescription {padding: 1rem;}
+    .projectLinkContainer {margin: 1em 0;}
     svg {height: 100px !important;}
 }
 @media only screen and (min-width: 320px) and (max-width: 768px) {
@@ -723,16 +723,18 @@ socketio2 {color: #fff; left: -4.4em}
     #homeTitle {font-size: 4vw; text-shadow: #00a3e1 1px 1px;}
     // #aboutPage {padding-bottom: 2em;} Removed because of SVG
     #skillsImg {transform: scale(0.5); -ms-transform: scale(0.5); -webkit-transform: scale(0.5);}
-    #projectsImg-1 {transform: scale(0.5); -ms-transform: scale(0.5); -webkit-transform: scale(0.5);}
-    #projectsImgHover-1 {width: 90%;}
-    #projectsImgContainer-1 {margin: 1em 0; width: 100%; height: 200px; padding: 1em;}
-    #about, #projectsDescription-1 {font-size: 1.1rem; line-height: 1.5em;}
-    #projectsDetailContainer-1 { width: 100%; margin: 0;}
-    #projectsTechnologiesDivContainer {transform: scale(0.9); -ms-transform: scale(0.9); -webkit-transform: scale(0.9);}
+    .projectImg {transform: scale(0.5); -ms-transform: scale(0.5); -webkit-transform: scale(0.5);}
+    .projectImgHover {width: 90%;}
+    .projectImgContainer {margin: 1em 0; width: 100%; height: 200px; padding: 1em;}
+    #about, .projectDescription {font-size: 1.1rem; line-height: 1.5em;}
+    .projectDetails { width: 100%; margin: 0;}
+    .projectTechContainer {transform: scale(0.9); -ms-transform: scale(0.9); -webkit-transform: scale(0.9);}
+    .projectDetails, .projectDescriptionContainer, .projectTechContainer {min-inline-size: -webkit-fill-available; min-inline-size: -moz-fill-available;}
     .tech {margin: 0;}
-    react, sass, gsap, git {font-size: 1.5rem; left: -2.8em;}
+    react, sass, gsap, git {font-size: 1.5rem; left: -2.8em; -webkit-text-stroke: thin;}
     react {left: -3.5em;}
-    #projectsLinkContainer-1 {margin: 2em 0 0; align-items: center;}
+    socketio2, react2, sass2, express2, git2 {font-size: 1.2rem; left: -3.5em; -webkit-text-stroke: thin;}
+    .projectLinkContainer {margin: 2em 0 0; align-items: center;}
     #contactPage {scroll-margin-top: 18em;}
     #footer {height: 3rem;}
     svg {height: 50px !important;}
@@ -753,10 +755,11 @@ socketio2 {color: #fff; left: -4.4em}
     #phone-nav {height: 92vh;}
     .header-contact-img {width: 40px; height: 40px;}
     #about {max-width: 54%; margin: 0 1em 0 0;}
-    #skills {width: 43%; margin: 0;}
-    #projectsImgContainer-1 {margin: 1em 1em 0 0; width: 40%; padding: 0;}
-    #projectsDetailContainer-1 {width: 55%;}
-    #projectsDescription-1 {font-size: 1rem;}
+    #skills {width: 43%;}
+    .projectImgContainer {margin: 1em 2em 0 0; width: 40%; padding: 0;}
+    .projectDetails {width: 55%;}
+    .projectDescription {font-size: 1rem;}
+    .projectDetails, .projectDescriptionContainer, .projectTechContainer {min-inline-size: min-content ; min-inline-size: -moz-min-content;}
     #contactPage {scroll-margin-top: 10em;}
     #contact-desktop {display: none;}
 }
@@ -770,8 +773,10 @@ socketio2 {color: #fff; left: -4.4em}
     #phone-nav a {font-size: 2.7rem !important;}
     #about {max-width: 48%; margin: 1em 0; line-height: 1.5;}
     #skills {width: 15em;}
-    #projectsImgContainer-1 {height: 280px; margin: 1em 1em 0 0;}
-    #projectsLinkContainer-1 {align-items: center;}
+    .projectImgContainer {height: 280px; margin: 1em 1em 0 0;}
+    .projectLinkContainer {align-items: center;}
+    .projectContainer {justify-content: center;}
+    .projectDetails, .projectDescriptionContainer, .projectTechContainer {min-inline-size: -webkit-fill-available; min-inline-size: -moz-fill-available;}
     .header-contact-img {width: 60px; height: 60px;}
     #contact-desktop {display: none;}
 }
