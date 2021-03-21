@@ -79,8 +79,8 @@ body{
     background-attachment: fixed; 
     background-size: cover; 
     background-position-x: center;
-    height: 200vh;
-    -webkit-overflow-scrolling:touch;
+    height: 110vh;
+    position: absolute;
 }
 #content-wrap {
     position: relative;
@@ -514,7 +514,7 @@ socketio2 {color: #fff; left: -4.4em}
 	background: #151515;
 	border-radius: 10px;
 	z-index: 3;
-	top: -1.5em;
+	top: -1em;
 }
 #hamburger {
 	position: absolute;
@@ -871,14 +871,13 @@ socketio2 {color: #fff; left: -4.4em}
 #particles-js {
     position: absolute;
     width: 99%;
-    height: 94%;
+    height: 107vh;
     opacity: 1;
     transition: opacity 1.5s ease-in-out;
-    margin-top: 2em;
-    padding: 3em 1em;
 }
 canvas {
     display: block;
     position: absolute;
+    width: 98% !important;
     z-index: 1;
 }
