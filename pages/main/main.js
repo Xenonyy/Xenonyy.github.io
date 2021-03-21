@@ -4,6 +4,7 @@ const homepage = $("#homePage"),
 window.onload = () => {
     homepage.fadeIn(2000);
     homepage.css({"opacity": "1"});
+    document.getElementById("particles-js").classList.remove("hide");
     // homepage.scrollTop();
     // location.assign("#homePage");
 }
@@ -57,7 +58,7 @@ for (const tech of Object.entries(techArr)) {
     });
 }
 // Hover animation for the second project (so the same technologies don't get highlighted everywhere by hovering one of them)
-let techArr2 = ["socketio2", "react2", "sass2", "node2", "git2"];
+let techArr2 = ["socketio2", "express2", "react2", "sass2", "git2"];
 for (const tech of Object.entries(techArr2)) {
     $(`.${tech[1]}`).hover(() => {
         $(tech[1]).removeClass("hide");
