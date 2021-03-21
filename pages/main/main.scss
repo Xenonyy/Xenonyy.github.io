@@ -724,7 +724,7 @@ socketio2 {color: #fff; left: -4.4em}
     // #aboutPage {padding-bottom: 2em;} Removed because of SVG
     #skillsImg {transform: scale(0.5); -ms-transform: scale(0.5); -webkit-transform: scale(0.5);}
     .projectImg {transform: scale(0.5); -ms-transform: scale(0.5); -webkit-transform: scale(0.5);}
-    .projectImgHover {width: 90%;}
+    #projectsImgHover-1, #projectsImgHover-2 {width: 80%;}
     .projectImgContainer {margin: 1em 0; width: 100%; height: 200px; padding: 1em;}
     #about, .projectDescription {font-size: 1.1rem; line-height: 1.5em;}
     .projectDetails { width: 100%; margin: 0;}

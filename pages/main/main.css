@@ -655,7 +655,7 @@ socketio2 {
   justify-content: space-evenly;
   flex-flow: wrap;
   align-items: flex-end;
-  height: 92vh; }
+  height: 95vh; }
 
 .header-contact-img {
   width: 50px;
@@ -745,8 +745,8 @@ socketio2 {
     transform: scale(0.5);
     -ms-transform: scale(0.5);
     -webkit-transform: scale(0.5); }
-  .projectImgHover {
-    width: 90%; }
+  #projectsImgHover-1, #projectsImgHover-2 {
+    width: 80%; }
   .projectImgContainer {
     margin: 1em 0;
     width: 100%;
