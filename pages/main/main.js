@@ -71,11 +71,11 @@ for (const tech of Object.entries(techArr2)) {
 }
 // Switch to another image/gif when hovering a project's image to showcase project.
 $("#projectsImgContainer-1").hover(() => {
-    $("#projectsImg-1").addClass("hide");
-    $("#projectsImgHover-1").removeClass("hide");
+    $("#projectsImg-1").toggleClass("hide");
+    $("#projectsImgHover-1").toggleClass("hide");
 }, () => {
-    $("#projectsImg-1").removeClass("hide");
-    $("#projectsImgHover-1").addClass("hide");
+    $("#projectsImg-1").toggleClass("hide");
+    $("#projectsImgHover-1").toggleClass("hide");
 });
 // Wait for fade out animation to end, then reset the video.
 $("#projectsImgContainer-1").mouseout(async() => {
@@ -84,16 +84,16 @@ $("#projectsImgContainer-1").mouseout(async() => {
 });
 // Same on second project
 $("#projectsImgContainer-2").hover(() => {
-    $("#projectsImg-2").addClass("hide");
-    $("#projectsImgHover-2").removeClass("hide");
+    $("#projectsImg-2").toggleClass("hide");
+    $("#projectsImgHover-2").toggleClass("hide");
 }, () => {
-    $("#projectsImg-2").removeClass("hide");
-    $("#projectsImgHover-2").addClass("hide");
+    $("#projectsImg-2").toggleClass("hide");
+    $("#projectsImgHover-2").toggleClass("hide");
 });
 // Wait for fade out animation to end, then reset the video.
 $("#projectsImgContainer-2").mouseout(async() => {
     await timer(400);
-    $("video").get(0).currentTime = 0;
+    $("video").get(1).currentTime = 0;
 });
 
 // Hamburger Menu SVG
