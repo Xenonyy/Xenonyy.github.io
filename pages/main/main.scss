@@ -75,6 +75,7 @@ body{
     background-attachment: fixed; 
     background-size: cover; 
     background-position-x: center;
+    min-height: 100vh;
 }
 #content-wrap {
     position: relative;
@@ -98,6 +99,7 @@ body{
     transition: opacity 1.5s linear;
     opacity: 0;
     background: $gradient;
+    min-height: 100vh;
     height: 100vh;
     width: 100%;
     scroll-margin: 5em;
@@ -598,7 +600,7 @@ socketio2 {color: #fff; left: -4.4em}
 #header-menu {
     // display: none;
     width: 80%;
-    height: 100%;
+    height: 105vh;
     background-color: #212121;
     position: fixed;
     right: 0;
@@ -644,7 +646,7 @@ socketio2 {color: #fff; left: -4.4em}
     justify-content: space-evenly;
     flex-flow: wrap;
     align-items: flex-end;
-    height: 100%;
+    height: 92vh;
 }
 .header-contact-img {
     width: 50px;
@@ -745,7 +747,8 @@ socketio2 {color: #fff; left: -4.4em}
     .phone {display: flex;}
     #header-menu {width: 50%;}
     #phone-nav a {font-size: 2rem !important;}
-    #phone-nav {height: 90%;}
+    #phone-nav {height: 92vh;}
+    #contact-phone {height: 80vh;}
     .header-contact-img {width: 40px; height: 40px;}
     #about {max-width: 54%; margin: 0 1em 0 0;}
     #skills {width: 43%; margin: 0;}
