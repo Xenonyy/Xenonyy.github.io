@@ -856,10 +856,12 @@ socketio2 {color: #fff; left: -4.4em}
 // Particles on homepage
 #particles-js {
     position: absolute;
-    width: 100%;
-    height: 105%;
+    width: 99%;
+    height: 94%;
     opacity: 1;
     transition: opacity 1.5s ease-in-out;
+    margin-top: 4em;
+    padding: 3em 1em;
 }
 canvas {
     display: block;
