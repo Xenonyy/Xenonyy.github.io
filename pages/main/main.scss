@@ -106,6 +106,7 @@ body{
     @extend %flex;
     height: 85vh;
     font-family: Capriola;
+    filter: drop-shadow(2px 2px 6px black);
 }
 #homeName {
     font-size: 5vw;
@@ -430,16 +431,18 @@ hr {
     text-shadow: $primary-text-shadow;
 }
 react, sass, gsap, git {position: relative; left: -3.8em; transition: opacity .25s linear; width: 10px; font-size: 1.5rem; -webkit-text-stroke: medium;}
-socketio2, react2, sass2, node2, git2 {position: relative; left: -3.8em; transition: opacity .25s linear; width: 10px; font-size: 1.5rem; -webkit-text-stroke: medium;}
+socketio2, express2, react2, sass2, git2 {position: relative; left: -3.8em; transition: opacity .25s linear; width: 10px; font-size: 1.5rem; -webkit-text-stroke: medium;}
 .react, .react2 {transform: scale(1.3); -ms-transform: scale(1.3); -webkit-transform: scale(1.3);}
 .git, .git2 {transform: scale(1.5); -ms-transform: scale(1.5); -webkit-transform: scale(1.5);}
-.node2 {transform: scale(0.8); -ms-transform: scale(0.8); -webkit-transform: scale(0.8);}
+// .node2 {transform: scale(0.8); -ms-transform: scale(0.8); -webkit-transform: scale(0.8);}
+.express2 {transform: scale(1.5); -ms-transform: scale(1.5); -webkit-transform: scale(1.5); filter: brightness(0.2);}
 .tech {z-index: 2;transition: opacity .25s linear; max-width: 92px; min-width: 50px; margin: 0 0.5em;}
 react, react2 {color: #55c6e4; left: -4.2em;}
 sass, sass2 {color: #ce679a}
 gsap {color: #93d400}
 git, git2 {color: #df4b33; left: -2.8em;}
-node2 {color: #89bd5e; left: -4em}
+// node2 {color: #89bd5e; left: -4em}
+express2 { color: #7d7d7d; left: -4.5em;}
 socketio2 {color: #fff; left: -4.4em}
 .projectTechDivContainer {@extend %flex; flex-flow: row;}
 
@@ -848,4 +851,18 @@ socketio2 {color: #fff; left: -4.4em}
 		-webkit-transform: translateZ(0);
 		transform: translateZ(0);
 	}
+}
+
+// Particles on homepage
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 105%;
+    opacity: 1;
+    transition: opacity 1.5s ease-in-out;
+}
+canvas {
+    display: block;
+    position: absolute;
+    z-index: 1;
 }
