@@ -83,7 +83,8 @@ body {
   background-attachment: fixed;
   background-size: cover;
   background-position-x: center;
-  min-height: 100vh; }
+  min-height: 100vh;
+  width: fit-content; }
 
 #content-wrap {
   position: relative;
@@ -107,6 +108,7 @@ body {
   background: linear-gradient(135deg, rgba(191, 35, 165, 0.4) 0%, rgba(0, 87, 137, 0.4) 100%);
   min-height: 100vh;
   height: 100vh;
+  min-width: fit-content;
   width: 100%;
   scroll-margin: 5em; }
 
@@ -611,7 +613,8 @@ socketio2 {
 
 #header-menu {
   width: 80%;
-  height: 105vh;
+  min-height: 100vh;
+  height: -webkit-fill-available;
   background-color: #212121;
   position: fixed;
   right: 0;
@@ -808,8 +811,6 @@ socketio2 {
     font-size: 2rem !important; }
   #phone-nav {
     height: 92vh; }
-  #contact-phone {
-    height: 80vh; }
   .header-contact-img {
     width: 40px;
     height: 40px; }
