@@ -79,7 +79,8 @@ body{
     background-attachment: fixed; 
     background-size: cover; 
     background-position-x: center;
-    height: 110vh;
+    min-height: 150vh;
+    height: max-content;
     position: absolute;
 }
 #content-wrap {
