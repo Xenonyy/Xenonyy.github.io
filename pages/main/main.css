@@ -824,6 +824,8 @@ socketio2 {
     font-size: 2rem !important; }
   #phone-nav {
     height: 92vh; }
+  #contact-phone {
+    height: 98vh; }
   .header-contact-img {
     width: 40px;
     height: 40px; }
