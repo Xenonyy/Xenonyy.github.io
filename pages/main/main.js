@@ -69,32 +69,34 @@ for (const tech of Object.entries(techArr2)) {
 
     });
 }
-// Switch to another image/gif when hovering a project's image to showcase project.
-$("#projectsImgContainer-1").hover(() => {
-    $("#projectsImg-1").toggleClass("hide");
-    $("#projectsImgHover-1").toggleClass("hide");
-}, () => {
-    $("#projectsImg-1").toggleClass("hide");
-    $("#projectsImgHover-1").toggleClass("hide");
-});
-// Wait for fade out animation to end, then reset the video.
-$("#projectsImgContainer-1").mouseout(async() => {
-    await timer(400);
-    $("video").get(0).currentTime = 0;
-});
-// Same on second project
-$("#projectsImgContainer-2").hover(() => {
-    $("#projectsImg-2").toggleClass("hide");
-    $("#projectsImgHover-2").toggleClass("hide");
-}, () => {
-    $("#projectsImg-2").toggleClass("hide");
-    $("#projectsImgHover-2").toggleClass("hide");
-});
-// Wait for fade out animation to end, then reset the video.
-$("#projectsImgContainer-2").mouseout(async() => {
-    await timer(400);
-    $("video").get(1).currentTime = 0;
-});
+// Hover animation for the third project (so the same technologies don't get highlighted everywhere by hovering one of them)
+let techArr3 = ["react3", "css3", "git3"];
+for (const tech of Object.entries(techArr3)) {
+    $(`.${tech[1]}`).hover(() => {
+        $(tech[1]).removeClass("hide");
+        $(`.${tech[1]}`).addClass("hide-almost");
+    }, () => {
+        $(tech[1]).addClass("hide");
+        $(`.${tech[1]}`).removeClass("hide-almost");
+
+    });
+}
+// Switch to a gif when hovering a project's image to showcase the project. Easily scalabe and maintainable now!
+let projects = [1,2,3];
+for (let project of projects) {
+    $(`#projectsImgContainer-${project}`).hover(() => {
+        $(`#projectsImg-${project}`).toggleClass("hide");
+        $(`#projectsImgHover-${project}`).toggleClass("hide");
+    }, () => {
+        $(`#projectsImg-${project}`).toggleClass("hide");
+        $(`#projectsImgHover-${project}`).toggleClass("hide");
+    });
+    // Wait for fade out animation to end, then reset the video.
+    $(`#projectsImgContainer-${project}`).mouseout(async() => {
+        await timer(400);
+        $("video")[project-1].currentTime = 0; // Needs -1 to work.
+    });
+}
 
 // Hamburger Menu SVG
 $('#menu-toggle').click(function(){
