@@ -1,7 +1,7 @@
 # About this project
 
-A fully responsive website I designed and built from scratch to showcase my projects along with my web developer skills!
-Custom design and functionality for mobile devices. Optimized for all browsers.
+A fully responsive website I designed and built from scratch to showcase my projects alongside with my web developer skills!
+Custom design and functionality for mobile devices. Optimized for most screen sizes and browsers.
                      
 ![alt text](https://i.gyazo.com/1a1b2fdfd287201b8362b6651c3ab481.png)
 
@@ -35,7 +35,7 @@ In the project directory, you can run:
 
 Runs the app via Node.js.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.\
-Reload the server to see changes.
+Reload the page to view changes.
 
 # Author
 
