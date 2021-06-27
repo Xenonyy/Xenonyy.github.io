@@ -229,7 +229,7 @@ body {
 #skills {
   background-color: #42182c;
   margin: 1em;
-  width: 18em;
+  width: 20em;
   height: 15em;
   max-width: 20em;
   max-height: 20em; }
@@ -470,9 +470,9 @@ react3, ts3, css3, git3 {
   -webkit-transform: scale(0.65); }
 
 .ts3 {
-  transform: scale(0.75);
-  -ms-transform: scale(0.75);
-  -webkit-transform: scale(0.75); }
+  transform: scale(1.4);
+  -ms-transform: scale(1.4);
+  -webkit-transform: scale(1.4); }
 
 .tech {
   z-index: 2;

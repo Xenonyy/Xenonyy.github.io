@@ -235,7 +235,7 @@ body{
     background-color: #42182c;
     @extend %border;
     margin: 1em;
-    width: 18em;
+    width: 20em;
     height: 15em;
     max-width: 20em;
     max-height: 20em;
@@ -450,7 +450,7 @@ react3, ts3, css3, git3 {position: relative; left: -3.8em; transition: opacity .
 // .node2 {transform: scale(0.8); -ms-transform: scale(0.8); -webkit-transform: scale(0.8);}
 .express2 {transform: scale(1.5); -ms-transform: scale(1.5); -webkit-transform: scale(1.5); filter: brightness(0.2);}
 .css3 {transform: scale(0.65); -ms-transform: scale(0.65); -webkit-transform: scale(0.65);}
-.ts3 {transform: scale(.75); -ms-transform: scale(.75); -webkit-transform: scale(.75);}
+.ts3 {transform: scale(1.4); -ms-transform: scale(1.4); -webkit-transform: scale(1.4);}
 .tech {z-index: 2;transition: opacity .25s linear; max-width: 92px; min-width: 40px; margin: 0 0.5em;}
 react, react2, react3 {color: #55c6e4; left: -4.2em;}
 sass, sass2 {color: #ce679a}
