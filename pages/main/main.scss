@@ -442,7 +442,7 @@ hr {
 }
 react, sass, jest, gsap, git {position: relative; left: -3.5em; transition: opacity .25s linear; width: 10px; font-size: 1.5rem; -webkit-text-stroke: medium;}
 socketio2, express2, react2, sass2, git2 {position: relative; left: -3.8em; transition: opacity .25s linear; width: 10px; font-size: 1.5rem; -webkit-text-stroke: medium;}
-react3, css3, git3 {position: relative; left: -3.8em; transition: opacity .25s linear; width: 10px; font-size: 1.5rem; -webkit-text-stroke: medium;}
+react3, ts3, css3, git3 {position: relative; left: -3.8em; transition: opacity .25s linear; width: 10px; font-size: 1.5rem; -webkit-text-stroke: medium;}
 
 .react, .react2, .react3 {transform: scale(1.3); -ms-transform: scale(1.3); -webkit-transform: scale(1.3);}
 .jest {transform: scale(1.2); -ms-transform: scale(1.2); -webkit-transform: scale(1.2);}
@@ -450,6 +450,7 @@ react3, css3, git3 {position: relative; left: -3.8em; transition: opacity .25s l
 // .node2 {transform: scale(0.8); -ms-transform: scale(0.8); -webkit-transform: scale(0.8);}
 .express2 {transform: scale(1.5); -ms-transform: scale(1.5); -webkit-transform: scale(1.5); filter: brightness(0.2);}
 .css3 {transform: scale(0.65); -ms-transform: scale(0.65); -webkit-transform: scale(0.65);}
+.ts3 {transform: scale(.75); -ms-transform: scale(.75); -webkit-transform: scale(.75);}
 .tech {z-index: 2;transition: opacity .25s linear; max-width: 92px; min-width: 40px; margin: 0 0.5em;}
 react, react2, react3 {color: #55c6e4; left: -4.2em;}
 sass, sass2 {color: #ce679a}
@@ -459,7 +460,8 @@ git, git2, git3 {color: #df4b33; left: -2.8em;}
 // node2 {color: #89bd5e; left: -4em}
 express2 { color: #7d7d7d; left: -4.5em;}
 socketio2 {color: #fff; left: -4.4em}
-css3 {color: #00c9ff; left: -3.5em}
+css3 {color: #00c9ff; left: -3.8em}
+ts3 {color: #3179c7; left: -5em}
 .projectTechDivContainer {@extend %flex; flex-flow: row;}
 
 .projectLinkContainer {

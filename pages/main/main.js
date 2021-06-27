@@ -26,8 +26,8 @@ if (d.readyState === 'interactive') {
 }
 
 // Slideshow of images of skills on 'About Me' page
-let skillsImageArray = ["./images/webp/react.webp", "./images/webp/node.webp", "./images/webp/html-js-css.webp", "./images/webp/sass.webp", "./images/webp/jest.webp", "./images/webp/jquery.webp", "./images/webp/gsap.webp", "./images/webp/git.webp"];
-let skillsImageArrayName = ["React (JavaScript UI Library)", "Node.js (Back-end JS Environment)", "HTML-JS-CSS (Core) ", "Sass (CSS Extension)", "Jest (JavaScript testing framework)", "jQuery (JavaScript Library)", "Gsap (JavaScript Animation Library)", "Git (Version Control System)"]
+let skillsImageArray = ["./images/webp/react.webp", "./images/webp/ts.webp", "./images/webp/node.webp", "./images/webp/html-js-css.webp", "./images/webp/sass.webp", "./images/webp/jest.webp", "./images/webp/jquery.webp", "./images/webp/gsap.webp", "./images/webp/git.webp"];
+let skillsImageArrayName = ["React (JavaScript UI Library)", "TypeScript (Syntactical Superset of JavaScript)", "Node.js (Back-end JS Environment)", "HTML-JS-CSS (Core) ", "Sass (CSS Extension)", "Jest (JavaScript testing framework)", "jQuery (JavaScript Library)", "Gsap (JavaScript Animation Library)", "Git (Version Control System)"]
 const timer = ms => new Promise(res => setTimeout(res, ms)) // Returns a Promise that resolves after "ms" Milliseconds
 let i = 0;
 
@@ -70,7 +70,7 @@ for (const tech of Object.entries(techArr2)) {
     });
 }
 // Hover animation for the third project (so the same technologies don't get highlighted everywhere by hovering one of them)
-let techArr3 = ["react3", "css3", "git3"];
+let techArr3 = ["react3", "ts3", "css3", "git3"];
 for (const tech of Object.entries(techArr3)) {
     $(`.${tech[1]}`).hover(() => {
         $(tech[1]).removeClass("hide");

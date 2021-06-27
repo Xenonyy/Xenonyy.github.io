@@ -435,7 +435,7 @@ socketio2, express2, react2, sass2, git2 {
   font-size: 1.5rem;
   -webkit-text-stroke: medium; }
 
-react3, css3, git3 {
+react3, ts3, css3, git3 {
   position: relative;
   left: -3.8em;
   transition: opacity .25s linear;
@@ -468,6 +468,11 @@ react3, css3, git3 {
   transform: scale(0.65);
   -ms-transform: scale(0.65);
   -webkit-transform: scale(0.65); }
+
+.ts3 {
+  transform: scale(0.75);
+  -ms-transform: scale(0.75);
+  -webkit-transform: scale(0.75); }
 
 .tech {
   z-index: 2;
@@ -504,7 +509,11 @@ socketio2 {
 
 css3 {
   color: #00c9ff;
-  left: -3.5em; }
+  left: -3.8em; }
+
+ts3 {
+  color: #3179c7;
+  left: -5em; }
 
 .projectTechDivContainer {
   flex-flow: row; }
