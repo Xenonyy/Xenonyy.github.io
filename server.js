@@ -11,7 +11,7 @@ app.get('/', (req,res) => {
 });
 //mount other paths
 // in this case render 404 for any other path than '/'
-app.get("*",function (req, res) {
+app.get("*", (req, res) => {
     res.status(404).send('<h1>File not found</h1>');
     res.end();
 });

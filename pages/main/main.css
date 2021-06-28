@@ -321,7 +321,8 @@ hr {
   flex-direction: column;
   float: left;
   clear: both;
-  content: ""; }
+  content: "";
+  filter: invert(1); }
 
 .cell {
   display: flex;
