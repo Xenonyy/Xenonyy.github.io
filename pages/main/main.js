@@ -5,8 +5,6 @@ window.onload = () => {
     homepage.fadeIn(2000);
     homepage.css({"opacity": "1"});
     document.getElementById("particles-js").classList.remove("hide");
-    // homepage.scrollTop();
-    // location.assign("#homePage");
 }
 
 // Animations for page titles and panels.
@@ -26,11 +24,21 @@ if (d.readyState === 'interactive') {
 }
 
 // Slideshow of images of skills on 'About Me' page
-let skillsImageArray = ["./images/webp/react.webp", "./images/webp/ts.webp", "./images/webp/node.webp", "./images/webp/html-js-css.webp", "./images/webp/sass.webp", "./images/webp/jest.webp", "./images/webp/jquery.webp", "./images/webp/gsap.webp", "./images/webp/git.webp"];
+let skillsImageArray = ["/images/webp/react.webp", "/images/webp/ts.webp", "/images/webp/node.webp", "/images/webp/html-js-css.webp", "/images/webp/sass.webp", "/images/webp/jest.webp", "/images/webp/jquery.webp", "/images/webp/gsap.webp", "/images/webp/git.webp"];
 let skillsImageArrayName = ["React (JavaScript UI Library)", "TypeScript (Syntactical Superset of JavaScript)", "Node.js (Back-end JS Environment)", "HTML-JS-CSS (Core) ", "Sass (CSS Extension)", "Jest (JavaScript testing framework)", "jQuery (JavaScript Library)", "Gsap (JavaScript Animation Library)", "Git (Version Control System)"]
 const timer = ms => new Promise(res => setTimeout(res, ms)) // Returns a Promise that resolves after "ms" Milliseconds
 let i = 0;
 
+// Preloading images first.
+for (const skills of skillsImageArray) {
+    try {
+        ((url) => {
+            new Image().src = `https://raw.githubusercontent.com/Xenonyy/Xenonyy.github.io/master${url}`;
+        })(skills);
+    } catch (error) {
+        console.log(error)
+    }
+}
 const SlideShow = async() => {
     for (let i = 0; i < skillsImageArray.length; i++) {
         $("#slideCounter").text(`${i+1}/${skillsImageArray.length}`);
