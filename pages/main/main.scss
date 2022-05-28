@@ -201,6 +201,7 @@ body{
     height: fit-content;
     height: -moz-fit-content;
     width: 100%;
+    padding: 0 5em;
     scroll-margin-top: 3em;
     background: #25101a;
 }
@@ -215,7 +216,7 @@ body{
     background-color: #311422;
     @extend %border;
     padding: 1.5em;
-    width: 90%;
+    width: 100%;
     font-size: 1.3rem;
     margin: 1em 0 3em;
 }
@@ -236,9 +237,9 @@ body{
     @extend %border;
     margin: 1em;
     padding: 1em;
-    width: 20em;
+    width: 22em;
     height: 15em;
-    max-width: 20em;
+    max-width: 22em;
     max-height: 20em;
 }
 #slideCounter, #slideName {
@@ -790,7 +791,7 @@ ts3 {color: #3179c7; left: -5em}
     #header-menu {width: 65%; transform: translateX(40em);}
     #phone-nav a {font-size: 2.7rem !important;}
     #about {margin: 1em 0; line-height: 1.5;}
-    #skills {width: 70%;}
+    #skills {width: 100%; margin: 1em 0;}
     .projectImgContainer {height: 280px; margin: 1em 2em 0 0;}
     .projectLinkContainer {align-items: center;}
     .projectContainer {justify-content: center;}
