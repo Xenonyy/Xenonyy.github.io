@@ -235,6 +235,7 @@ body{
     background-color: #42182c;
     @extend %border;
     margin: 1em;
+    padding: 1em;
     width: 20em;
     height: 15em;
     max-width: 20em;
@@ -454,6 +455,7 @@ react3, ts3, css3, git3 {position: relative; left: -3.8em; transition: opacity .
 .ts3 {transform: scale(1.4); -ms-transform: scale(1.4); -webkit-transform: scale(1.4);}
 .tech {z-index: 2;transition: opacity .25s linear; max-width: 92px; min-width: 40px; margin: 0 0.5em;}
 react, react2, react3 {color: #55c6e4; left: -4.2em;}
+react2 { left: -3.8em;}
 sass, sass2 {color: #ce679a}
 jest {color: #8c3f4d; left: -3em}
 gsap {color: #93d400}
@@ -723,7 +725,7 @@ ts3 {color: #3179c7; left: -5em}
 /*************************** Support for different screen sizes *********************************/
 @media only screen and (min-width: 500px) and (max-width: 1650px) {
     html {font-size: 0.8rem; line-height: 1.2em;}
-    #skills {width: 20em;}
+    #skills {width: 70%;}
     #skillsImg {transform: scale(0.7); -ms-transform: scale(0.7); -webkit-transform: scale(0.7);}
     .projectImg {transform: scale(0.8); -ms-transform: scale(0.8); -webkit-transform: scale(0.8);}
     .projectTechn, .projectDescription {padding: 1rem;}
@@ -787,8 +789,8 @@ ts3 {color: #3179c7; left: -5em}
     html {font-size: 0.9rem;}
     #header-menu {width: 65%; transform: translateX(40em);}
     #phone-nav a {font-size: 2.7rem !important;}
-    #about {max-width: 48%; margin: 1em 0; line-height: 1.5;}
-    #skills {width: 15em;}
+    #about {margin: 1em 0; line-height: 1.5;}
+    #skills {width: 70%;}
     .projectImgContainer {height: 280px; margin: 1em 2em 0 0;}
     .projectLinkContainer {align-items: center;}
     .projectContainer {justify-content: center;}
