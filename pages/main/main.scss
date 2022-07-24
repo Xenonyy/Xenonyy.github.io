@@ -154,20 +154,22 @@ body{
     position: sticky;
     z-index: 1;
     padding: 0.8em 0 0.8em 1em;
+    @extend %flex;
+    justify-content: space-between;
+    flex-flow: row;
+    height: 5em;
 }
 .menu:hover, #home:hover {
     // filter: drop-shadow(0px 0px 1px white); Buggy interaction, glitches if hovering too fast
     color: #c75dac;
 }
 #contact-desktop {
-    display: flex;
-    justify-content: space-evenly;
-    width: 18rem;
-    height: 3rem;
-    flex-wrap: wrap;
-    position: absolute;
-    top: 6px;
-    right: 0;
+    @extend %flex;
+    flex-flow: row;
+}
+#contact-desktop > a {
+    @extend %flex;
+    margin: 0 1.5em;
 }
 .header-contact-desktop-img {
     width: 2.8rem;
@@ -204,6 +206,7 @@ body{
     padding: 0 5em;
     scroll-margin-top: 3em;
     background: #25101a;
+    padding-bottom: 8em;
 }
 #aboutTitle {
     width: 100%;
@@ -297,7 +300,8 @@ hr {
     // background-color: rgba(154, 130, 228, 0.32);
     background-color: #42182c;
     @extend %border;
-    font-style: oblique;
+    margin: 1em;
+    padding: 0.5em 2em;
 }
 #phone {
     -ms-transform: scale(0.4, 0.4);
@@ -314,15 +318,15 @@ hr {
     -webkit-transform: scale(0.5, 0.5);
     transform: scale(0.5, 0.5);
 }
-#linkedInLink {
+.contact-link {
     text-decoration: none;
     color: #ff3d96;
     position: relative;
 }
-#linkedInLink:hover {
+.contact-link:hover {
     color: #f762a7;
 }
-#linkedInLink::after {
+.contact-link::after {
     background-color: #e24892;
     bottom: 5px;
 }
@@ -340,7 +344,7 @@ hr {
     display: flex;
     flex-direction: row;
     line-height: 2em;
-    margin: 2em 0em 1em 5em;
+    margin: 0em 0em 2em 5em;
     text-shadow: $primary-text-shadow;
     color: whitesmoke;
 }
@@ -507,9 +511,15 @@ ts3 {color: #3179c7; left: -5em}
 
 // SVG page division
 #svg-container {
-    overflow: hidden;
-    display: grid;
-    width: inherit;
+    width: 100%;
+}
+#projects-svg {
+    fill: #1f1f1f;
+    width: 100%;
+    height: 125px;
+    transform: rotate(180deg);
+    position: relative;
+    top: -7em;
 }
 
 /************** HAMBURGER MENU AND HEADER ON PHONE **************************/
@@ -604,7 +614,7 @@ ts3 {color: #3179c7; left: -5em}
 }
 #header-img {
     width: inherit;
-    height: inherit;
+    height: 5em;
     padding: 0.5rem;
 }
 #header-text {
@@ -724,7 +734,7 @@ ts3 {color: #3179c7; left: -5em}
 
 
 /*************************** Support for different screen sizes *********************************/
-@media only screen and (min-width: 500px) and (max-width: 1650px) {
+@media screen and (min-width: 500px) and (max-width: 1920px) {
     html {font-size: 0.8rem; line-height: 1.2em;}
     #skills {width: 70%;}
     #skillsImg {transform: scale(0.7); -ms-transform: scale(0.7); -webkit-transform: scale(0.7);}
@@ -733,14 +743,18 @@ ts3 {color: #3179c7; left: -5em}
     .projectLinkContainer {margin: 1em 0;}
     svg {height: 100px !important;}
 }
-@media only screen and (min-width: 320px) and (max-width: 768px) {
+@media screen and (min-width: 320px) and (max-width: 768px) {
     html {font-family: $secondary-font; font-style: italic; font-size: 0.6rem; line-height: 1em;}
     .title {font-size: 2.5rem; margin: 0 0 0.5em;}
     .menu, .divider {font-size: 1.3rem !important;}
     #homeName {font-size: 8vw; text-shadow: #b73785 2px 2px;}
     #homeTitle {font-size: 4vw; text-shadow: #00a3e1 1px 1px;}
     // #aboutPage {padding-bottom: 2em;} Removed because of SVG
+    #aboutPage {padding: 0 2em 5em;}
+    #contactPage {width: inherit;}
+    .cell {margin: 0 0 2em 4em;}
     #skillsImg {transform: scale(0.5); -ms-transform: scale(0.5); -webkit-transform: scale(0.5);}
+    #projects-svg {top: -5em;}
     .projectImg {transform: scale(0.5); -ms-transform: scale(0.5); -webkit-transform: scale(0.5);}
     #projectsImgHover-1, #projectsImgHover-2, #projectsImgHover-3 {width: 80%;}
     .projectImgContainer {margin: 1em 0; width: 100%; height: 190px; padding: 1em;}
@@ -754,9 +768,10 @@ ts3 {color: #3179c7; left: -5em}
     socketio2, react2, sass2, express2, git2 {font-size: 1.2rem; left: -3.5em; -webkit-text-stroke: thin;}
     .projectLinkContainer {margin: 2em 0 0; align-items: center;}
     #contactPage {scroll-margin-top: 18em;}
+    #contactInfo {padding: 0.5em 0; font-size: 11px;}
     #footer {height: 3rem;}
     svg {height: 50px !important;}
-    .header {height: 75px; display: flex; align-items: center; justify-content: flex-start;}
+    .header {height: 80px; display: flex; align-items: center; justify-content: flex-start;}
     nav {display: none;}
     .phone {display: flex;}
     #aboutPage {scroll-margin: 0; min-height: fit-content;}
@@ -765,7 +780,7 @@ ts3 {color: #3179c7; left: -5em}
 }
 // Mobile landscape
 @media screen and (orientation:landscape) and (min-device-width: 320px) and (max-device-width: 900px) {
-    .header {height: 75px; display: flex; align-items: center; justify-content: flex-start;}
+    .header {height: 80px; display: flex; align-items: center; justify-content: flex-start;}
     nav {display: none;}
     .phone {display: flex;}
     #header-menu {width: 50%;}
@@ -774,7 +789,9 @@ ts3 {color: #3179c7; left: -5em}
     #contact-phone { height: 98vh;}
     .header-contact-img {width: 40px; height: 40px;}
     #about {max-width: 54%; margin: 0 1em 0 0;}
+    #aboutContainer {padding: 1.5em;}
     #skills {width: 43%;}
+    #projects-svg {top: -5em;}
     .projectImgContainer {margin: 1em 1em 0 0; width: 40%; padding: 0;}
     .projectDetails {width: 55%;}
     .projectDescription {font-size: 1rem;}
@@ -784,14 +801,17 @@ ts3 {color: #3179c7; left: -5em}
 }
 // Tablets
 @media screen and (min-device-width: 768px) and (max-width: 999px){
-    .header {height: 75px; display: flex; align-items: center; justify-content: flex-start;}
+    .header {height: 80px; display: flex; align-items: center; justify-content: flex-start;}
     nav {display: none;}
     .phone {display: flex;}
     html {font-size: 0.9rem;}
     #header-menu {width: 65%; transform: translateX(40em);}
     #phone-nav a {font-size: 2.7rem !important;}
     #about {margin: 1em 0; line-height: 1.5;}
+    #aboutContainer {padding: 1.5em;}
+    #contactPage {width: auto;}
     #skills {width: 100%; margin: 1em 0;}
+    #projects-svg {top: -3em;}
     .projectImgContainer {height: 280px; margin: 1em 2em 0 0;}
     .projectLinkContainer {align-items: center;}
     .projectContainer {justify-content: center;}

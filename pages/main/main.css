@@ -1,4 +1,4 @@
-#homeTextContainer, #footer, #aboutPage, #aboutContainer, #about, #skills, #slideCounter, #slideName, #projectsPage, #projectsTitle, #projectsPanel, .projectContainer, .projectImgContainer, .projectDescription, .projectTech, .projectTechDivContainer, .projectLinkContainer, .projectLink, #phone-nav, #phone-nav a {
+#homeTextContainer, .header, #contact-desktop, #contact-desktop > a, #footer, #aboutPage, #aboutContainer, #about, #skills, #slideCounter, #slideName, #projectsPage, #projectsTitle, #projectsPanel, .projectContainer, .projectImgContainer, .projectDescription, .projectTech, .projectTechDivContainer, .projectLinkContainer, .projectLink, #phone-nav, #phone-nav a {
   display: flex;
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -158,20 +158,19 @@ body {
   top: 0;
   position: sticky;
   z-index: 1;
-  padding: 0.8em 0 0.8em 1em; }
+  padding: 0.8em 0 0.8em 1em;
+  justify-content: space-between;
+  flex-flow: row;
+  height: 5em; }
 
 .menu:hover, #home:hover {
   color: #c75dac; }
 
 #contact-desktop {
-  display: flex;
-  justify-content: space-evenly;
-  width: 18rem;
-  height: 3rem;
-  flex-wrap: wrap;
-  position: absolute;
-  top: 6px;
-  right: 0; }
+  flex-flow: row; }
+
+#contact-desktop > a {
+  margin: 0 1.5em; }
 
 .header-contact-desktop-img {
   width: 2.8rem;
@@ -203,7 +202,8 @@ body {
   width: 100%;
   padding: 0 5em;
   scroll-margin-top: 3em;
-  background: #25101a; }
+  background: #25101a;
+  padding-bottom: 8em; }
 
 #aboutTitle {
   width: 100%;
@@ -287,7 +287,8 @@ hr {
 
 #contactInfo {
   background-color: #42182c;
-  font-style: oblique; }
+  margin: 1em;
+  padding: 0.5em 2em; }
 
 #phone {
   -ms-transform: scale(0.4, 0.4);
@@ -304,15 +305,15 @@ hr {
   -webkit-transform: scale(0.5, 0.5);
   transform: scale(0.5, 0.5); }
 
-#linkedInLink {
+.contact-link {
   text-decoration: none;
   color: #ff3d96;
   position: relative; }
 
-#linkedInLink:hover {
+.contact-link:hover {
   color: #f762a7; }
 
-#linkedInLink::after {
+.contact-link::after {
   background-color: #e24892;
   bottom: 5px; }
 
@@ -330,7 +331,7 @@ hr {
   display: flex;
   flex-direction: row;
   line-height: 2em;
-  margin: 2em 0em 1em 5em;
+  margin: 0em 0em 2em 5em;
   text-shadow: black 1px 1px;
   color: whitesmoke; }
 
@@ -559,9 +560,15 @@ ts3 {
   margin: 0 0 0.5em; }
 
 #svg-container {
-  overflow: hidden;
-  display: grid;
-  width: inherit; }
+  width: 100%; }
+
+#projects-svg {
+  fill: #1f1f1f;
+  width: 100%;
+  height: 125px;
+  transform: rotate(180deg);
+  position: relative;
+  top: -7em; }
 
 /************** HAMBURGER MENU AND HEADER ON PHONE **************************/
 #menu-toggle #hamburger span {
@@ -645,7 +652,7 @@ ts3 {
 
 #header-img {
   width: inherit;
-  height: inherit;
+  height: 5em;
   padding: 0.5rem; }
 
 #header-text {
@@ -746,7 +753,7 @@ ts3 {
     transition-duration: 0.5s; } }
 
 /*************************** Support for different screen sizes *********************************/
-@media only screen and (min-width: 500px) and (max-width: 1650px) {
+@media screen and (min-width: 500px) and (max-width: 1920px) {
   html {
     font-size: 0.8rem;
     line-height: 1.2em; }
@@ -767,7 +774,7 @@ ts3 {
   svg {
     height: 100px !important; } }
 
-@media only screen and (min-width: 320px) and (max-width: 768px) {
+@media screen and (min-width: 320px) and (max-width: 768px) {
   html {
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
     font-style: italic;
@@ -784,10 +791,18 @@ ts3 {
   #homeTitle {
     font-size: 4vw;
     text-shadow: #00a3e1 1px 1px; }
+  #aboutPage {
+    padding: 0 2em 5em; }
+  #contactPage {
+    width: inherit; }
+  .cell {
+    margin: 0 0 2em 4em; }
   #skillsImg {
     transform: scale(0.5);
     -ms-transform: scale(0.5);
     -webkit-transform: scale(0.5); }
+  #projects-svg {
+    top: -5em; }
   .projectImg {
     transform: scale(0.5);
     -ms-transform: scale(0.5);
@@ -829,12 +844,15 @@ ts3 {
     align-items: center; }
   #contactPage {
     scroll-margin-top: 18em; }
+  #contactInfo {
+    padding: 0.5em 0;
+    font-size: 11px; }
   #footer {
     height: 3rem; }
   svg {
     height: 50px !important; }
   .header {
-    height: 75px;
+    height: 80px;
     display: flex;
     align-items: center;
     justify-content: flex-start; }
@@ -852,7 +870,7 @@ ts3 {
 
 @media screen and (orientation: landscape) and (min-device-width: 320px) and (max-device-width: 900px) {
   .header {
-    height: 75px;
+    height: 80px;
     display: flex;
     align-items: center;
     justify-content: flex-start; }
@@ -874,8 +892,12 @@ ts3 {
   #about {
     max-width: 54%;
     margin: 0 1em 0 0; }
+  #aboutContainer {
+    padding: 1.5em; }
   #skills {
     width: 43%; }
+  #projects-svg {
+    top: -5em; }
   .projectImgContainer {
     margin: 1em 1em 0 0;
     width: 40%;
@@ -894,7 +916,7 @@ ts3 {
 
 @media screen and (min-device-width: 768px) and (max-width: 999px) {
   .header {
-    height: 75px;
+    height: 80px;
     display: flex;
     align-items: center;
     justify-content: flex-start; }
@@ -912,9 +934,15 @@ ts3 {
   #about {
     margin: 1em 0;
     line-height: 1.5; }
+  #aboutContainer {
+    padding: 1.5em; }
+  #contactPage {
+    width: auto; }
   #skills {
     width: 100%;
     margin: 1em 0; }
+  #projects-svg {
+    top: -3em; }
   .projectImgContainer {
     height: 280px;
     margin: 1em 2em 0 0; }
