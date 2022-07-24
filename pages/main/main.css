@@ -75,7 +75,8 @@ html, body {
   scroll-behavior: smooth;
   font-size: 100%;
   font-family: Aleo;
-  font-style: normal; }
+  font-style: normal;
+  width: 100%; }
 
 body {
   line-height: 2em;
