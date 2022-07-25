@@ -233,7 +233,7 @@ body{
     @extend %border;
     padding: 2em;
     margin: 1em;
-    line-height: 2.7em;
+    line-height: 2.58em;
 }
 #skills {
     @extend %flex;
@@ -242,7 +242,7 @@ body{
     margin: 1em;
     padding: 1em;
     width: 22em;
-    height: 15em;
+    height: 17em;
     max-width: 22em;
     max-height: 20em;
 }
@@ -258,18 +258,15 @@ body{
 #slideName {
     @extend %flex;
     justify-content: flex-end;
-    margin-bottom: 1rem;
+    margin-bottom: 0rem;
 }
 #skillsImg {
-    max-height: 256px;
-    max-width: 256px;
+    max-height: 215px;
+    max-width: 215px;
     opacity: 1;
     position: absolute;
     filter: drop-shadow(2px 4px 3px black);
     transition: opacity .5s linear;
-    transform: scale(0.8);
-    -ms-transform: scale(0.8);
-    -webkit-transform: scale(0.8);
 }
 .hide {
     opacity: 0 !important;
