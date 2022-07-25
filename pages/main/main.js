@@ -25,7 +25,7 @@ if (d.readyState === 'interactive') {
 
 // Slideshow of images of skills on 'About Me' page
 let skillsImageArray = ["/images/webp/react.webp", "/images/webp/ts.webp", "/images/webp/nextjs.webp", "/images/webp/redux-logo.webp", "/images/webp/tailwind.webp", "/images/webp/docker.webp", "/images/webp/git.webp", "/images/webp/sass.webp", "/images/webp/jest.webp", "/images/webp/jquery.webp", "/images/webp/gsap.webp"];
-let skillsImageArrayName = ["React (JavaScript UI Library)", "TypeScript (Syntactical Superset of JavaScript)", "Next.js (Back-end JS Environment)", "Redux (Managing and centralizing state)", "TailwindCSS (CSS Framework)", "Docker (Virtualization Platform)", "Git (Version Control System)", "Sass (CSS Preprocessor)", "Jest (JavaScript testing framework)", "jQuery (JavaScript Library)", "Gsap (JavaScript Animation Library)"];
+let skillsImageArrayName = ["React (JavaScript UI Library)", "TypeScript (Syntactical Superset of JavaScript)", "Next.js (Back-end JS Environment)", "Redux (Managing and centralizing state)", "TailwindCSS (CSS Framework)", "Docker (Virtualization Platform)", "Git (Version Control System)", "Sass (CSS Preprocessor)", "Jest (JavaScript testing framework)", "jQuery (JavaScript Library)", "GSAP (JavaScript Animation Library)"];
 const timer = ms => new Promise(res => setTimeout(res, ms)) // Returns a Promise that resolves after "ms" Milliseconds
 let i = 0;
 
