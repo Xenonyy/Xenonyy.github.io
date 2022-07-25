@@ -175,10 +175,10 @@ body{
 .header-contact-desktop-img {
     width: 2.8rem;
     height: 2.8rem;
-    filter: drop-shadow(0px 0px 1px #b82669);
+    filter: drop-shadow(0px 0px 2.5px #b82669);
 }
 .header-contact-desktop-img:hover {
-    filter: drop-shadow(0px 0px 1.2px white);
+    filter: drop-shadow(0px 0px 2px white);
 }
 #footer {
     position: relative;
@@ -724,9 +724,11 @@ ts3 {color: #3179c7; left: -5em}
     .link:hover {
         color: #bb99ff;
     }
+    .header-contact-desktop-img {
+        transition-duration: 0.5s;
+    }
     .header-contact-desktop-img:hover {
         transform: scale(1.025);
-        transition-duration: 0.5s;
     }
 }
 
