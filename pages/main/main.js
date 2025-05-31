@@ -29,7 +29,7 @@ const skillsImageArray = [
     "/images/webp/ts.webp",
     "/images/webp/nextjs.webp",
     "/images/webp/tailwindcss.webp",
-    "/images/webp/motion.avif",
+    "/images/webp/motion.webp",
     "/images/webp/redux-logo.webp",
     "/images/webp/docker.webp",
     "/images/webp/jest.webp",
