@@ -24,37 +24,79 @@ if (d.readyState === 'interactive') {
 }
 
 // Slideshow of images of skills on 'About Me' page
-let skillsImageArray = ["/images/webp/react.webp", "/images/webp/ts.webp", "/images/webp/nextjs.webp", "/images/webp/redux-logo.webp", "/images/webp/tailwind.webp", "/images/webp/docker.webp", "/images/webp/git.webp", "/images/webp/sass.webp", "/images/webp/jest.webp", "/images/webp/jquery.webp", "/images/webp/gsap.webp"];
-let skillsImageArrayName = ["React (JavaScript UI Library)", "TypeScript (Syntactical Superset of JavaScript)", "Next.js (Back-end JS Environment)", "Redux (Managing and centralizing state)", "TailwindCSS (CSS Framework)", "Docker (Virtualization Platform)", "Git (Version Control System)", "Sass (CSS Preprocessor)", "Jest (JavaScript testing framework)", "jQuery (JavaScript Library)", "GSAP (JavaScript Animation Library)"];
-const timer = ms => new Promise(res => setTimeout(res, ms)) // Returns a Promise that resolves after "ms" Milliseconds
-let i = 0;
-
-// Preloading images first.
-for (const skills of skillsImageArray) {
-    try {
-        ((url) => {
-            new Image().src = `https://raw.githubusercontent.com/Xenonyy/Xenonyy.github.io/master${url}`;
-        })(skills);
-    } catch (error) {
-        console.log(error)
+const skillsImageArray = [
+    "/images/webp/react.webp",
+    "/images/webp/ts.webp",
+    "/images/webp/nextjs.webp",
+    "/images/webp/tailwindcss.webp",
+    "/images/webp/motion.avif",
+    "/images/webp/redux-logo.webp",
+    "/images/webp/docker.webp",
+    "/images/webp/jest.webp",
+    "/images/webp/gsap.webp",
+    "/images/webp/sass.webp",
+    "/images/webp/jquery.webp",
+    "/images/webp/git.webp",
+  ];
+  
+  const skillsImageArrayName = [
+    "React (JavaScript UI Library)",
+    "TypeScript (Syntactical Superset of JavaScript)",
+    "Next.js (Back-end JS Environment)",
+    "TailwindCSS (CSS Framework)",
+    "Motion (JavaScript Animation Library)",
+    "Redux (Managing and centralizing state)",
+    "Docker (Virtualization Platform)",
+    "Jest (JavaScript testing framework)",
+    "GSAP (JavaScript Animation Library)",
+    "Sass (CSS Preprocessor)",
+    "jQuery (JavaScript Library)",
+    "Git (Version Control System)",
+  ];
+  
+  const timer = ms => new Promise(res => setTimeout(res, ms));
+  
+  // Preload images
+  const preloadImages = (paths) => {
+    return Promise.all(paths.map(path => {
+      return new Promise((resolve, reject) => {
+        const img = new Image();
+        img.src = path;
+        img.onload = resolve;
+        img.onerror = () => {
+          console.warn(`Failed to load: ${path}`);
+          resolve(); // Still resolve to avoid hanging
+        };
+      });
+    }));
+  };
+  
+  // Start slideshow after preloading
+  const SlideShow = async () => {
+    let i = 0;
+    while (true) {
+      $("#slideCounter").text(`${i + 1}/${skillsImageArray.length}`);
+      $("#slideName").text(skillsImageArrayName[i]);
+      document.querySelector("#skillsImg").classList.remove("hide");
+      document.querySelector("#skillsImg").src = skillsImageArray[i];
+  
+      await timer(2500);
+  
+      // Hide image before next slide
+      document.querySelector("#skillsImg").classList.add("hide");
+      await timer(500);
+  
+      i = (i + 1) % skillsImageArray.length;
     }
-}
-const SlideShow = async() => {
-    for (let i = 0; i < skillsImageArray.length; i++) {
-        $("#slideCounter").text(`${i+1}/${skillsImageArray.length}`);
-        $("#slideName").text(skillsImageArrayName[i]);
-        d.querySelector("#skillsImg").classList.remove("hide");
-        d.querySelector("#skillsImg").src = skillsImageArray[i];
-        await timer(2500);
-        d.querySelector("#skillsImg").classList.add("hide");
-        await timer(500);
-        if (i + 1 >= skillsImageArray.length) i = -1; // Reset slideshow
-    }
-}
-SlideShow();
+  };
+  
+  preloadImages(skillsImageArray).then(() => {
+    SlideShow();
+  });
+  
 
 // Technologies used on 'Projects' page hover animation
-let techArr = ["react", "sass", "jest", "gsap", "git"];
+let techArr = ["react", "sass", "jest", "gsap"];
 for (const tech of Object.entries(techArr)) {
     $(`.${tech[1]}`).hover(() => {
         $(tech[1]).removeClass("hide");
@@ -66,7 +108,7 @@ for (const tech of Object.entries(techArr)) {
     });
 }
 // Hover animation for the second project (so the same technologies don't get highlighted everywhere by hovering one of them)
-let techArr2 = ["socketio2", "express2", "react2", "sass2", "git2"];
+let techArr2 = ["socketio2", "express2", "react2", "sass2"];
 for (const tech of Object.entries(techArr2)) {
     $(`.${tech[1]}`).hover(() => {
         $(tech[1]).removeClass("hide");
@@ -78,7 +120,7 @@ for (const tech of Object.entries(techArr2)) {
     });
 }
 // Hover animation for the third project (so the same technologies don't get highlighted everywhere by hovering one of them)
-let techArr3 = ["react3", "ts3", "css3", "git3"];
+let techArr3 = ["react3", "ts3", "css3"];
 for (const tech of Object.entries(techArr3)) {
     $(`.${tech[1]}`).hover(() => {
         $(tech[1]).removeClass("hide");
@@ -89,8 +131,21 @@ for (const tech of Object.entries(techArr3)) {
 
     });
 }
+// Visually 1st project, don't want to rewrite everything to change the order. 
+let techArr4 = ["react4", "ts4", "tailwind4", "motion4"];
+for (const tech of Object.entries(techArr4)) {
+    $(`.${tech[1]}`).hover(() => {
+        $(tech[1]).removeClass("hide");
+        $(`.${tech[1]}`).addClass("hide-almost");
+    }, () => {
+        $(tech[1]).addClass("hide");
+        $(`.${tech[1]}`).removeClass("hide-almost");
+
+    });
+}
+
 // Switch to a gif when hovering a project's image to showcase the project. Easily scalabe and maintainable now!
-let projects = [1,2,3];
+let projects = [1,2,3,4];
 for (let project of projects) {
     $(`#projectsImgContainer-${project}`).hover(() => {
         $(`#projectsImg-${project}`).toggleClass("hide");
