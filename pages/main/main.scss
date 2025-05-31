@@ -383,7 +383,7 @@ hr {
     flex-flow: wrap;
 }
 .projectImgContainer {
-    margin: 1em 4em 0 0;
+    margin: 1em 3em 0 0;
     width: 32%;
     min-inline-size: 20em;
     background-color: #3f3f3f;
@@ -391,7 +391,8 @@ hr {
     @extend %flex;
     background-image: linear-gradient(0deg, #362593, #313131 80%);
     filter: drop-shadow(2px 4px 6px black);
-    height: 20em;
+    height: auto;
+    padding: 2em 0 4em;
 }
 .projectImg {
     width: 192px;
@@ -404,7 +405,6 @@ hr {
     transition: opacity .4s linear;
     width: max-content;
     max-width: 75%;
-    margin-top: 2em;
     mask-image: linear-gradient(#000 65%, #0000 100%);
     -webkit-mask-image: linear-gradient(#000 65%, #0000 100%);
 }
@@ -412,7 +412,9 @@ hr {
     color: $white;
     text-shadow: $primary-text-shadow;
     font-size: 1.5rem;
-    padding: 1em 0;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
     filter: drop-shadow(2px 4px 6px black);
     font-family: Capriola;
 }
@@ -764,7 +766,7 @@ motion4 {color: #fff32e; }
     #projects-svg {top: -5em;}
     .projectImg {transform: scale(0.5); -ms-transform: scale(0.5); -webkit-transform: scale(0.5);}
     #projectsImgHover-1, #projectsImgHover-2, #projectsImgHover-3, #projectsImgHover-4 {width: 80%;}
-    .projectImgContainer {margin: 1em 0; width: 100%; height: 190px; padding: 1em;}
+    .projectImgContainer {margin: 1em 0; width: 100%; padding: 0em 0 2em;}
     #about, .projectDescription {font-size: 1.1rem; line-height: 1.5em;}
     .projectDetails { width: 100%; margin: 0;}
     .projectTechContainer {transform: scale(0.9); -ms-transform: scale(0.9); -webkit-transform: scale(0.9);}
@@ -798,7 +800,7 @@ motion4 {color: #fff32e; }
     #aboutContainer {padding: 1.5em;}
     #skills {width: 43%;}
     #projects-svg {top: -5em;}
-    .projectImgContainer {margin: 1em 1em 0 0; width: 40%; padding: 0;}
+    .projectImgContainer {margin: 1em 1em 0 0; width: 40%; padding: 1em 0 2em;}
     .projectDetails {width: 55%;}
     .projectDescription {font-size: 1rem;}
     .projectDetails, .projectDescriptionContainer, .projectTechContainer {min-inline-size: min-content ; min-inline-size: -moz-min-content;}
@@ -818,7 +820,7 @@ motion4 {color: #fff32e; }
     #contactPage {width: auto;}
     #skills {width: 100%; margin: 1em 0;}
     #projects-svg {top: -3em;}
-    .projectImgContainer {height: 280px; margin: 1em 2em 0 0;}
+    .projectImgContainer {padding: 1em 0 2em;}
     .projectLinkContainer {align-items: center;}
     .projectContainer {justify-content: center;}
     .projectDetails, .projectDescriptionContainer, .projectTechContainer {min-inline-size: -webkit-fill-available; min-inline-size: -moz-fill-available;}
