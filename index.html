@@ -92,10 +92,10 @@
             <section id="aboutContainer">
                 <ul id="about">
                     <li>My name is Armand Gonda and I'm a <b>self-taught</b> programmer</li>
-                    <li>I've started programming at the age of 15 and been a fan of it since</li>
+                    <li>I started programming at the age of 15 and I fell in love with being able to create things</li>
                     <li>I specialize in <b>Front-End Web Development</b></li>
-                    <li>Key skills: <b>React, TypeScript/JavaScript (ES5+), Next.js, Redux (redux-thunk), TailwindCSS, Jest, Docker</b></li>
-                    <li>My favorite/most used packages: Prettier, ESlint, React-query, Axios, FormatJS, Zustand, GSAP </li>
+                    <li>Key skills: <b>React, TypeScript/JavaScript (ES5+), Next.js, Redux/Zustand, TailwindCSS, Jest, Docker</b></li>
+                    <li>I like to stay up to date with technologies and not afraid to learn anything that seems useful or fun </li>
                 </ul>
                 <section id="skills">
                     <p id="slideCounter"></p>
@@ -149,29 +149,89 @@
             <h1 id="projectsTitle" class="title non_selectable">Projects</h1>
             <div id="projectsPanel" class="col-12">
                 <section class="projectContainer">
-                    <div class="projectImgContainer" id="projectsImgContainer-1">
-                        <img class="projectImg" id="projectsImg-1" src="./images/webp/league-library.webp" alt="League Library" width="192" height="192"/>
-                        <video autoplay loop preload="metadata" id="projectsImgHover-1" src="https://i.gyazo.com/781c19557aa27ba7f65ea30df7bb0621.mp4" width="192" height="192" class="hide"></video>
-                        <h1 class="projectTitle">League Library</h1>
+                    <div class="projectImgContainer" id="projectsImgContainer-4">
+                        <img class="projectImg" id="projectsImg-4" src="./images/webp/rps-logo.webp" alt="Rock Paper Scissors Advanced" width="192" height="192"/>
+                        <video autoplay loop preload="metadata" id="projectsImgHover-4" src="./images/mp4/rps.mp4" width="192" height="192" class="hide"></video>
+                        <h1 class="projectTitle">Rock Paper Scissors Advanced</h1>
                     </div>
                     <section class="projectDetails">
                         <section class="projectDescriptionContainer">
-                            <p class="projectDescription">This project is based on a game called League of Legends, where you can freely browse all the champions from the game using Riot Games' APIs. 
-                                <br> The web app is responsive, optimized for most browsers and screen sizes.</p>
+                            <p class="projectDescription">
+                                A sleek, modern Rock-Paper-Scissors game featuring both a classic mode and an advanced mode with two additional moves: Lizard and Spock.
+                                <br>Developed with React, TypeScript, and Tailwind CSS; animations powered by Motion, built using Vite. (2025)
+                                <br>Optimized for smooth performance and accessibility across devices.
+                              </p>
                         </section>
                         <section class="projectTechContainer">
                             <div class="projectTech"> Technologies used: 
                                 <div class="projectTechDivContainer">
-                                    <img src="./images/webp/react.webp" alt="ReactJS" width="92" height="92" class="react tech">
-                                    <react class="hide">ReactJS</react>
-                                    <img src="./images/webp/sass.webp" alt="Sass" width="92" height="92" class="sass tech">
-                                    <sass class="hide">Sass</sass>
-                                    <img src="./images/webp/jest.webp" alt="Jest" width="92" height="92" class="jest tech">
-                                    <jest class="hide">Jest</jest>
-                                    <img src="./images/webp/gsap.webp" alt="Gsap" width="92" height="92" class="gsap tech">
-                                    <gsap class="hide">Gsap</gsap>
-                                    <img src="./images/webp/git.webp" alt="Git" width="92" height="92" class="git tech">
-                                    <git class="hide">Git</git>
+                                    <div class="techContainer">
+                                        <img src="./images/webp/react.webp" alt="ReactJS" width="92" height="92" class="react4 tech">
+                                        <react4 class="hide">ReactJS</react4>
+                                    </div>
+                                    <div class="techContainer">
+                                        <img src="./images/webp/ts.webp" alt="TypeScript" width="92" height="92" class="ts4 tech">
+                                        <ts4 class="hide">TypeScript</ts4>
+                                    </div>
+                                    <div class="techContainer">
+                                        <img src="./images/webp/tailwind.webp" alt="TailwindCSS" width="92" height="92" class="tailwind4 tech">
+                                        <tailwind4 class="hide">TailwindCSS</tailwind4>
+                                    </div>
+                                    <div class="techContainer">
+                                        <img src="./images/webp/motion.avif" alt="Motion" width="92" height="92" class="motion4 tech">
+                                        <motion4 class="hide">Motion</motion4>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </section>
+                </section>
+                <section class="projectLinkContainer">
+                    <div class="projectLink">
+                        <div class="projectLinkText">View this project's repository at:
+                            <a class="link" href="https://github.com/Xenonyy/rock-paper-scissors">GitHub</a>
+                        </div>
+                    </div>
+                    <div class="projectLink">
+                        <div class="projectLinkText">View this project at:
+                            <a class="link" href="https://rps-gameapp.netlify.app/">Netlify</a>
+                        </div>
+                    </div>
+                </section>
+                <hr class="hr2">
+                <section class="projectContainer">
+                    <div class="projectImgContainer" id="projectsImgContainer-1">
+                        <img class="projectImg" id="projectsImg-1" src="./images/webp/league-library.webp" alt="League Library" width="192" height="192"/>
+                        <video autoplay loop preload="metadata" id="projectsImgHover-1" src="./images/mp4/league-library.mp4" width="192" height="192" class="hide"></video>
+                        <h1 class="projectTitle">League Library</h1>
+                    </div>
+                    <section class="projectDetails">
+                        <section class="projectDescriptionContainer">
+                            <p class="projectDescription">
+                                A web app based on League of Legends that lets you browse all the characters, their roles, abilities, and skins powered by Riot Games’ API.
+                                <br>Developed using React and Sass; animations implemented with GSAP, bootstrapped via Create React App (CRA).
+                                <br>Designed with device compatibility and responsive layout in mind.
+                              </p>
+                        </section>
+                        <section class="projectTechContainer">
+                            <div class="projectTech"> Technologies used: 
+                                <div class="projectTechDivContainer">
+                                    <div class="techContainer">
+                                        <img src="./images/webp/react.webp" alt="ReactJS" width="92" height="92" class="react tech">
+                                        <react class="hide">ReactJS</react>
+                                    </div>
+                                    <div class="techContainer">
+                                        <img src="./images/webp/sass.webp" alt="Sass" width="92" height="92" class="sass tech">
+                                        <sass class="hide">Sass</sass>
+                                    </div>
+                                    <div class="techContainer">
+                                        <img src="./images/webp/jest.webp" alt="Jest" width="92" height="92" class="jest tech">
+                                        <jest class="hide">Jest</jest>
+                                    </div>
+                                    <div class="techContainer">
+                                        <img src="./images/webp/gsap.webp" alt="Gsap" width="92" height="92" class="gsap tech">
+                                        <gsap class="hide">Gsap</gsap>
+                                    </div>
                                 </div>
                             </div>
                         </section>
@@ -193,27 +253,35 @@
                 <section class="projectContainer">
                         <div class="projectImgContainer" id="projectsImgContainer-2">
                             <img class="projectImg" id="projectsImg-2" src="./images/webp/xenochat.webp" alt="Xenochat" width="192" height="192"/>
-                            <video autoplay loop preload="metadata" id="projectsImgHover-2" src="https://i.gyazo.com/1c36423fcc3aea4aaca017225ecfb208.mp4" width="192" height="192" class="hide"></video>
+                            <video autoplay loop preload="metadata" id="projectsImgHover-2" src="./images/mp4/xenochat.mp4" width="192" height="192" class="hide"></video>
                             <h1 class="projectTitle">Xenochat</h1>
                         </div>
                         <section class="projectDetails">
                             <section class="projectDescriptionContainer">
-                                <p class="projectDescription">This project is a chat app, where you get automatically connected to a public chatroom and chat with anyone else who connects. 
-                                    <br> The website is fully responsive, optimized for most browsers and screen sizes.</p>
+                                <p class="projectDescription">
+                                    A real-time chat application where users are automatically connected to a public chatroom to communicate with others instantly.
+                                    <br>  Built with React, Sass, and Socket.IO on an Express.js backend; bootstrapped via CRA.
+                                  </p>
                             </section>
                             <section class="projectTechContainer">
                                 <div class="projectTech"> Technologies used: 
                                     <div class="projectTechDivContainer">
-                                        <img src="./images/webp/socketio.webp" alt="Socket.io" width="92" height="92" class="socketio2 tech">
-                                        <socketio2 class="hide">Socket.io</socketio2>
-                                        <img src="./images/webp/express.webp" alt="Express.js" width="92" height="92" class="express2 tech">
-                                        <express2 class="hide">Express.js</express2>
-                                        <img src="./images/webp/react.webp" alt="ReactJS" width="92" height="92" class="react2 tech">
-                                        <react2 class="hide">ReactJS</react2>
-                                        <img src="./images/webp/sass.webp" alt="Sass" width="92" height="92" class="sass2 tech">
-                                        <sass2 class="hide">Sass</sass2>
-                                        <img src="./images/webp/git.webp" alt="Git" width="92" height="92" class="git2 tech">
-                                        <git2 class="hide">Git</git2>
+                                        <div class="techContainer">
+                                            <img src="./images/webp/react.webp" alt="ReactJS" width="92" height="92" class="react2 tech">
+                                            <react2 class="hide">ReactJS</react2>
+                                        </div>
+                                        <div class="techContainer">
+                                            <img src="./images/webp/sass.webp" alt="Sass" width="92" height="92" class="sass2 tech">
+                                            <sass2 class="hide">Sass</sass2>
+                                        </div>
+                                        <div class="techContainer">
+                                            <img src="./images/webp/socketio.webp" alt="Socket.io" width="92" height="92" class="socketio2 tech">
+                                            <socketio2 class="hide">Socket.io</socketio2>
+                                        </div>
+                                        <div class="techContainer">
+                                            <img src="./images/webp/express.webp" alt="Express.js" width="92" height="92" class="express2 tech">
+                                            <express2 class="hide">Express.js</express2>
+                                        </div>
                                     </div>
                                 </div>
                             </section>
@@ -235,25 +303,32 @@
                 <section class="projectContainer">
                     <div class="projectImgContainer" id="projectsImgContainer-3">
                         <img class="projectImg" id="projectsImg-3" src="./images/webp/hangman.webp" alt="Hangman" width="240" height="240"/>
-                        <video autoplay loop preload="metadata" id="projectsImgHover-3" src="https://i.gyazo.com/9e7248e08c70446f4853a71cca9ea41e.mp4" width="192" height="192" class="hide"></video>
+                        <video autoplay loop preload="metadata" id="projectsImgHover-3" src="./images/mp4/hangman.mp4" width="192" height="192" class="hide"></video>
                         <h1 class="projectTitle">Hangman</h1>
                     </div>
                     <section class="projectDetails">
                         <section class="projectDescriptionContainer">
-                            <p class="projectDescription">This project is a React game, where you can play the classic Hangman, with the ability to choose your preferred length of a random word among other features. 
-                                <br> The website is responsive, optimized for most browsers and screen sizes.</p>
+                            <p class="projectDescription">
+                                A classic Hangman game built with React and TypeScript, featuring words from lengths of 8 to 14.
+                                <br>Styled with pure CSS3 and bootstrapped via CRA.
+                                <br>Designed with mobile responsiveness and accessibility in mind to ensure smooth gameplay across devices.
+                              </p>
                         </section>
                         <section class="projectTechContainer">
                             <div class="projectTech"> Technologies used: 
                                 <div class="projectTechDivContainer">
-                                    <img src="./images/webp/react.webp" alt="ReactJS" width="92" height="92" class="react3 tech">
-                                    <react3 class="hide">ReactJS</react3>
-                                    <img src="./images/webp/ts.webp" alt="TypeScript" width="92" height="92" class="ts3 tech">
-                                    <ts3 class="hide">TypeScript</ts3>
-                                    <img src="./images/webp/css.webp" alt="CSS" width="92" height="92" class="css3 tech">
-                                    <css3 class="hide">CSS3</css3>
-                                    <img src="./images/webp/git.webp" alt="Git" width="92" height="92" class="git3 tech">
-                                    <git3 class="hide">Git</git3>
+                                    <div class="techContainer">
+                                        <img src="./images/webp/react.webp" alt="ReactJS" width="92" height="92" class="react3 tech">
+                                        <react3 class="hide">ReactJS</react3>
+                                    </div>
+                                    <div class="techContainer">
+                                        <img src="./images/webp/ts.webp" alt="TypeScript" width="92" height="92" class="ts3 tech">
+                                        <ts3 class="hide">TypeScript</ts3>
+                                    </div>
+                                    <div class="techContainer">
+                                        <img src="./images/webp/css.webp" alt="CSS" width="92" height="92" class="css3 tech">
+                                        <css3 class="hide">CSS3</css3>
+                                    </div>
                                 </div>
                             </div>
                         </section>
