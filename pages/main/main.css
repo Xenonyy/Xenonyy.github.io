@@ -694,7 +694,9 @@ motion4 {
 @media (hover: hover) {
   /* Only works if the deivce supports hover state*/
   input:hover {
-    box-shadow: 1px 1px #53a7ea, 2px 2px #53a7ea, 3px 3px #53a7ea;
+    box-shadow: 1px 1px #53a7ea,
+ 2px 2px #53a7ea,
+ 3px 3px #53a7ea;
     -moz-transform: translateX(-3px);
     -webkit-transform: translateX(-3px);
     transform: translateX(-3px);
@@ -802,11 +804,8 @@ motion4 {
     min-inline-size: -moz-fill-available; }
   .tech {
     margin: 0; }
-  react, sass, gsap {
+  react, sass, jest, gsap, socketio2, express2, react2, sass2, react3, ts3, css3, react4, ts4, tailwind4, motion4 {
     font-size: 1.5rem;
-    -webkit-text-stroke: thin; }
-  socketio2, react2, sass2, express2 {
-    font-size: 1.2rem;
     -webkit-text-stroke: thin; }
   .projectLinkContainer {
     margin: 2em 0 0;
@@ -854,7 +853,7 @@ motion4 {
   #phone-nav {
     height: 92vh; }
   #contact-phone {
-    height: 98vh; }
+    height: 85vh; }
   .header-contact-img {
     width: 40px;
     height: 40px; }
